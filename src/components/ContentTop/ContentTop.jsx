@@ -16,6 +16,7 @@ const ContentTop = () => {
                 <h3 className="content-top-title">Home</h3>
             </div>
             <div className="content-top-btns">
+                <input type="search" className="SearchBar" placeholder='eg : siddharth' id="" />
                 <button type="button" className="search-btn content-top-btn">
                     <img src={iconsImgs.search} alt="" />
                 </button>

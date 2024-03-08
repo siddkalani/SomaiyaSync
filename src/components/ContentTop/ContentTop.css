@@ -39,3 +39,8 @@
 .notification-btn:hover{
   color: aliceblue;
 }
+.SearchBar{
+  size: 6rem;
+  height:2rem;
+  width: 15rem;
+}
