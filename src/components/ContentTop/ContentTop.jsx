@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { SidebarContext } from "../../context/sidebarContext";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const ContentTop = () => {
   const { toggleSidebar } = useContext(SidebarContext);
@@ -23,9 +24,8 @@ const ContentTop = () => {
         <input
           type="search"
           className="SearchBar"
-          placeholder="Search..."
+          placeholder="eg : siddharth"
           id=""
-          
         />
         <button type="button" className="search-btn content-top-btn">
           <img src={iconsImgs.search} alt="" />
