@@ -39,4 +39,5 @@ const ContentTop = () => {
   )
 }
 
-export default ContentTop
+
+export default ContentTop;
