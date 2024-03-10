@@ -14,7 +14,7 @@ import NewsFeed from './pages/NewsFeed';
 function App() {
   return (
 
-    <>
+    <div className='whole-main'>
       <BrowserRouter>
         <div className='app'>
           <Sidebar />
@@ -52,7 +52,7 @@ function App() {
         </div>
         </BrowserRouter>
 
-    </>
+    </div>
   )
 }
 
