@@ -1,13 +1,16 @@
 .account-main{
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    margin-top: -0.5rem;
+    /* background-color: aqua; */
 }
 .account-container{
     display: flex;
     flex-grow: 1;
-    /* background-color: rgb(121, 13, 13); */
-    height: 35rem;
+    /* background-color: rgb(216, 177, 177); */
+    height: 40rem;
     width: 65rem;
     gap: 2rem;
 }
@@ -60,6 +63,7 @@
     width: 6rem;
     color: white;
     border-radius: 15px;
+    transition: background-color 30ms ease-out 30ms
     
 }
 .message{
@@ -68,6 +72,7 @@
     width: 6rem;
     color: rgb(33, 9, 131);
     border-radius: 15px;
+    transition: background-color 30ms ease-out 30ms
 
 }
 .left-lower{
@@ -82,15 +87,12 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .right-upper{
-    height: 15em;
+    height: 15rem;
     /* background-color: blue; */
     border-radius: 20px;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     /* font-size: large; */
-   
-    
-
 }
 .personal-info{
     margin-top: 0.7rem;
@@ -102,6 +104,7 @@
 .right-lower{
     height: 20rem;
     /* background-color: brown; */
+    flex: 1;
     display: flex;
     gap: 2rem;
 
@@ -125,5 +128,81 @@
 }
 .right-lower-right{
     flex: 1;
-    /* background-color: darkblue; */
+    border-radius:20px ;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.right-lower-right-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+
+}
+.right-lower-right-header{
+    font-size: 1.6rem;
+
+}
+/* footer css */
+
+/* .left-edit-profile{
+    background-color: rgb(207, 104, 104);
+    border-radius: 20px;
+    
+} */
+.left-edit-profile{
+    height: 2rem;
+    width: 23rem;
+    /* background-color: aquamarine;  */
+    display: flex;
+    justify-content: center;
+    
+}
+.edit-prof-btn{
+    background-color: rgb(33, 9, 131);
+    height: 2.2rem;
+    width: 23rem;
+    color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: background-color 30ms ease-out 30ms
+}
+.right-footer-btn{
+    height: 2rem;
+    width: 45rem;
+    /* background-color: rgb(16, 68, 51); */
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: end;
+    
+}
+.profile-resume-btn{
+    background-color: rgb(33, 9, 131);
+    height: 2rem;
+    width: 45rem;
+    color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: background-color 30ms ease-out 30ms
+}
+/* .white-hover :hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 9, 131);
+} */
+.follow:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 9, 131);
+}
+.profile-resume-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 9, 131);
+}
+.edit-prof-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 9, 131);
+}
+.message:hover{
+    background-color: rgb(33, 9, 131);
+    color: white;
 }

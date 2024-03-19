@@ -22,14 +22,10 @@ const ContentTop = () => {
         <h3 className="content-top-title">Home</h3>
       </div>
       <div className="content-top-btns right-btn">
-
-        
-          <div className="search-box">
+            <div className="search-box">
         <input type="search" placeholder="Search for comaptible user" />
         <i className="fa fa-search fa-lg"></i>
-      
-
-        </div>
+             </div>
 
       </div>
       <div className="NewsFeed">

@@ -23,7 +23,10 @@ color: #06142E
 
 .right-btn {
   display: flex;
-
+  /* justify-content: center; */
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  /* background-color: aqua; */
 }
 
 .search-box i {
