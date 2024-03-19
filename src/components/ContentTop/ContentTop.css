@@ -1,16 +1,19 @@
 .main-content-top {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
   justify-content: space-between;
   padding: 1rem;
   margin-bottom: 2rem;
 }
 .content-top-title{
-color: antiquewhite;
+color: #06142E
 }
-.sidebar-toggler img {
+.sidebar-toggler{
+  
+  font-size: 1.6rem;
 
-  width: 1.5rem;
 }
 
 .content-top-left {
@@ -28,14 +31,14 @@ color: antiquewhite;
 
 }
 .search-box input{
-  color:rgb(74, 20, 20);
+  color:#06142e;
 }
 input::placeholder{
-  color:rgb(74, 20, 20);
+  color:#06142e;
 }
 input[type="search"] {
   display: inline-block;
-  background-color:bisque;
+  background-color:rgb(211, 206, 206);
   width: 45rem;
   font-size: 1.5rem;
 
@@ -56,9 +59,13 @@ controls the search cancel button */ [type="search"]::-webkit-search-cancel-butt
 }
 
 .notification-btn {
-  color: grey;
+  color:#06142e;
   font-size: 1.7rem
 }
 .notification-btn :hover{
-  color: antiquewhite;
+  color: rgb(79, 75, 65);
 }
+/* .search-box{
+  display: flex;
+  flex-grow: 1;
+} */

@@ -1,6 +1,7 @@
 /* sidebar */
+
 .sidebar {
-    background-color: var(--clr-primary);
+    background:linear-gradient(10deg,#000000,#130F40);
     width: 260px;
     padding: 36px 20px;
     transition: var(--transition-default);

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Contest.css"
-import Cards from '../components/Cards/Cards'
+import Cards from '../../components/Cards/Cards'
 import { CiSquarePlus } from "react-icons/ci";
 import { FaQuestionCircle } from "react-icons/fa";
 import { MdLeaderboard } from "react-icons/md";

@@ -6,16 +6,20 @@ import { FaRegNewspaper } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import ReactSearchBox from "react-search-box";
+import { PiListFill } from "react-icons/pi";
 
 const ContentTop = () => {
   const { toggleSidebar } = useContext(SidebarContext);
+
+  
+
   return (
     <div className="main-content-top">
       <div className="content-top-left">
         <button type="button" className="sidebar-toggler" onClick={() => toggleSidebar()}>
-          <img src={iconsImgs.menu} alt="" />
+        <PiListFill />
         </button>
-        <h3 className="content-top-title">home</h3>
+        <h3 className="content-top-title">Home</h3>
       </div>
       <div className="content-top-btns right-btn">
 

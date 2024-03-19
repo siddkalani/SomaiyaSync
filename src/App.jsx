@@ -5,13 +5,16 @@ import ContentTop from './components/ContentTop/ContentTop';
 import ContentMain from './components/ContentMain/ContentMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Inbox from './pages/Inbox';
-import Contest from './pages/Contest';
+import Contest from './pages/Contest/Contest';
 import Leaderboard from './pages/Leaderboard';
-import Account from './pages/Account';
+import Account from './pages/Accounts/Account';
 import Settings from './pages/Settings';
 import Footer from './components/Footer/Footer';
-import NewsFeed from './pages/NewsFeed';
+import NewsFeed from './pages/NewsFeed/NewsFeed';
+import EditProfile from './pages/BasicDetails/EditProfile';
+
 function App() {
+  
   return (
 
     <div className='whole-main'>
@@ -43,6 +46,9 @@ function App() {
               <Route path='/NewsFeed' element={<NewsFeed/>} >
 
               </Route>
+              {/* <Route path='/EditProfile' element={<EditProfile/>} >
+
+              </Route> */}
 
             </Routes>
            {/* <div className="footer">

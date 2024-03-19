@@ -6,9 +6,6 @@
   box-sizing: border-box;
   
 }
-.whole-main{
-
-}
 :root {
   --clr-primary: #29221d;
   --clr-primar-light: #473b33;
@@ -111,3 +108,6 @@ button {
     font-size: 14px !important;
   }
 }
+/* .whole-main{
+  color: #00fe93;
+} */

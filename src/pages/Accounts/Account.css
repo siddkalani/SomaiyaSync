@@ -1,0 +1,129 @@
+.account-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-container{
+    display: flex;
+    flex-grow: 1;
+    /* background-color: rgb(121, 13, 13); */
+    height: 35rem;
+    width: 65rem;
+    gap: 2rem;
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* background-color: aqua; */
+    gap: 1.6rem;
+    
+}
+.right-side{
+    flex: 2;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    
+}
+.left-upper{
+    flex: 2;
+    /* background-color: blanchedalmond; */
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.profile-img{
+    border-radius: 50%;
+    background-color: rgb(33, 9, 131);
+    height: 8rem;
+    width: 8rem;
+}
+.profile-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+.profile-info{
+    margin-top: 0.5rem;
+}
+.follow{
+    background-color: rgb(33, 9, 131);
+    height: 2rem;
+    width: 6rem;
+    color: white;
+    border-radius: 15px;
+    
+}
+.message{
+    background-color: rgb(255, 255, 255);
+    height: 2rem;
+    width: 6rem;
+    color: rgb(33, 9, 131);
+    border-radius: 15px;
+
+}
+.left-lower{
+    display: flex;
+    flex: 1;
+    /* background-color: rgb(104, 78, 78); */
+    height: 15rem;
+    border-radius: 20px;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.right-upper{
+    height: 15em;
+    /* background-color: blue; */
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* font-size: large; */
+   
+    
+
+}
+.personal-info{
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: large;
+}
+.right-lower{
+    height: 20rem;
+    /* background-color: brown; */
+    display: flex;
+    gap: 2rem;
+
+}
+.right-lower-left{
+    /* background-color: coral; */
+    flex: 1;
+    border-radius:20px ;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.right-lower-left-header{
+    font-size: 1.6rem;
+}
+.right-lower-left-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+}
+.right-lower-right{
+    flex: 1;
+    /* background-color: darkblue; */
+}
