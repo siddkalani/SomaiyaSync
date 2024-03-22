@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Contest.css"
-import Cards from '../../components/Cards/Cards'
 import { CiSquarePlus } from "react-icons/ci";
 import { FaQuestionCircle } from "react-icons/fa";
 import { MdLeaderboard } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
+import ContestCard from './Contest-cards/ContestCard';
 const Contest = () => {
   return (
     <div className='main-contest'>
@@ -14,14 +14,24 @@ const Contest = () => {
         <div className="navbar-btn"><div className='symbol-game'><BsSearch /></div><h2>Search for Games</h2></div>
       </div>
       <div className="games">
-        <div className='cards'><Cards
-          name="DSA Battles" /></div>
-        <div className='cards'><Cards 
-          name="CSS Relays"/></div>
-        <div className='cards'><Cards /></div>
-        <div className='cards'><Cards /></div>
-        <div className='cards'><Cards /></div>
-        <div className='cards'><Cards /></div>
+        <ContestCard
+        Name="CSS Battle"/>
+        <ContestCard
+        Name="CSS Battle"/>
+        <ContestCard
+        Name="CSS Battle"/>
+        <ContestCard
+        Name="CSS Battle"/>
+        <ContestCard
+        Name="CSS Battle"/>
+        <ContestCard
+        Name="CSS Battle"/>
+        {/* <div className='cards'></div>
+        <div className='cards'></div>
+        <div className='cards'></div>
+        <div className='cards'></div>
+        <div className='cards'></div>
+        <div className='cards'></div> */}
         {/* <div className="cards">
           <div className="card-title">
           <div><h2>Dsa battle</h2></div>

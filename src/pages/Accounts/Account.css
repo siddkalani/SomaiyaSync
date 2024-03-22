@@ -3,7 +3,7 @@
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    margin-top: -0.5rem;
+    margin-top: -0.9rem;
     /* background-color: aqua; */
 }
 .account-container{
@@ -179,7 +179,7 @@
 }
 .profile-resume-btn{
     background-color: rgb(33, 9, 131);
-    height: 2rem;
+    height: 2.2rem;
     width: 45rem;
     color: white;
     border-radius: 15px;
