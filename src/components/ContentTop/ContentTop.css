@@ -8,7 +8,7 @@
   margin-bottom: 2rem;
 }
 .content-top-title{
-color: #06142E
+color: white
 }
 .sidebar-toggler{
   
@@ -34,14 +34,14 @@ color: #06142E
 
 }
 .search-box input{
-  color:#06142e;
+  color:rgb(26, 26, 26)
 }
 input::placeholder{
-  color:#06142e;
+  color:gray
 }
 input[type="search"] {
   display: inline-block;
-  background-color:rgb(211, 206, 206);
+  background-color:rgb(233, 229, 229);
   width: 45rem;
   font-size: 1.5rem;
 
@@ -62,7 +62,7 @@ controls the search cancel button */ [type="search"]::-webkit-search-cancel-butt
 }
 
 .notification-btn {
-  color:#06142e;
+  color:white;
   font-size: 1.7rem
 }
 .notification-btn :hover{

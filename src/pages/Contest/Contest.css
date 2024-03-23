@@ -6,7 +6,9 @@
     padding: 1rem;
 }
 .nav-bar{
-    background-color:rgb(33, 9, 131);  
+    /* background-color: #07161b; */
+    background: radial-gradient(759px at 14% 22.3%, rgb(10, 64, 88) 0%, rgb(15, 164, 102) 90%);
+
     color: white; 
     height: 3rem;
     display: flex;

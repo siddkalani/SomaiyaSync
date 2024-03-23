@@ -25,7 +25,7 @@ const Leaderboard = () => {
           <div><h1>See where you are!</h1></div>
           <div className="goal-img"><img src={goal} alt="" /></div>
         </div>
-        <div className="Leaderboard-container">
+        <div className="Leaderboard-body">
           <div className='Leaderboard-container-header'>
             <button onClick={() => {
               return (setButton1(true),
@@ -50,7 +50,47 @@ const Leaderboard = () => {
 
             
           </div>
-
+          <div className="Leaderboard-content">
+          <div className="Leaderboard-content-header">
+            <div>Username</div>
+            <div>Rank</div>
+            <div>Score</div>
+            </div>
+            <div className="content-inputs">
+              <div className="Leaderboard-content-inputs">
+              <div>@sidd</div>
+              <div>1</div>
+              <div>10</div>
+            </div>
+            <div className="Leaderboard-content-inputs">
+              <div>@sidd</div>
+              <div>1</div>
+              <div>10</div>
+            </div>
+            <div className="Leaderboard-content-inputs">
+              <div>@sidd</div>
+              <div>1</div>
+              <div>10</div>
+            </div>
+            
+            <div className="Leaderboard-content-inputs">
+            <div>@sidd</div>
+              <div>1</div>
+              <div>10</div>
+            </div>
+            <div className="Leaderboard-content-inputs">
+            <div>@sidd</div>
+              <div>1</div>
+              <div>10</div>
+            </div>
+            <div className="Leaderboard-content-inputs">
+            <div>@sidd</div>
+              <div>1</div>
+              <div>10</div>
+            </div>
+            </div>
+          </div>
+            
         </div>
       </div>
     </div>

@@ -3,10 +3,9 @@
     width: 22vw;
     color: gray;
     border-radius: 10px;
-    /* background-color: #826b54; */
     padding: 1rem;
     background: rgba( 255, 255, 255, 0.05 );
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.89);
     backdrop-filter: blur( 0px );
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 10px;

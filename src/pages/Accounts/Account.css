@@ -1,12 +1,14 @@
-.account-main{
+.account-main {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     margin-top: -0.9rem;
     /* background-color: aqua; */
+    color: rgb(76, 74, 74);
 }
-.account-container{
+
+.account-container {
     display: flex;
     flex-grow: 1;
     /* background-color: rgb(216, 177, 177); */
@@ -14,25 +16,34 @@
     width: 65rem;
     gap: 2rem;
 }
-.left-side{
+
+.left-side {
     display: flex;
     flex-direction: column;
     flex: 1;
     /* background-color: aqua; */
     gap: 1.6rem;
-    
+
 }
-.right-side{
+
+.right-side {
     flex: 2;
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    
+
 }
-.left-upper{
+
+.left-upper {
     flex: 2;
-    /* background-color: blanchedalmond; */
+    /* background-color: #9fd8ef; */
+    background: rgba(255, 255, 255, 0);
+    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(253, 253, 253, 0.18);
     height: 20rem;
     display: flex;
     flex-direction: column;
@@ -40,68 +51,84 @@
     justify-content: center;
     text-align: center;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
-.profile-img{
+
+.profile-img {
     border-radius: 50%;
-    background-color: rgb(33, 9, 131);
+    /* background-color: rgb(33, 9, 131); */
     height: 8rem;
     width: 8rem;
 }
-.profile-btn{
+
+.profile-btn {
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
     gap: 2rem;
 }
-.profile-info{
+
+.profile-info {
     margin-top: 0.5rem;
 }
-.follow{
+
+.follow {
     background-color: rgb(33, 9, 131);
     height: 2rem;
     width: 6rem;
     color: white;
     border-radius: 15px;
     transition: background-color 30ms ease-out 30ms
-    
 }
-.message{
+
+.message {
     background-color: rgb(255, 255, 255);
     height: 2rem;
     width: 6rem;
     color: rgb(33, 9, 131);
     border-radius: 15px;
     transition: background-color 30ms ease-out 30ms
-
 }
-.left-lower{
+
+.left-lower {
     display: flex;
     flex: 1;
-    /* background-color: rgb(104, 78, 78); */
+    background: rgba(255, 255, 255, 0);
+    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(253, 253, 253, 0.18);
     height: 15rem;
     border-radius: 20px;
     padding: 1rem;
     flex-direction: column;
     gap: 1.6rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.right-upper{
+
+.right-upper {
     height: 15rem;
     /* background-color: blue; */
     border-radius: 20px;
     padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(253, 253, 253, 0.18);
     /* font-size: large; */
 }
-.personal-info{
+
+.personal-info {
     margin-top: 0.7rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-size: large;
 }
-.right-lower{
+
+.right-lower {
     height: 20rem;
     /* background-color: brown; */
     flex: 1;
@@ -109,30 +136,45 @@
     gap: 2rem;
 
 }
-.right-lower-left{
+
+.right-lower-left {
     /* background-color: coral; */
     flex: 1;
-    border-radius:20px ;
+    border-radius: 20px;
     padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    /* border: 1px solid rgba(253, 253, 253, 0.18); */
 }
-.right-lower-left-header{
+
+.right-lower-left-header {
     font-size: 1.6rem;
 }
-.right-lower-left-container{
+
+.right-lower-left-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     font-size: 1.4rem;
     margin-top: 1.2rem;
 }
-.right-lower-right{
+
+.right-lower-right {
     flex: 1;
-    border-radius:20px ;
+    border-radius: 20px;
     padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(253, 253, 253, 0.18);
 }
-.right-lower-right-container{
+
+.right-lower-right-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -140,10 +182,12 @@
     margin-top: 1.2rem;
 
 }
-.right-lower-right-header{
+
+.right-lower-right-header {
     font-size: 1.6rem;
 
 }
+
 /* footer css */
 
 /* .left-edit-profile{
@@ -151,33 +195,37 @@
     border-radius: 20px;
     
 } */
-.left-edit-profile{
+.left-edit-profile {
     height: 2rem;
     width: 23rem;
     /* background-color: aquamarine;  */
     display: flex;
     justify-content: center;
-    
+    flex-grow: 1;
+
 }
-.edit-prof-btn{
+
+.edit-prof-btn {
     background-color: rgb(33, 9, 131);
     height: 2.2rem;
     width: 23rem;
     color: white;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: background-color 30ms ease-out 30ms
+    transition: background-color 30ms ease-out 30ms;
 }
-.right-footer-btn{
+
+.right-footer-btn {
     height: 2rem;
     width: 45rem;
     /* background-color: rgb(16, 68, 51); */
     display: flex;
     /* align-items: flex-end; */
     justify-content: end;
-    
+
 }
-.profile-resume-btn{
+
+.profile-resume-btn {
     background-color: rgb(33, 9, 131);
     height: 2.2rem;
     width: 45rem;
@@ -186,23 +234,27 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: background-color 30ms ease-out 30ms
 }
+
 /* .white-hover :hover{
     background-color: rgb(255, 255, 255);
     color: rgb(33, 9, 131);
 } */
-.follow:hover{
+.follow:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(33, 9, 131);
 }
-.profile-resume-btn:hover{
+
+.profile-resume-btn:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(33, 9, 131);
 }
-.edit-prof-btn:hover{
+
+.edit-prof-btn:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(33, 9, 131);
 }
-.message:hover{
+
+.message:hover {
     background-color: rgb(33, 9, 131);
     color: white;
 }
