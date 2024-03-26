@@ -12,6 +12,7 @@ import Settings from './pages/Settings/Settings';
 import Footer from './components/Footer/Footer';
 import NewsFeed from './pages/NewsFeed/NewsFeed';
 import EditProfile from './pages/BasicDetails/EditProfile';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   
@@ -22,7 +23,7 @@ function App() {
         <div className='app'>
           <Sidebar />
           <div className='main-content'>
-            <ContentTop />
+            {/* <ContentTop /> */}
 
             <Routes>
               <Route path='/home' element={<ContentMain />} >

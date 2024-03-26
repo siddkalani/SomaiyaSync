@@ -13,6 +13,7 @@
     justify-content: space-between;
     padding: 1rem;
     margin-top: -1.6rem;
+    color: aliceblue;
 }
 .Leaderboard-body{
     /* background-color:rgb(160, 157, 157); */
@@ -25,10 +26,13 @@
 .goal-img img{
   width: 5rem;
   height: 5rem;
-  /* background-color: aqua; */
+  color: aliceblue;
+  background-color: rgb(188, 201, 201);
+  border-radius: 20px;
+  margin-top: -1rem;
 }
 .Leaderboard-container-header{
-    /* background-color:rgb(160, 157, 157); */
+    background-color:rgb(160, 157, 157);
     height: 5rem;
     display: flex;
     gap: 1.7rem;
@@ -63,6 +67,7 @@
     padding: 1rem;
     /* background-color: rgb(52, 104, 104); */
     font-size: 1.5rem;
+    color: aliceblue;
 }
 .Leaderboard-content-inputs{
     background-color: rgb(226, 223, 219);

@@ -7,35 +7,42 @@ import Subscriptions from "../Subscriptions/Subscriptions";
 import Savings from "../Savings/Savings";
 import Loans from "../Loans/Loans";
 import Financial from "../Financial/Financial";
+import { useLocation } from "react-router-dom";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
+import ContentTop from "../ContentTop/ContentTop";
 
 const ContentMain = () => {
+  const locate = useLocation();
+  const topName = locate.state.topName
   return (
     
     <div className="main-content-holder">
+      <ContentTop 
+      topName={topName}/>
         <div className="content-grid-one">
-            <Cards />
+            <Cards 
+            name="Welcome to SomaiyaSync"/>
             <Transactions />
             <Report />
         </div>
         <div className="content-grid-two">
-            {/* <Budget /> */}
+            <Budget />
             <div className="grid-two-item">
               <div className="subgrid-two">
-                {/* <Subscriptions />
-                <Savings /> */}
+                <Subscriptions />
+                <Savings />
               </div>
             </div>
 
             <div className="grid-two-item">
               <div className="subgrid-two">
-                {/* <Loans />
-                <Financial /> */}
+                <Loans />
+                <Financial />
               </div>
             </div>
         </div>
