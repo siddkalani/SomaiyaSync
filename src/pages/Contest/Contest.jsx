@@ -5,9 +5,19 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { MdLeaderboard } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import ContestCard from './Contest-cards/ContestCard';
+import ContentTop from '../../components/ContentTop/ContentTop';
+import { useLocation } from 'react-router-dom';
 const Contest = () => {
+  const locate = useLocation();
+  const userName = locate.state.userName
   return (
+    <div className="">
+      <ContentTop 
+      userName="Contest"
+      />
+    
     <div className='main-contest'>
+      
       <div className="nav-bar">
         <div className="navbar-btn"><div className='symbol-game'><FaQuestionCircle /></div><h2>How to play</h2></div>
         <div className="navbar-btn"><div className='symbol-game'><MdLeaderboard /></div><h2>Leaderboard</h2></div>
@@ -69,6 +79,7 @@ const Contest = () => {
           </div>
         </div> */}
       </div>
+    </div>
     </div>
   )
 }

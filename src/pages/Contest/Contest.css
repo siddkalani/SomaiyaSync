@@ -26,6 +26,7 @@
     gap: 0.4rem;
     font-size: ;
     /* background-color: aqua; */
+    cursor: pointer;
 }
 .symbol-game{
     font-size: 2rem;

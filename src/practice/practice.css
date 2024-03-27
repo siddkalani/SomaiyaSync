@@ -1,0 +1,10 @@
+.practice{
+    background-color: aquamarine;
+    width: 9rem;
+}
+.active{
+    background-color: bisque;
+}
+.practice li{
+    cursor: pointer;
+}

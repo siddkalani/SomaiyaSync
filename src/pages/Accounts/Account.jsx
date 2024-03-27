@@ -1,9 +1,15 @@
 import React from 'react'
 import "./Account.css"
-import { NavLink, useNavigate, Link } from 'react-router-dom'
-const Account = () => {
+import { NavLink, useNavigate, Link,useLocation } from 'react-router-dom'
+import ContentTop from '../../components/ContentTop/ContentTop'
 
+const Account = () => {
+  const locate = useLocation();
+  const topName = locate.state.topName
   return (
+    <div>
+      <ContentTop
+      topName={topName}/>
     <div className='account-main'>
       <div className="account-container">
         <div className="left-side">
@@ -11,22 +17,22 @@ const Account = () => {
             <div className="profile-img"></div>
             <div className="profile-info">
               <h1>Siddharth kalani</h1>
-              <p>siddharth.kalani@somaiya.edu</p>
+              <p>Btech SY</p>
               <div className="profile-btn">
-                <button className='follow white-hover'>Follow</button>
-                <button className='message'>Message</button>
+                <button className='follow white-hover'>Resume</button>
+                <button className='message'>Share</button>
               </div>
             </div>
           </div>
           <div className="left-lower">
-            <div className='website'><p>Website:</p></div>
-            <div className='twitter'><p>twitter:</p></div>
-            <div className='facebook'><p>facebook:</p></div>
-            <div className='instagram'><p>instagram:</p></div>
+            <div className='website'><p>Github:</p></div>
+            <div className='twitter'><p>Twitter:</p></div>
+            <div className='facebook'><p>Linkedin:</p></div>
+            <div className='instagram'><p>Instagram:</p></div>
           </div>
           <div className="left-footer">
           <div className="left-edit-profile">
-          <button className="edit-prof-btn white-hover">Edit Profile</button>
+          {/* <button className="edit-prof-btn white-hover">Edit Profile</button> */}
         </div>
           </div>
         </div>
@@ -36,8 +42,8 @@ const Account = () => {
               <div className=''>Full Name:</div>
               <div className=''>Email:</div>
               <div className=''>Phone:</div>
-              <div className=''>Mobile:</div>
-              <div className=''>Address:</div>
+              <div className=''>College:</div>
+              <div className='bio'>Bio: lorem42</div>
             </div>
 
           </div>
@@ -65,16 +71,17 @@ const Account = () => {
           </div>
           <div className="right-footer">
             <div className="right-footer-btn">
-              <button className="profile-resume-btn white-hover">Edit Resume</button>
+              {/* <button className="profile-resume-btn white-hover">Edit Resume</button> */}
             </div>
           </div>
-        </div>
+        </div>  
       </div>
       {/* <div className="profile-footer">
         <div className="edit-profile">
           <button className="edit-prof-btn">Edit Profile</button>
         </div>
       </div> */}
+    </div>
     </div>
   )
 }

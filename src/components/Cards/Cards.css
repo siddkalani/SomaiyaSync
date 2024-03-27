@@ -2,14 +2,20 @@
 .grid-c1 {
   display: flex;
   flex-direction: column;
+  /* background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba(119, 120, 120, 0.37);
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 .grid-c1-content {
   background: linear-gradient(
       114.07deg,
-      rgba(66, 59, 55, 0.6) 3.49%,
-      rgba(66, 59, 55, 0) 34.7%
+      rgba(255, 253, 252, 0.6) 3.49%,
+      rgba(204, 192, 185, 0) 34.7%
     ),
-    linear-gradient(138.58deg, rgba(59, 43, 30, 0.37) 43.56%, #fea767 112.68%);
+    linear-gradient(138.58deg, rgba(236, 232, 229, 0.37) 43.56%, #fea767 112.68%);
   flex: 1;
   border-radius: 10px;
   padding: 16px;
@@ -17,7 +23,7 @@
 .grid-c1-content .lg-value {
   margin-top: 8px;
   margin-bottom: 16px;
-  color: #c7c4c6;
+  color: #fffeff;
 }
 .grid-c1-content .expiry-text {
   margin-bottom: 6px;

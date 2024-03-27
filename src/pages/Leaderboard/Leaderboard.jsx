@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import goal from "./noun-soccer-goal.png"
 import "./Leaderboard.css"
-
-
+import ContentTop from '../../components/ContentTop/ContentTop'
+import { useLocation } from 'react-router-dom'
 const Leaderboard = () => {
+  const locate = useLocation();
+  const topName = locate.state.topName
 
   const [button1
     , setButton1
@@ -19,6 +21,9 @@ const Leaderboard = () => {
   ] = useState(false)
 
   return (
+    <div className="">
+      <ContentTop
+      topName={topName}/>
     <div className='Leaderboard-container'>
       <div className="Leaderboard-main">
         <div className="Leaderboard-header">
@@ -93,6 +98,7 @@ const Leaderboard = () => {
             
         </div>
       </div>
+    </div>
     </div>
   )
 }

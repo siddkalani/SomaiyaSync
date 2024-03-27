@@ -73,7 +73,7 @@
 }
 
 .follow {
-    background-color: rgb(33, 9, 131);
+    background-color: rgb(255, 72, 0);
     height: 2rem;
     width: 6rem;
     color: white;
@@ -108,6 +108,7 @@
 
 .right-upper {
     height: 15rem;
+    height: max-content;
     /* background-color: blue; */
     border-radius: 20px;
     padding: 1rem;
@@ -166,14 +167,16 @@
     flex: 1;
     border-radius: 20px;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.05);
     box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
     border: 1px solid rgba(253, 253, 253, 0.18);
 }
-
+.bio{
+   
+}
 .right-lower-right-container {
     display: flex;
     flex-direction: column;
@@ -197,7 +200,7 @@
 } */
 .left-edit-profile {
     height: 2rem;
-    width: 23rem;
+    /* width: 23rem; */
     /* background-color: aquamarine;  */
     display: flex;
     justify-content: center;
@@ -206,33 +209,37 @@
 }
 
 .edit-prof-btn {
-    background-color: rgb(33, 9, 131);
+    background-color: rgb(255, 72, 0);
     height: 2.2rem;
     width: 23rem;
     color: white;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: background-color 30ms ease-out 30ms;
+    flex-grow: 1;
 }
 
 .right-footer-btn {
     height: 2rem;
-    width: 45rem;
     /* background-color: rgb(16, 68, 51); */
     display: flex;
     /* align-items: flex-end; */
     justify-content: end;
+    
 
 }
 
 .profile-resume-btn {
-    background-color: rgb(33, 9, 131);
+    background-color: rgb(255, 72, 0);
     height: 2.2rem;
-    width: 45rem;
+    width: 20rem;
     color: white;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: background-color 30ms ease-out 30ms
+    transition: background-color 30ms ease-out 30ms;
+    flex-grow: 1;
+
+    
 }
 
 /* .white-hover :hover{
@@ -252,9 +259,10 @@
 .edit-prof-btn:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(33, 9, 131);
+    
 }
 
 .message:hover {
-    background-color: rgb(33, 9, 131);
+    background-color: rgb(255, 72, 0);
     color: white;
 }

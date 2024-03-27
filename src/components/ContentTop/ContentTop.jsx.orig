@@ -9,11 +9,17 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import ReactSearchBox from "react-search-box";
 import { PiListFill } from "react-icons/pi";
+<<<<<<< HEAD
+import { useLocation } from "react-router-dom";
+=======
 import axios from "axios";
+>>>>>>> origin/main
 
 const ContentTop = ({topName}) => {
   
   const { toggleSidebar } = useContext(SidebarContext);
+<<<<<<< HEAD
+=======
 
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
@@ -58,6 +64,7 @@ const ContentTop = ({topName}) => {
         console.error("Error fetching data:", error);
       }
     };
+>>>>>>> origin/main
 
     fetchData();
   }, [search]);
@@ -79,9 +86,12 @@ const ContentTop = ({topName}) => {
           <input
             type="search"
             placeholder="Search for comaptible user"
+<<<<<<< HEAD
+=======
             onChange={handleChange}
             value={search}
             onKeyDown={handleKeyDown}
+>>>>>>> origin/main
           />
           {/* <div className="search_icon">
             {search === " " ? (
