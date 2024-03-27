@@ -18,8 +18,6 @@ import axios from "axios";
 const ContentTop = ({topName}) => {
   
   const { toggleSidebar } = useContext(SidebarContext);
-<<<<<<< HEAD
-=======
 
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
@@ -64,7 +62,6 @@ const ContentTop = ({topName}) => {
         console.error("Error fetching data:", error);
       }
     };
->>>>>>> origin/main
 
     fetchData();
   }, [search]);
