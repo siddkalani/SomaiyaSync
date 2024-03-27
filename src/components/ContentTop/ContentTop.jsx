@@ -9,11 +9,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import ReactSearchBox from "react-search-box";
 import { PiListFill } from "react-icons/pi";
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-=======
 import axios from "axios";
->>>>>>> origin/main
 
 const ContentTop = ({topName}) => {
   
@@ -83,12 +79,9 @@ const ContentTop = ({topName}) => {
           <input
             type="search"
             placeholder="Search for comaptible user"
-<<<<<<< HEAD
-=======
             onChange={handleChange}
             value={search}
             onKeyDown={handleKeyDown}
->>>>>>> origin/main
           />
           {/* <div className="search_icon">
             {search === " " ? (
