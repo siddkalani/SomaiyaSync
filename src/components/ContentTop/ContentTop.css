@@ -50,6 +50,7 @@ input[type="search"] {
   outline: none;
   border: none;
   border-radius: 20px;
+  overflow: hidden;
 }
 .searchResult {
   background-color: rgb(233, 229, 229);
@@ -58,6 +59,15 @@ input[type="search"] {
   margin-top: 12px;
   position: absolute;
   top: 70px;
+  background-color: aquamarine;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  overflow: hidden;
+}
+.active-searchbar{
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px
+
 }
 .searchResult::-webkit-scrollbar {
   display: none;
@@ -69,6 +79,8 @@ input[type="search"] {
   font-size: 18px;
   display: block;
   color: black;
+  background-color: rgb(74, 49, 19);
+  overflow: hidden;
 }
 /* controls
   the
@@ -80,16 +92,17 @@ button */ [type="search"]::-webkit-search-cancel-button {
   background-size: 15px 15px;
 }
 
-.search_suggestion,
-.search_loading {
+.search_suggestion {
   color: black;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  background-color: aqua;
+  border-radius: 2rem;
 }
 .search_suggestion:hover {
-  background:brown;
+  background: brown;
 }
 
 .notification-btn {
