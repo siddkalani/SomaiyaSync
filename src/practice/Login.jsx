@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import "./practice.css"
+import "./login.css"
 import boy from "./boy.svg"
+import Register from './Register'
 
-const App = () => {
+const Login = () => {
 
     return (
         <div className="login-container">
@@ -51,7 +52,7 @@ const App = () => {
     )
 }
 
-export default App;
+export default Login;
 
 
 
