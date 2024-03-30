@@ -30,11 +30,6 @@ const Account = () => {
             <div className='facebook'><p>Linkedin:</p></div>
             <div className='instagram'><p>Instagram:</p></div>
           </div>
-          <div className="left-footer">
-          <div className="left-edit-profile">
-          {/* <button className="edit-prof-btn white-hover">Edit Profile</button> */}
-        </div>
-          </div>
         </div>
         <div className="right-side">
           <div className="right-upper">
@@ -47,7 +42,7 @@ const Account = () => {
             </div>
 
           </div>
-          <div className="right-lower">
+          {/* <div className="right-lower">
             <div className="right-lower-left">
               <div className='right-lower-left-header'>Leaderboard Highscore</div>
               <div className='right-lower-left-container'>
@@ -68,19 +63,9 @@ const Account = () => {
                 <h5>Css relay:</h5>
               </div>
             </div>
-          </div>
-          <div className="right-footer">
-            <div className="right-footer-btn">
-              {/* <button className="profile-resume-btn white-hover">Edit Resume</button> */}
-            </div>
-          </div>
+          </div> */}
         </div>  
       </div>
-      {/* <div className="profile-footer">
-        <div className="edit-profile">
-          <button className="edit-prof-btn">Edit Profile</button>
-        </div>
-      </div> */}
     </div>
     </div>
   )

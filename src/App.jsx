@@ -15,7 +15,7 @@ import EditProfile from './pages/BasicDetails/EditProfile';
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  
+
   return (
 
     <div className='whole-main'>
@@ -23,28 +23,30 @@ function App() {
         <div className='app'>
           <Sidebar />
           <div className='main-content'>
-            {/* <ContentTop /> */}
 
-            <Routes>
+             <Routes>
+              {/* <Route index element={<ContentMain />}>
+
+              </Route>  */}
               <Route path='/home' element={<ContentMain />} >
 
               </Route>
-              <Route path='/contest' element={<Contest/>} >
+              <Route path='/contest' element={<Contest />} >
 
               </Route>
-              <Route path='/inbox' element={<Inbox/>} >
+              <Route path='/inbox' element={<Inbox />} >
 
               </Route>
-              <Route path='/account' element={<Account/>} >
+              <Route path='/account' element={<Account />} >
 
               </Route>
-              <Route path='/leaderboard' element={<Leaderboard/>} >
+              <Route path='/leaderboard' element={<Leaderboard />} >
 
               </Route>
-              <Route path='/settings' element={<Settings/>} >
+              <Route path='/settings' element={<Settings />} >
 
               </Route>
-              <Route path='/NewsFeed' element={<NewsFeed/>} >
+              <Route path='/NewsFeed' element={<NewsFeed />} >
 
               </Route>
               {/* <Route path='/EditProfile' element={<EditProfile/>} >
@@ -52,12 +54,9 @@ function App() {
               </Route> */}
 
             </Routes>
-           {/* <div className="footer">
-            <Footer />
-            </div> */}
           </div>
         </div>
-        </BrowserRouter>
+      </BrowserRouter>
 
     </div>
   )

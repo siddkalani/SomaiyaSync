@@ -6,6 +6,9 @@ import { useContext } from 'react';
 import { SidebarContext } from '../../context/sidebarContext';
 import somaiya from '../../assets/images/somaiya.jpg'
 import { Link } from 'react-router-dom';
+import { TbLogout } from "react-icons/tb";
+import { PiX } from 'react-icons/pi';
+
 
 const Sidebar = () => {
   const [activeLinkIdx, setActiveLinkIdx] = useState(null);
@@ -48,9 +51,13 @@ const Sidebar = () => {
                       <span className="nav-link-text">{ navigationLink.title }</span>
                   </Link> 
                 </li>
+                
               ))
+              
             }
+            
           </ul>
+          <div className='sidebar-end nav-item nav-link nav-link-text'><TbLogout size={30}/>logout</div>
       </nav>
     </div>
   )

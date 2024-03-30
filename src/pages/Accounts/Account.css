@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     margin-top: -0.9rem;
-    /* background-color: aqua; */
+    /* background-color: rgb(172, 200, 200); */
     color: rgb(76, 74, 74);
 }
 
@@ -20,7 +20,8 @@
 .left-side {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1.1;
+    /* height: 40rem; */
     /* background-color: aqua; */
     gap: 1.6rem;
 
@@ -44,7 +45,7 @@
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
     border: 1px solid rgba(253, 253, 253, 0.18);
-    height: 20rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,13 +94,16 @@
 .left-lower {
     display: flex;
     flex: 1;
+    height: 21rem;
+   
     background: rgba(255, 255, 255, 0);
     box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
     border: 1px solid rgba(253, 253, 253, 0.18);
-    height: 15rem;
+    
+    
     border-radius: 20px;
     padding: 1rem;
     flex-direction: column;
@@ -107,8 +111,7 @@
 }
 
 .right-upper {
-    height: 15rem;
-    height: max-content;
+    height: 40rem;
     /* background-color: blue; */
     border-radius: 20px;
     padding: 1rem;
@@ -209,7 +212,7 @@
 }
 
 .edit-prof-btn {
-    background-color: rgb(255, 72, 0);
+    background-color: rgb(216, 107, 23);
     height: 2.2rem;
     width: 23rem;
     color: white;
@@ -230,7 +233,7 @@
 }
 
 .profile-resume-btn {
-    background-color: rgb(255, 72, 0);
+    background-color: rgb(216, 107, 23);
     height: 2.2rem;
     width: 20rem;
     color: white;
