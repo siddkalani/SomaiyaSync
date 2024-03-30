@@ -7,6 +7,6 @@ import { SidebarProvider } from './context/sidebarContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <SidebarProvider>
-    <Register />
+    <Login />
   </SidebarProvider>
 )
