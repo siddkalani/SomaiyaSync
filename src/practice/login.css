@@ -56,6 +56,10 @@ background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
     color:#fe6c00;
     font-family: sans-serif;
 }
+
+.form-header-color{
+    color: whitesmoke;
+}
 .form-inputs{
     display: flex;
     flex-direction: column;
@@ -70,8 +74,8 @@ border-radius: 6px;
 line-height: 1.5;
 padding: 5px 10px;
 transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-border: 2px solid #dee1e2;
-color: rgb(14, 14, 16);
+border: 2px solid #e2dfde;
+color: rgb(16, 15, 14);
 background: #dee1e2;
 display: block;
 height: 2.4rem;
@@ -107,7 +111,7 @@ width: 21.5rem;
 
 .login-form{
     background: rgba( 0, 0, 0, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur( 7px );
     -webkit-backdrop-filter: blur( 7px );
     border-radius: 10px;
@@ -123,8 +127,14 @@ width: 21.5rem;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    height: 18rem;
 }
-
+.form-header{
+    margin-top: 1rem;
+}
+.login-btn{
+    margin-bottom: 1rem;
+}
 .login-content{
     position: absolute;
     top: 17rem;
@@ -142,4 +152,46 @@ width: 21.5rem;
 .orange-content{
     color:#fe6c00;
     text-decoration: none;
+}
+
+
+
+
+
+
+.sign-in-btn {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  width: 14rem;
+}
+
+.sign-in-btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sign-in-btn:active {
+  transform: scale(0.95);
+}
+
+.email-error{
+    color: whitesmoke;
 }
