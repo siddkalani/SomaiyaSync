@@ -7,6 +7,14 @@ const Login = () => {
     
     const [email , setEmail] = useState("")
     const [error  , setError] = useState('')
+    const [pass, setPass] = useState("")
+    const [message, setMessage] = useState("")
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+
+    const checkPass = (e) =>{
+        setPass(e.target.value)
+        
+    }
 
     const checkEmail = (e) =>{
         setEmail(e.target.value)
@@ -29,7 +37,22 @@ const Login = () => {
          else{
             setError("")
         }
+
+        if(passwordRegex.test(pass)){
+            setMessage("valid password")
+        }
+        else if(pass === "") {
+            setMessage("Please enter password")
+        }
+        else if(!passwordRegex.test(pass)){
+            setMessage("Please enter a valid password()")
+        } 
+         else{
+            setMessage("")
+        }
+        
     }
+    
     return (
         <div className="login-container">
             <div className="login-main">
@@ -61,8 +84,11 @@ const Login = () => {
                             <input
                                 type='password'
                                 placeholder='Password'
+                                value={pass}
+                                onChange={checkPass}
                                 className='inputbox-pass'
                             />
+                            <p className='email-error'>{message}</p>
                         </div>
 
 
