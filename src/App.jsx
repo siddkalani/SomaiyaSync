@@ -13,52 +13,56 @@ import Footer from './components/Footer/Footer';
 import NewsFeed from './pages/NewsFeed/NewsFeed';
 import EditProfile from './pages/BasicDetails/EditProfile';
 import { useLocation } from 'react-router-dom';
+import Login from './practice/Login';
+import Register from './practice/Register';
 
 function App() {
 
   return (
 
-    <div className='whole-main'>
+    
       <BrowserRouter>
-        <div className='app'>
-          <Sidebar />
-          <div className='main-content'>
-
-             <Routes>
-              {/* <Route index element={<ContentMain />}>
+        <Routes>
+          {/* <Route index element={<ContentMain />}>
 
               </Route>  */}
-              <Route path='/home' element={<ContentMain />} >
+          <Route path='/' element={<ContentMain />} >
 
-              </Route>
-              <Route path='/contest' element={<Contest />} >
+          </Route>
+          <Route path='/home' element={<ContentMain />} >
 
-              </Route>
-              <Route path='/inbox' element={<Inbox />} >
+          </Route>
+          <Route path='/contest' element={<Contest />} >
 
-              </Route>
-              <Route path='/account' element={<Account />} >
+          </Route>
+          <Route path='/inbox' element={<Inbox />} >
 
-              </Route>
-              <Route path='/leaderboard' element={<Leaderboard />} >
+          </Route>
+          <Route path='/account' element={<Account />} >
 
-              </Route>
-              <Route path='/settings' element={<Settings />} >
+          </Route>
+          <Route path='/leaderboard' element={<Leaderboard />} >
 
-              </Route>
-              <Route path='/NewsFeed' element={<NewsFeed />} >
+          </Route>
+          <Route path='/settings' element={<Settings />} >
 
-              </Route>
-              {/* <Route path='/EditProfile' element={<EditProfile/>} >
+          </Route>
+          <Route path='/NewsFeed' element={<NewsFeed />} >
+
+          </Route>
+          <Route path='/login' element={<Login />} >
+
+          </Route>
+          <Route path='/register' element={<Register />} >
+
+          </Route>
+          {/* <Route path='/EditProfile' element={<EditProfile/>} >
 
               </Route> */}
 
-            </Routes>
-          </div>
-        </div>
+        </Routes>
       </BrowserRouter>
-
-    </div>
+    
   )
 }
 

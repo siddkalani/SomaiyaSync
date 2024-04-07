@@ -15,15 +15,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ContentTop from "../ContentTop/ContentTop";
+import Sidebar from "../../layout/Sidebar/Sidebar";
 
 const ContentMain = () => {
-  const locate = useLocation();
-  const topName = locate.state.topName
+  // const locate = useLocation();
+  // const topName = locate.state.topName
+
+  // if(topName == null){
+  //   topName = 
+  // }
   return (
-    
+    <div className='whole-main'>
+    <div className='app'>
+    <Sidebar />
+    <div className='main-content'>
     <div className="main-content-holder">
-      <ContentTop 
-      topName={topName}/>
+      <ContentTop />
         <div className="content-grid-one">
             <Cards 
             name="Welcome to SomaiyaSync"/>
@@ -46,8 +53,10 @@ const ContentMain = () => {
               </div>
             </div>
         </div>
-    </div>
-    
+        </div>
+        </div>
+        </div>
+        </div>
   )
 }
 
