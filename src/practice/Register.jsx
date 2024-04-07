@@ -85,7 +85,7 @@ const Register = () => {
         }
       );
       console.log("User registered:", response.data);
-      setMsg(res.message);
+      // setMsg(res.message);
       window.alert(
         "Registration successful! Check your email for verification."
       );
@@ -197,8 +197,8 @@ const Register = () => {
                   />
                 </div>
               </div>
-              {error && <div className="error_msg">{error}</div>}
-              {msg && <div className="success_msg">{msg}</div>}
+              {/* {error && <div className="error_msg">{error}</div>}
+              {msg && <div className="success_msg">{msg}</div>} */}
               <div className="register-btn">
                 <button type="submit">Register</button>
               </div>

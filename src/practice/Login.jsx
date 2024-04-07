@@ -2,14 +2,56 @@ import React, { useState } from "react";
 import "./login.css";
 import boy from "./boy.svg";
 import Register from "./Register";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+// const Login = () => {
+//   const [email, setEmail] = useState("");
+//   const [error, setError] = useState("");
+//   const [pass, setPass] = useState("");
+//   const [message, setMessage] = useState("");
+//   const passwordRegex =
+//     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+
+//   const checkPass = (e) => {
+//     setPass(e.target.value);
+//   };
+
+//   const checkEmail = (e) => {
+//     setEmail(e.target.value);
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
+//     if (regex.test(email)) {
+//       // setError("valid email address");
+//     } else if (email === "") {
+//       setError("Please enter email");
+//     } else if (!regex.test(email)) {
+//       setError("Please enter a valid email address");
+//     } else {
+//       setError("");
+//     }
+
+//     if (passwordRegex.test(pass)) {
+//       // setMessage("valid password");
+//     } else if (pass === "") {
+//       setMessage("Please enter password");
+//     } else if (!passwordRegex.test(pass)) {
+//       setMessage("Please enter a valid password");
+//     } else {
+//       setMessage("");
+//     }
+//   };
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
-  const passwordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+  // const navigate = useNavigate();
 
   const checkPass = (e) => {
     setPass(e.target.value);
@@ -19,28 +61,39 @@ const Login = () => {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
-    if (regex.test(email)) {
-      setError("valid email address");
-    } else if (email === "") {
-      setError("Please enter email");
-    } else if (!regex.test(email)) {
+    if (!regex.test(email)) {
       setError("Please enter a valid email address");
-    } else {
-      setError("");
+      return;
     }
 
-    if (passwordRegex.test(pass)) {
-      setMessage("valid password");
-    } else if (pass === "") {
-      setMessage("Please enter password");
-    } else if (!passwordRegex.test(pass)) {
-      setMessage("Please enter a valid password()");
-    } else {
-      setMessage("");
+    try {
+      const response = await axios.post(
+        "http://localhost:4200/api/users/login",
+        { email, password: pass }
+      );
+
+      if (response.status === 200 && response.data.accessToken) {
+        if (response.data.user.is_verified === 1) {
+          // Redirect to home page if user is verified
+          localStorage.setItem("accessToken", response.data.accessToken);
+          // navigate("/home");
+        } else if (response.data.user && response.data.user.is_verified === 0) {
+          // If user is not verified
+          setError("Please verify your email to login.");
+        } else {
+          // Handle other cases where user is not found or is_verified is not provided
+          setError("User not found or verification status not provided.");
+        }
+      } else {
+        setError("Invalid email or password");
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+      setError("Error logging in. Please try again later.");
     }
   };
 
@@ -102,9 +155,12 @@ const Login = () => {
           <div className="login-content-main">
             <p>
               if you don't have an account <br /> You can{" "}
-              <a href="#" className="orange-content">
+              {/* <Link to="/register"> */}
+              {/* {" "} */}
+              <a href="" className="orange-content">
                 Register here
               </a>
+              {/* </Link> */}
             </p>
           </div>
         </div>

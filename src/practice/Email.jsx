@@ -1,38 +1,93 @@
-import axios from "axios";
-import "./email.css";
+// import axios from "axios";
+// import "./email.css";
+// import { Fragment, useEffect, useState } from "react";
+// import { useParams, useNavigate } from "react-router-dom";
+
+// const EmailVerify = () => {
+//   const [validUrl, setValidUrl] = useState(false);
+//   const { id } = useParams();
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     const verifyEmailUrl = async () => {
+//       try {
+//         const url = `http://localhost:4200/api/users/verify?id=${id}`;
+//         const { data } = await axios.get(url);
+//         console.log(data);
+//         setValidUrl(true);
+//         navigate("/email");
+//       } catch (error) {
+//         console.log(error);
+//         setValidUrl(false);
+//       }
+//     };
+//     verifyEmailUrl();
+//   }, [id, navigate]);
+//   return (
+//     <Fragment>
+//       {validUrl ? (
+//         <div className="container">
+//           <h1>You are verified</h1>
+//           <Link to="/login">
+//             <button>Login</button>
+//           </Link>
+//         </div>
+//       ) : (
+//         <h1>404 Page not found</h1>
+//       )}
+//     </Fragment>
+//   );
+// };
+// export default EmailVerify;
+
 import { Fragment, useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const EmailVerify = () => {
-  const [validUrl, setValidUrl] = useState(false);
-  const param = useParams();
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const verifyEmailUrl = async () => {
+    const verifyEmail = async () => {
       try {
-        const url = `http://localhost:4200/api/users/verify/${param.id}`;
-        const { data } = await axios.get(url);
-        console.log(data);
-        setValidUrl(true);
+        const response = await axios.get(
+          `http://localhost:4200/api/users/verify?id=${id}`
+        );
+        if (response.status === 200 && response.data.is_verified === 1) {
+          // Check if response status is 200
+          setLoading(false);
+          navigate("/email");
+        } else {
+          setLoading(false);
+          console.log("User is not verified.");
+        }
       } catch (error) {
-        console.log(error);
-        setValidUrl(false);
+        console.error("Error verifying email:", error);
+        setLoading(false);
+        // Handle error, maybe show an error message to the user
       }
     };
-    verifyEmailUrl();
-  }, [param]);
+
+    verifyEmail();
+  }, [id, navigate]);
+
   return (
     <Fragment>
-      {validUrl ? (
+      {loading ? (
         <div className="container">
-          <h1>You are verified</h1>
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
+          <h1>Email Verification</h1>
+          <p>Verifying your email...</p>
         </div>
       ) : (
-        <h1>404 Page not found</h1>
+        <div className="container">
+          <h1>Email Verification</h1>
+          <p>Verification complete. Redirecting...</p>
+        </div>
       )}
     </Fragment>
   );
 };
+
 export default EmailVerify;

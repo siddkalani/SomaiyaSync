@@ -132,3 +132,7 @@ background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
   border-radius: 5px;
   text-align: center;
 }
+.register-btn {
+  background-color: wheat;
+  margin: 20px;
+}

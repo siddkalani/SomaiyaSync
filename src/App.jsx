@@ -30,10 +30,7 @@ function App() {
               </Route>  */}
               <Route path="/register" element={<Register />}></Route>
               <Route path="/login" element={<Login />}></Route>
-              <Route
-                path="/api/users/verify/:id"
-                element={<EmailVerify />}
-              ></Route>
+              <Route path="/email" element={<EmailVerify />}></Route>
 
               <Route path="/home" element={<ContentMain />}></Route>
               <Route path="/contest" element={<Contest />}></Route>
