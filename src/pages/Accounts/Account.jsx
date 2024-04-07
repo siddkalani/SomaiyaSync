@@ -2,14 +2,17 @@ import React from 'react'
 import "./Account.css"
 import { NavLink, useNavigate, Link,useLocation } from 'react-router-dom'
 import ContentTop from '../../components/ContentTop/ContentTop'
+import Sidebar from '../../layout/Sidebar/Sidebar'
 
 const Account = () => {
-  const locate = useLocation();
-  const topName = locate.state.topName
+  // const locate = useLocation();
+  // const topName = locate.state.topName
   return (
-    <div>
-      <ContentTop
-      topName={topName}/>
+    <div className='whole-main'>
+    <div className='app'>
+    <Sidebar />
+    <div className='main-content'>
+      <ContentTop/>
     <div className='account-main'>
       <div className="account-container">
         <div className="left-side">
@@ -66,6 +69,8 @@ const Account = () => {
           </div> */}
         </div>  
       </div>
+    </div>
+    </div>
     </div>
     </div>
   )
