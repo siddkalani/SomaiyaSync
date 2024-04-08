@@ -43,7 +43,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-
+import "./email.css";
 const EmailVerify = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -75,12 +75,14 @@ const EmailVerify = () => {
 
   return (
     <Fragment>
-      <div>
-        <h1>Email verified</h1>
-        <Link to="/login">
-          {" "}
-          <button>Login</button>
-        </Link>
+      <div className="email-container">
+        <div className="email-main">
+          <h1>Email verified</h1>
+          <Link to="/login">
+            {" "}
+            <button>Login</button>
+          </Link>
+        </div>
       </div>
     </Fragment>
   );

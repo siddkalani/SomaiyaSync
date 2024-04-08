@@ -6,9 +6,10 @@ import App from "./App.jsx";
 import Account from "./pages/Accounts/Account.jsx";
 
 import { SidebarProvider } from "./context/sidebarContext.jsx";
+import EmailVerify from "./practice/Email.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <SidebarProvider>
-    <App/>
+    <EmailVerify />
   </SidebarProvider>
 );
