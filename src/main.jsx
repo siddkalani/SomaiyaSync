@@ -10,6 +10,6 @@ import EmailVerify from "./practice/Email.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <SidebarProvider>
-    <EmailVerify />
+    <App />
   </SidebarProvider>
 );
