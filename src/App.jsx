@@ -15,6 +15,7 @@ import EditProfile from "./pages/BasicDetails/EditProfile";
 import { useLocation } from "react-router-dom";
 import Login from "./practice/Login";
 import Register from "./practice/Register";
+import EmailVerify from "./practice/Email";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
 
               </Route>  */}
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/email" element={<EmailVerify />}></Route>
 

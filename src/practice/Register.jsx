@@ -68,10 +68,6 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [msg, setMsg] = useState("");
-  const [error, setError] = useState("");
-  // const [registrationSuccess, setRegistrationSuccess] = useState(false);
-  // const [verificationSuccess, setVerificationSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,64 +89,12 @@ const Register = () => {
       // setVerificationSent(true);
     } catch (error) {
       // console.error("Registration failed:", error.response.data);
-      // window.alert(
-      //   "Already registered with this email! Check your email for verification if not verified yet!"
-      // );
+      window.alert(
+        "Already registered with this email! Check your email for verification if not verified yet!"
+      );
       // setErrorMessage("Registration failed! Check your email id");
     }
   };
-
-  // const sendVerificationEmail = async (userId) => {
-  //   try {
-  //     const response = await axios.get(
-  //       `http://localhost:4200/api/users/verify?id=${userId}`
-  //       // {
-  //       //   username: username,
-  //       //   email: email,
-  //       //   password: password,
-  //       // }
-  //     );
-  //     console.log("Verification email sent:", response.data);
-  //     window.alert("You are verified");
-  //     // handleVerificationSuccess(); // Call the function to handle verification success
-  //   } catch (error) {
-  //     console.error("Failed to send verification email:", error.response.data);
-  //     window.alert("Failed to verify email");
-  //   }
-  // };
-  // const sendVerificationEmail = async (userId) => {
-  //   try {
-  //     // Polling mechanism to check verification status
-  //     const intervalId = setInterval(async () => {
-  //       try {
-  //         const verificationResponse = await axios.get(
-  //           `http://localhost:4200/api/users/verify?id=${userId}`
-  //         );
-  //         if (verificationResponse.data.is_verified === 1) {
-  //           clearInterval(intervalId); // Stop polling if verification is confirmed
-  //           window.alert("You are verified");
-  //           // handleVerificationSuccess(); // Call the function to handle verification success
-  //         }
-  //       } catch (error) {
-  //         console.error("Failed to verify email:", error.response.data);
-  //         clearInterval(intervalId); // Stop polling if an error occurs
-  //         window.alert("Failed to verify email");
-  //       }
-  //     }, 5000); // Poll every 5 seconds (adjust interval as needed)
-  //   } catch (error) {
-  //     console.error(
-  //       "Failed to start verification process:",
-  //       error.response.data
-  //     );
-  //     window.alert("Failed to start verification process");
-  //   }
-  // };
-
-  // Function to handle verification success
-  // const handleVerificationSuccess = () => {
-  //   setVerificationSuccess(true);
-  //   window.alert("You are a verified user!");
-  // };
 
   return (
     <div>
@@ -197,8 +141,7 @@ const Register = () => {
                   />
                 </div>
               </div>
-              {/* {error && <div className="error_msg">{error}</div>}
-              {msg && <div className="success_msg">{msg}</div>} */}
+
               <div className="register-btn">
                 <button type="submit">Register</button>
               </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./login.css";
 import boy from "./boy.svg";
 import Register from "./Register";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 // const Login = () => {
@@ -51,7 +51,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const checkPass = (e) => {
     setPass(e.target.value);
@@ -76,24 +76,40 @@ const Login = () => {
         { email, password: pass }
       );
 
-      if (response.status === 200 && response.data.accessToken) {
-        if (response.data.user.is_verified === 1) {
-          // Redirect to home page if user is verified
-          localStorage.setItem("accessToken", response.data.accessToken);
-          // navigate("/home");
-        } else if (response.data.user && response.data.user.is_verified === 0) {
-          // If user is not verified
-          setError("Please verify your email to login.");
-        } else {
-          // Handle other cases where user is not found or is_verified is not provided
-          setError("User not found or verification status not provided.");
-        }
+      // if (response.status === 200 && response.data.accessToken) {
+      //   if (response.data.user.is_verified === 1) {
+      //     // Redirect to home page if user is verified
+      //     localStorage.setItem("accessToken", response.data.accessToken);
+      //     navigate("/home");
+      //   } else {
+      //     // If user is not verified
+      //     setError("Please verify your email to login.");
+      //   }
+      // } else if (response.status === 401) {
+      //   // Unauthorized - Invalid email or password
+      //   setError("Invalid email or password");
+      // } else {
+      //   setError("Unexpected error occured!");
+      // }
+      if (
+        response.status === 200 &&
+        response.data.accessToken &&
+        response.data.user.is_verified === 1
+      ) {
+        localStorage.setItem("accessToken", response.data.accessToken);
+        navigate("/home");
+      } else if (
+        response.status === 200 &&
+        response.data.accessToken &&
+        response.data.user.is_verified === 0
+      ) {
+        setError("Please verify your email to login.");
       } else {
-        setError("Invalid email or password");
+        setError("User not registered");
       }
     } catch (error) {
       console.error("Error logging in:", error);
-      setError("Error logging in. Please try again later.");
+      setError("Invalid email or password");
     }
   };
 
@@ -155,12 +171,11 @@ const Login = () => {
           <div className="login-content-main">
             <p>
               if you don't have an account <br /> You can{" "}
-              {/* <Link to="/register"> */}
-              {/* {" "} */}
-              <a href="" className="orange-content">
-                Register here
-              </a>
-              {/* </Link> */}
+              <Link to="/register">
+                <a href="" className="orange-content">
+                  Register here
+                </a>
+              </Link>
             </p>
           </div>
         </div>

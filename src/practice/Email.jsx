@@ -41,7 +41,7 @@
 // export default EmailVerify;
 
 import { Fragment, useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const EmailVerify = () => {
@@ -75,17 +75,13 @@ const EmailVerify = () => {
 
   return (
     <Fragment>
-      {loading ? (
-        <div className="container">
-          <h1>Email Verification</h1>
-          <p>Verifying your email...</p>
-        </div>
-      ) : (
-        <div className="container">
-          <h1>Email Verification</h1>
-          <p>Verification complete. Redirecting...</p>
-        </div>
-      )}
+      <div>
+        <h1>Email verified</h1>
+        <Link to="/login">
+          {" "}
+          <button>Login</button>
+        </Link>
+      </div>
     </Fragment>
   );
 };
