@@ -22,6 +22,7 @@ const Leaderboard = () => {
   ] = useState(false)
 
   return (
+    <div className="">
     <div className='whole-main'>
     <div className='app'>
     <Sidebar />
@@ -101,6 +102,7 @@ const Leaderboard = () => {
             
         </div>
       </div>
+    </div>
     </div>
     </div>
     </div>

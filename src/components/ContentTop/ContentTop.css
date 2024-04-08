@@ -16,6 +16,8 @@
 
 .content-top-left {
   display: flex;
+  /* background-color: aqua; */
+  width: 10rem;
   gap: 1rem;
 }
 

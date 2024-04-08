@@ -42,8 +42,7 @@ const Sidebar = () => {
               navigationLinks.map((navigationLink) => (
                 <li  onClick={() => handleClick(navigationLink.id)}  className="nav-item" key = { navigationLink.id }>
                  <Link  state={{
-                  topName:"home",
-                  userName:"Contest"
+                  topName:navigationLink.title,
 
 
                  }} to ={`/${navigationLink.title}`} className={ `nav-link ${ navigationLink.id === activeLinkIdx ? 'active' : null }` }>

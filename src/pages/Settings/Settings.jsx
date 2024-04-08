@@ -5,15 +5,18 @@ import Sidebar from '../../layout/Sidebar/Sidebar'
   
 
 const Setting = () => {
-  // const locate = useLocation();
-  // const topName = locate.state.topName
+  const locate = useLocation();
+  const topName = locate.state.topName
   return (
+    <div className="">
     <div className='whole-main'>
     <div className='app'>
     <Sidebar />
     <div className='main-content'>
-      <ContentTop />
+      <ContentTop topName={topName
+      }/>
       Settinfrg
+      </div>
       </div>
       </div>
       </div>

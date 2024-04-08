@@ -10,14 +10,15 @@ import { useLocation } from 'react-router-dom';
 import Sidebar from '../../layout/Sidebar/Sidebar';
 
 const Contest = () => {
-  // const locate = useLocation();
-  // const userName = locate.state.userName
+  const locate = useLocation();
+  const topName = locate.state.topName
   return (
+    <div className="">
     <div className='whole-main'>
     <div className='app'>
     <Sidebar />
     <div className='main-content'>
-      <ContentTop />
+      <ContentTop topName={topName}/>
     
     <div className='main-contest'>
       
@@ -82,6 +83,7 @@ const Contest = () => {
           </div>
         </div> */}
       </div>
+    </div>
     </div>
     </div>
     </div>

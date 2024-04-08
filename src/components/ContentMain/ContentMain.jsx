@@ -8,29 +8,20 @@ import Savings from "../Savings/Savings";
 import Loans from "../Loans/Loans";
 import Financial from "../Financial/Financial";
 import { useLocation } from "react-router-dom";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
 import ContentTop from "../ContentTop/ContentTop";
 import Sidebar from "../../layout/Sidebar/Sidebar";
 
 const ContentMain = () => {
-  // const locate = useLocation();
-  // const topName = locate.state.topName
-
-  // if(topName == null){
-  //   topName = 
-  // }
+  const locate = useLocation();
+  const topName = locate.state.topName
   return (
     <div className='whole-main'>
     <div className='app'>
     <Sidebar />
     <div className='main-content'>
     <div className="main-content-holder">
-      <ContentTop />
+      <ContentTop
+      topName={topName} />
         <div className="content-grid-one">
             <Cards 
             name="Welcome to SomaiyaSync"/>

@@ -7,6 +7,9 @@
 
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -89,6 +92,10 @@ width: 21.5rem;
     border-color: #ffffff;
     background: #fff;
 }
+.input-email{
+    background-color: #B56E06;
+    
+}
 .inputbox-pass{
     font-size: 14px;
     border-radius: 6px;
@@ -101,6 +108,7 @@ width: 21.5rem;
     display: block;
     height: 1.5rem;
     width: 20rem;
+    
 }
 .inputbox-pass:hover{
     border-color: #ccc;

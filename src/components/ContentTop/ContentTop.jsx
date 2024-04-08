@@ -77,6 +77,7 @@ const ContentTop = ({topName}) => {
       <div className="content-top-btns right-btn">
         <div className="search-box">
           <input
+            className="searchbar-input"
             type="search"
             placeholder="Search for comaptible user"
             onChange={handleChange}
