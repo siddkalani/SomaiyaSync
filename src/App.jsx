@@ -15,11 +15,7 @@ import EditProfile from "./pages/BasicDetails/EditProfile";
 import { useLocation } from "react-router-dom";
 import Login from "./practice/Login";
 import Register from "./practice/Register";
-<<<<<<< Updated upstream
 import EmailVerify from "./practice/Email";
-=======
-import EmailVerify from './practice/Email'
->>>>>>> Stashed changes
 
 function App() {
   return (
