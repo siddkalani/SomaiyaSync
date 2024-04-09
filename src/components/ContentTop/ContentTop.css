@@ -30,16 +30,16 @@
   /* background-color: aqua; */
 }
 
-.search-box i {
+.main-input i {
   position: absolute;
 }
-.search-box input {
+.main-input input {
   color: rgb(26, 26, 26);
 }
-.searchbar-input::placeholder {
+.main-input::placeholder {
   color: gray;
 }
-.searchbar-input[type="search"] {
+.main-input{
   display: inline-block;
   background-color: rgb(233, 229, 229);
   width: 45rem;
