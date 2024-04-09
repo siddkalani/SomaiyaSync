@@ -1,0 +1,126 @@
+/* Css:
+//ContactInformation.css */
+
+
+.CI-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+}
+.CI-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    color: #06142e;
+}
+.CI-edit-section {
+    flex: 1;
+    margin: 4% 0% 0% 5%;
+}
+.CI-section-title {
+    color:#06142e;
+    margin-bottom: 7%;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.CI-edit-links {
+    display: flex;
+    flex-direction: column;
+}
+.CI-edit-link {
+    color:#06142e ;
+    text-decoration: none;
+    border: 2px solid #06142e;
+    border-radius: 10px;
+    padding: 3% 0% 3% 3%;
+    margin-bottom: 5%;
+    max-width: 80%;
+    font-size: 1.1rem;
+}
+.CI-edit-link:hover{
+    box-shadow: 3px 3px 10px #06142e;
+}
+.CI-form-section {
+    flex: 2;
+    border-radius: 10px;
+    max-width: 50%;
+    margin: 4% 0% 0% 5%;
+}
+.CI-user-details{
+    background: none;
+    display: flex;
+    width: 100%;
+}
+.CI-input-box {
+    margin-bottom: 5%;
+    width: calc(100%/2);
+}
+.CI-form-label {
+    margin: 0% 60% 0% 0%;
+    color: #06142e;
+}
+.CI-form-input{
+    border:none;
+    color:  #06142e;
+    height: 50px;
+    width: 90%;
+    outline: none;
+    align-items: baseline;
+    border-bottom: 2px solid #06142e;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: none;
+}
+.CI-form-input:focus{
+    background:none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #a8a5a6;
+    color: #06142e;
+}
+.CI-form-input::placeholder{
+    color: gray;
+}
+.CI-form-select{
+    border:none;
+    height: 50px;
+    width: 90%;
+    outline: none;
+    align-items: baseline;
+    border-bottom: 2px solid #06142e;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: none;
+}
+.CI-form-select:focus{
+    background:none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #a8a5a6;
+    color: #06142e;
+}
+.CI-option-field{
+    color: #06142e;
+}
+.CI-btn {
+    padding: 2% 40% 2% 40%;
+    margin: 0% 5% 3% 0%;
+    width: 100%;
+    background: none;
+    color: #06142e;
+    border: 2px solid #06142e;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.CI-btn:hover {
+    box-shadow: 3px 3px 10px #06142e;
+}
+
+
+
+

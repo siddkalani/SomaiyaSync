@@ -13,9 +13,9 @@ import Footer from "./components/Footer/Footer";
 import NewsFeed from "./pages/NewsFeed/NewsFeed";
 import EditProfile from "./pages/BasicDetails/EditProfile";
 import { useLocation } from "react-router-dom";
-import Login from "./practice/Login";
-import Register from "./practice/Register";
-import EmailVerify from "./practice/Email";
+import Login from "./practice/login/Login";
+import Register from "./practice/register/Register";
+import EmailVerify from "./practice/email/Email";
 
 function App() {
   return (
