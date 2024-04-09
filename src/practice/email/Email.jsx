@@ -44,7 +44,7 @@ import { Fragment, useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 // import "./register.css"
-// import "./login.css"
+import "./email.css"
 
 const EmailVerify = () => {
   const navigate = useNavigate();
@@ -79,31 +79,35 @@ const EmailVerify = () => {
     <Fragment>
 
       <div>
-      <div className="login-container">
-        <div className="register-main">
-          <div className="yellow"></div>
-          <div className="blue"></div>
+        <div className="login-container">
+          <div className="register-main">
+            <div className="yellow"></div>
+            <div className="blue"></div>
 
-          <div className="register-form">
-            <div className="register-header">
+            <div className="verified-form">
+              <div className="register-header">
 
+              </div>
+              <div className="email-content">
+              
+                <div className="">
+                  <h1 className="email-verified">Email verified</h1>
+                  </div>
+
+                <Link to="/login">
+                  {" "}
+                 <div className=""> 
+                 <button className="verfied-sign-in" >
+                    sign in
+                  </button>
+                  </div>
+                </Link>
+              
             </div>
-            <form>
-              <h1 className="email-verified">Email verified</h1>
-
-              <Link to="/login">
-            {" "}
-            
-              <button className="sign-in-btn" >
-                sign in
-              </button>
-            
-          </Link>
-            </form>
           </div>
         </div>
       </div>
-    </div>
+      </div>
     </Fragment>
   );
 };
