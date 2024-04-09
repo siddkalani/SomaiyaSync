@@ -5,8 +5,8 @@ import ContentTop from '../../components/ContentTop/ContentTop'
 import { useLocation } from 'react-router-dom'
 import Sidebar from '../../layout/Sidebar/Sidebar'
 const Leaderboard = () => {
-  // const locate = useLocation();
-  // const topName = locate.state.topName
+  const locate = useLocation();
+  const topName = locate.state.topName
 
   const [button1
     , setButton1
@@ -27,7 +27,8 @@ const Leaderboard = () => {
     <div className='app'>
     <Sidebar />
     <div className='main-content'>
-      <ContentTop/>
+      <ContentTop
+      topName={topName}/>
     <div className='Leaderboard-container'>
       <div className="Leaderboard-main">
         <div className="Leaderboard-header">

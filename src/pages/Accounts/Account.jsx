@@ -35,6 +35,12 @@ const Account = () => {
             <div className='facebook'><p>Linkedin:</p></div>
             <div className='instagram'><p>Instagram:</p></div>
           </div>
+          <div className="left-btn">
+            <Link to="/editProfile">
+              <button className='edit-prof-btn'>Edit Profile</button>
+            </Link>
+          </div>
+
         </div>
         <div className="right-side">
           <div className="right-upper">

@@ -15,6 +15,7 @@ import { useLocation } from "react-router-dom";
 import Login from "./practice/login/Login";
 import Register from "./practice/register/Register";
 import EmailVerify from "./practice/email/Email";
+import EditBasicDetails from "./practice/EditProfile/basicDetails/EditProfile";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/leaderboard" element={<Leaderboard />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
         <Route path="/NewsFeed" element={<NewsFeed />}></Route>
+        <Route path="/Editprofile" element={<EditBasicDetails />}></Route>
         {/* <Route path='/EditProfile' element={<EditProfile/>} >
           <Route path='/' element={<ContentMain />} >
 

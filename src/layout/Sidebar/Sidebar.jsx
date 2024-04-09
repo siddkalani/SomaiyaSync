@@ -23,6 +23,7 @@ const Sidebar = () => {
       setSidebarClass('');
     }
   }, [isSidebarOpen]);
+
   const handleClick=(id)=>{
     setActiveLinkIdx(id)
   }
@@ -40,12 +41,11 @@ const Sidebar = () => {
           <ul className="nav-list">
             {
               navigationLinks.map((navigationLink) => (
-                <li  onClick={() => handleClick(navigationLink.id)}  className="nav-item" key = { navigationLink.id }>
+                <li onClick={() => handleClick(navigationLink.id)}  className="nav-item" key = { navigationLink.id }>
                  <Link  state={{
                   topName:navigationLink.title,
 
-
-                 }} to ={`/${navigationLink.title}`} className={ `nav-link ${ navigationLink.id === activeLinkIdx ? 'active' : null }` }>
+                 }} to ={`/${navigationLink.title}`} className={ `nav-link ${ navigationLink.id === activeLinkIdx ? 'active-sidebar' : null }` }>
                       <img src={ navigationLink.image } className="nav-link-icon" alt = { navigationLink.title } />
                       <span className="nav-link-text">{ navigationLink.title }</span>
                   </Link> 
