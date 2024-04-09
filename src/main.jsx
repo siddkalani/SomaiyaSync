@@ -4,6 +4,10 @@ import { SidebarProvider } from "./context/sidebarContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <SidebarProvider>
+<<<<<<< HEAD
     <EditBasicDetails />
+=======
+    <App />
+>>>>>>> refs/remotes/origin/main
   </SidebarProvider>
 );
