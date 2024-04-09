@@ -11,7 +11,6 @@ import Account from "./pages/Accounts/Account";
 import Settings from "./pages/Settings/Settings";
 import Footer from "./components/Footer/Footer";
 import NewsFeed from "./pages/NewsFeed/NewsFeed";
-import EditProfile from "./pages/BasicDetails/EditProfile";
 import { useLocation } from "react-router-dom";
 import Login from "./practice/login/Login";
 import Register from "./practice/register/Register";

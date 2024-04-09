@@ -13,7 +13,7 @@ import Sidebar from "../../layout/Sidebar/Sidebar";
 
 const ContentMain = () => {
   const locate = useLocation();
-  const topName = locate.state.topName
+  const topName = locate.state.topName;
   return (
     <div className='whole-main'>
     <div className='app'>

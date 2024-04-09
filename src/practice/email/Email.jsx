@@ -43,8 +43,8 @@
 import { Fragment, useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import "./register.css"
-import "./login.css"
+// import "./register.css"
+// import "./login.css"
 
 const EmailVerify = () => {
   const navigate = useNavigate();

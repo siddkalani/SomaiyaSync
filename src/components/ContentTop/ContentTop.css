@@ -36,10 +36,10 @@
 .search-box input {
   color: rgb(26, 26, 26);
 }
-input::placeholder {
+.searchbar-input::placeholder {
   color: gray;
 }
-input[type="search"] {
+.searchbar-input[type="search"] {
   display: inline-block;
   background-color: rgb(233, 229, 229);
   width: 45rem;

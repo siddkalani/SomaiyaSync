@@ -10,6 +10,7 @@ import { useState } from "react";
 import ReactSearchBox from "react-search-box";
 import { PiListFill } from "react-icons/pi";
 import axios from "axios";
+import Sidebar from "../../layout/Sidebar/Sidebar";
 
 const ContentTop = ({topName}) => {
   
@@ -77,7 +78,7 @@ const ContentTop = ({topName}) => {
       <div className="content-top-btns right-btn">
         <div className="search-box">
           <input
-            className="searchbar-input"
+            className="main-input"
             type="search"
             placeholder="Search for comaptible user"
             onChange={handleChange}

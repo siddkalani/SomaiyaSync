@@ -5,6 +5,7 @@ import Register from "../register/Register";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
+
 // const Login = () => {
 //   const [email, setEmail] = useState("");
 //   const [error, setError] = useState("");
@@ -51,6 +52,10 @@ const Login = () => {
   const [error, setError] = useState("");
   const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
+
+  // const locate = useLocation();
+  // const topName = locate.state.topName;
+
   const navigate = useNavigate();
 
   const checkPass = (e) => {
@@ -97,7 +102,10 @@ const Login = () => {
         response.data.user.is_verified === 1
       ) {
         localStorage.setItem("accessToken", response.data.accessToken);
-        navigate("/home");
+        navigate("/home",{state:{
+          topName:"home"
+        }});
+
       } else if (
         response.status === 200 &&
         response.data.accessToken &&
