@@ -3,20 +3,21 @@
 
 import React, { useState } from 'react';
 import './EditProfile.css';
- 
+import { Link } from 'react-router-dom';
+
 function EditBasicDetails() {
     const [gender, setGender] = useState('male');
- 
+
     const handleGenderChange = (event) => {
         setGender(event.target.value);
     };
- 
+
     const [userType, setUserType] = useState('Student');
- 
+
     const handleUserType = (event) => {
         setUserType(event.target.value);
     };
- 
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -29,7 +30,7 @@ function EditBasicDetails() {
         password: '',
         confirmPassword: ''
     });
- 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -37,24 +38,24 @@ function EditBasicDetails() {
             [name]: value
         });
     };
- 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission here
         console.log(formData);
     };
- 
+
     return (
         <div className="container body">
             <div className="content">
                 <div className="edit-section">
                     <h1 className="section-title">Edit Profile</h1>
                     <div className="edit-links">
-                        <a href="#" className="edit-link">Basic Details</a>
-                        <a href="#" className="edit-link">Education</a>
-                        <a href="#" className="edit-link">Skills</a>
-                        <a href="#" className="edit-link">Project</a>
-                        <a href="#" className="edit-link">Contact Information</a>
+                        <Link to="/Editprofile"> <div className="edit-link">Basic Details</div> </Link>
+                        <Link to="/education">  <div className="edit-link">Education</div></Link>
+                        <Link to="/skills"> <div className="edit-link">Skills</div></Link>
+                        <Link to="/project"> <div className="edit-link">Project</div></Link>
+                        <Link to="/contactInfo"> <div className="edit-link">Contact Information</div></Link>
                     </div>
                 </div>
                 <div className="form-section">
@@ -117,7 +118,7 @@ function EditBasicDetails() {
         </div>
     );
 }
- 
+
 export default EditBasicDetails;
- 
- 
+
+

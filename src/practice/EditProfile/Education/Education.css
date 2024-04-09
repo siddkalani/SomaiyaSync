@@ -1,6 +1,5 @@
 /* Css:
-
-//BasicDetails.css */
+//Education.css */
 
 
 .container {
@@ -31,7 +30,6 @@
 .edit-links {
     display: flex;
     flex-direction: column;
-    /* gap: 3rem; */
 }
 .edit-link {
     color:#06142e ;
@@ -55,7 +53,6 @@
 .user-details{
     background: none;
     display: flex;
-    flex-direction: column;
     width: 100%;
 }
 .input-box {

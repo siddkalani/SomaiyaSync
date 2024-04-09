@@ -1,7 +1,5 @@
 /* Css:
-
-//BasicDetails.css */
-
+//Skills.css */
 
 .container {
     display: flex;
@@ -31,7 +29,6 @@
 .edit-links {
     display: flex;
     flex-direction: column;
-    /* gap: 3rem; */
 }
 .edit-link {
     color:#06142e ;
@@ -54,13 +51,12 @@
 }
 .user-details{
     background: none;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
     width: 100%;
 }
 .input-box {
     margin-bottom: 5%;
-    width: calc(100%/2);
+    width: 100%;
 }
 .form-label {
     margin: 0% 60% 0% 0%;
@@ -90,7 +86,7 @@
 }
 .form-select{
     border:none;
-    height: 50px;
+    height: 0px;
     width: 90%;
     outline: none;
     align-items: baseline;
@@ -123,6 +119,9 @@
 .btn:hover {
     box-shadow: 3px 3px 10px #06142e;
 }
-
-
+#describeInterest{
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-top: 2%;
+}
 

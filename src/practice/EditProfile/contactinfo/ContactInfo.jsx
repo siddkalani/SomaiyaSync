@@ -3,6 +3,7 @@
 
 import React, { useState } from 'react';
 import './ContactInfo.css';
+import { Link } from 'react-router-dom';
 
 
 function EditContactInformation() {
@@ -42,11 +43,11 @@ function EditContactInformation() {
                 <div className="CI-edit-section">
                     <h1 className="CI-section-title">Edit Profile</h1>
                     <div className="CI-edit-links">
-                        <a href="#" className="CI-edit-link">Basic Details</a>
-                        <a href="#" className="CI-edit-link">Education</a>
-                        <a href="#" className="CI-edit-link">Skills</a>
-                        <a href="#" className="CI-edit-link">Project</a>
-                        <a href="#" className="CI-edit-link">Contact Information</a>
+                    <Link to="/Editprofile"> <div className="CI-edit-link">Basic Details</div> </Link>
+                        <Link to="/education">  <div className="edit-link">Education</div></Link>
+                        <Link to="/skills"> <div className="edit-link">Skills</div></Link>
+                        <Link to="/project"> <div className="edit-link">Project</div></Link>
+                        <Link to="/contactInfo"> <div className="edit-link">Contact Information</div></Link>
                     </div>
                 </div>
                 <div className="CI-form-section">
