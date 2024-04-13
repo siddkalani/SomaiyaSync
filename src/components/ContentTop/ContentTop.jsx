@@ -12,8 +12,7 @@ import { PiListFill } from "react-icons/pi";
 import axios from "axios";
 import Sidebar from "../../layout/Sidebar/Sidebar";
 
-const ContentTop = ({topName}) => {
-  
+const ContentTop = ({ topName }) => {
   const { toggleSidebar } = useContext(SidebarContext);
 
   const [search, setSearch] = useState("");
@@ -108,7 +107,7 @@ const ContentTop = ({topName}) => {
                 key={index}
               >
                 {/* {data.show && data.show.name ? data.show.name : "Unknown"} */}
-                {data.name}
+                {data.username}
               </a>
             );
           })}
