@@ -9,22 +9,22 @@ const educationSchema = mongoose.Schema({
     type: String,
     required: [true, "Please enter "],
   },
-  curryear: {
-    type: Number,
-    required: [true, "Please enter "],
-  },
+  // curryear: {
+  //   type: Number,
+  //   required: [true, "Please enter "],
+  // },
   passyear: {
     type: Number,
     required: [true, "Please enter "],
   },
-  percentage: {
-    type: Number,
-    // required: [true, "Please enter "],
-  },
-  cgpa: {
-    type: Number,
-    // required: [true, "Please enter "],
-  },
+  // percentage: {
+  //   type: Number,
+  //   // required: [true, "Please enter "],
+  // },
+  // cgpa: {
+  //   type: Number,
+  //   // required: [true, "Please enter "],
+  // },
 });
 
 const skillsSchema = mongoose.Schema({
@@ -39,22 +39,22 @@ const skillsSchema = mongoose.Schema({
 });
 
 const projectSchema = mongoose.Schema({
-  projectTitle: {
-    type: String,
-    // required: [true, "Please enter "],
-  },
-  projectDesc: {
-    type: String,
-    // required: [true, "Please enter "],
-  },
+  // projectTitle: {
+  //   type: String,
+  //   // required: [true, "Please enter "],
+  // },
+  // projectDesc: {
+  //   type: String,
+  //   // required: [true, "Please enter "],
+  // },
   projectLink: {
     type: String,
     // required: [true, "Please enter "],
   },
-  techno: {
-    type: String,
-    // required: [true, "Please enter "],
-  },
+  // techno: {
+  //   type: String,
+  //   // required: [true, "Please enter "],
+  // },
 });
 
 const personalSchema = mongoose.Schema({
@@ -64,21 +64,21 @@ const personalSchema = mongoose.Schema({
   github: {
     type: String,
   },
-  leetCode: {
-    type: String,
-  },
+  // leetCode: {
+  //   type: String,
+  // },
   insta: {
     type: String,
   },
-  wp: {
-    type: String,
-  },
-  facebook: {
-    type: String,
-  },
-  twitter: {
-    type: String,
-  },
+  // wp: {
+  //   type: String,
+  // },
+  // facebook: {
+  //   type: String,
+  // },
+  // twitter: {
+  //   type: String,
+  // },
 });
 
 const contactSchema = mongoose.Schema(
@@ -92,18 +92,18 @@ const contactSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add the contact name"],
     },
-    lname: {
-      type: String,
-      required: [true, "Please add the contact name"],
-    },
-    enrollment: {
-      type: Number,
-      // required:[true]
-    },
-    dob: {
-      type: String,
-      // required: [true, "Please add the contact name"],
-    },
+    // lname: {
+    //   type: String,
+    //   required: [true, "Please add the contact name"],
+    // },
+    // enrollment: {
+    //   type: Number,
+    //   // required:[true]
+    // },
+    // dob: {
+    //   type: String,
+    //   // required: [true, "Please add the contact name"],
+    // },
     gender: {
       type: String,
       required: [true, "Please enter your gender"],
@@ -112,10 +112,10 @@ const contactSchema = mongoose.Schema(
       type: String,
       required: [true, "Select one"],
     },
-    username: {
-      type: String,
-      // required: [true, "Please add the contact name"],
-    },
+    // username: {
+    //   type: String,
+    //   // required: [true, "Please add the contact name"],
+    // },
     email: {
       type: String,
       required: [true, "Please add the email id "],

@@ -36,39 +36,39 @@ const createContact = asyncHandler(async (req, res) => {
   }
   const {
     fname,
-    lname,
+    // lname,
     gender,
     usertype,
     email,
     currdegree,
     currcourse,
-    curryear,
+    // curryear,
     passyear,
-    percentage,
-    cgpa,
+    // percentage,
+    // cgpa,
     skillss,
     skillsDescp,
-    projectTitle,
-    projectDesc,
+    // projectTitle,
+    // projectDesc,
     projectLink,
-    techno,
+    // techno,
     linkedIn,
     github,
-    leetCode,
+    // leetCode,
     insta,
-    wp,
-    facebook,
-    twitter,
+    // wp,
+    // facebook,
+    // twitter,
   } = req.body;
   if (
     !fname ||
-    !lname ||
+    // !lname ||
     !gender ||
     !usertype ||
     !email ||
     !currdegree ||
     !currcourse ||
-    !curryear ||
+    // !curryear ||
     !passyear ||
     !skillss
   ) {
@@ -77,36 +77,36 @@ const createContact = asyncHandler(async (req, res) => {
   }
   const contact = await Contact.create({
     fname,
-    lname,
+    // lname,
     gender,
     usertype,
     email,
     education: {
       currdegree,
       currcourse,
-      curryear,
+      // curryear,
       passyear,
-      percentage,
-      cgpa,
+      // percentage,
+      // cgpa,
     },
     skills: {
       skillss,
       skillsDescp,
     },
     project: {
-      projectTitle,
-      projectDesc,
+      // projectTitle,
+      // projectDesc,
       projectLink,
-      techno,
+      // techno,
     },
     personalInfo: {
       linkedIn,
       github,
-      leetCode,
+      // leetCode,
       insta,
-      wp,
-      facebook,
-      twitter,
+      // wp,
+      // facebook,
+      // twitter,
     },
     user_id: req.user.id,
   });
