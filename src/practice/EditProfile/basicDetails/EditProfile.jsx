@@ -56,7 +56,7 @@ function EditBasicDetails({ updateFormData }) {
   return (
     <div className="container body">
       <div className="content">
-        <div className="edit-section">
+        {/* <div className="edit-section">
           <h1 className="section-title">Edit Profile</h1>
           <div className="edit-links">
             <Link to="/Editprofile">
@@ -80,74 +80,79 @@ function EditBasicDetails({ updateFormData }) {
               <div className="edit-link">Contact Information</div>
             </Link>
           </div>
-        </div>
+        </div> */}
         <div className="form-section">
-          <h1 className="section-title">Basic Details</h1>
+          <div>
+          <h1 className="section-title">Edit Profile</h1>
           <form onSubmit={handleFormSubmit} className="user-details">
             <div className="input-box">
-              <label htmlFor="firstName" className="form-label">
-                First Name
+
+              <h2>Basic detials</h2>
+
+              <label htmlFor="fullName" className="form-label">
+                Full Name
               </label>
               <input
                 type="text"
                 className="form-input"
-                id="firstName"
-                name="firstName"
+                id="fulltName"
+                name="fullName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="Enter Your First Name"
+                placeholder="Enter Your Full Name"
                 required
               />
             </div>
             <div className="input-box">
-              <label htmlFor="lastName" className="form-label">
-                Last Name
+              <label htmlFor="gender" className="form-label">
+                gender
               </label>
               <input
                 type="text"
                 className="form-input"
-                id="lastName"
+                id="gender"
                 name="lastName"
-                value={formData.lastName}
+                value={formData.gender}
                 onChange={handleChange}
-                placeholder="Enter Your Last Name"
+                placeholder="Enter Your gender"
                 required
               />
             </div>
             <div className="input-box">
-              <label htmlFor="enrolId" className="form-label">
-                Enrollment Id
+              <label htmlFor="userId" className="form-label">
+                user Id
               </label>
               <input
                 type="text"
                 className="form-input"
-                id="enrolId"
-                name="enrolId"
+                id="userId"
+                name="userId"
                 value={formData.enrolId}
                 onChange={handleChange}
-                placeholder="Enter Your Enrollment Id"
+                placeholder="Enter Your user Id"
               />
             </div>
             <div className="input-box">
-              <label htmlFor="dob" className="form-label">
-                Date of Birth
+              <label htmlFor="email" className="form-label">
+                email
               </label>
               <input
                 type="date"
                 className="form-input"
-                id="dob"
-                name="dob"
+                id="email"
+                name="email"
                 value={formData.dob}
                 onChange={handleChange}
                 // required
               />
             </div>
+            <h2>education</h2>
             <div className="input-box">
               <label className="form-label">Gender</label>
               <select
                 className="form-select"
-                name="gender"
-                value={formData.gender}
+                name="course"
+                
                 onChange={handleChange}
                 required
               >
@@ -231,6 +236,7 @@ function EditBasicDetails({ updateFormData }) {
               Next
             </button>
           </form>
+        </div>
         </div>
       </div>
     </div>
