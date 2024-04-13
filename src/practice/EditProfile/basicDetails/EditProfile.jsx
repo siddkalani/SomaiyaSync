@@ -104,50 +104,6 @@ function EditBasicDetails({ updateFormData }) {
               />
             </div>
             <div className="input-box">
-              <label htmlFor="gender" className="form-label">
-                gender
-              </label>
-              <input
-                type="text"
-                className="form-input"
-                id="gender"
-                name="lastName"
-                value={formData.gender}
-                onChange={handleChange}
-                placeholder="Enter Your gender"
-                required
-              />
-            </div>
-            <div className="input-box">
-              <label htmlFor="userId" className="form-label">
-                user Id
-              </label>
-              <input
-                type="text"
-                className="form-input"
-                id="userId"
-                name="userId"
-                value={formData.enrolId}
-                onChange={handleChange}
-                placeholder="Enter Your user Id"
-              />
-            </div>
-            <div className="input-box">
-              <label htmlFor="email" className="form-label">
-                email
-              </label>
-              <input
-                type="date"
-                className="form-input"
-                id="email"
-                name="email"
-                value={formData.dob}
-                onChange={handleChange}
-                // required
-              />
-            </div>
-            <h2>education</h2>
-            <div className="input-box">
               <label className="form-label">Gender</label>
               <select
                 className="form-select"
@@ -169,7 +125,7 @@ function EditBasicDetails({ updateFormData }) {
                   Other
                 </option>
               </select>
-            </div>
+            </div> 
             <div className="input-box">
               <label className="form-label">User Type</label>
               <select
@@ -194,21 +150,6 @@ function EditBasicDetails({ updateFormData }) {
               </select>
             </div>
             <div className="input-box">
-              <label htmlFor="userName" className="form-label">
-                Username
-              </label>
-              <input
-                type="text"
-                className="form-input"
-                id="userName"
-                name="userName"
-                value={formData.userName}
-                onChange={handleChange}
-                placeholder="Enter Your Username"
-                // required
-              />
-            </div>
-            <div className="input-box">
               <label htmlFor="email" className="form-label">
                 Email address
               </label>
@@ -221,6 +162,169 @@ function EditBasicDetails({ updateFormData }) {
                 onChange={handleChange}
                 placeholder="Enter Your Email Id"
                 required
+              />
+            </div>
+            <h2>Education</h2>
+            <div className="input-box">
+              <label htmlFor="currentDegree" className="form-label">
+                Current Degree
+              </label>
+              <select
+                className="form-select"
+                name="currentDegree"
+                value={formData.currentDegree}
+                onChange={handleChange}
+                required
+              >
+                <option className="option-field" value="">
+                  Select Current Degree
+                </option>
+                <option className="option-field" value="Bachelor">
+                  Bachelor
+                </option>
+                <option className="option-field" value="Master">
+                  Master
+                </option>
+                <option className="option-field" value="PhD">
+                  PhD
+                </option>
+              </select>
+            </div>
+
+            <div className="input-box">
+              <label htmlFor="courseSpecialization" className="form-label">
+                Course Specialization
+              </label>
+              <select
+                className="form-select"
+                name="courseSpecialization"
+                value={formData.courseSpecialization}
+                onChange={handleChange}
+                required
+              >
+                <option className="option-field" value="">
+                  Select Course Specialization
+                </option>
+                <option className="option-field" value="Cs">
+                  Computer Engineering
+                </option>
+                <option className="option-field" value="It">
+                  Information Technology
+                </option>
+                <option className="option-field" value="Mech">
+                  Mechanical Engineering
+                </option>
+                <option className="option-field" value="Extc">
+                  EXTC Engineering
+                </option>
+                <option className="option-field" value="Mech">
+                  Mechanical Engineering
+                </option>
+              </select>
+            </div>
+            <div className="input-box">
+              <label htmlFor="currentYear" className="form-label">
+                Current Year
+              </label>
+              <input
+                type="text"
+                className="form-input"
+                id="currentYear"
+                name="currentYear"
+                value={formData.currentYear}
+                onChange={handleChange}
+                placeholder="Enter Your Current Year"
+                required
+              />
+            </div>
+
+            <h2>Skills and Projects </h2>
+            <div className="input-box">
+              <label htmlFor="skills" className="form-label">
+                Skills
+              </label>
+              <input
+                type="text"
+                className="form-input"
+                id="skills"
+                name="skills"
+                value={formData.skills}
+                onChange={handleChange}
+                placeholder="Enter Your Skills"
+              />
+            </div>
+            <div className="input-box">
+              <label htmlFor="describeInterest" className="form-label">
+                Describe Interests{" "}
+              </label>
+              <textarea
+                className="form-input"
+                row="4"
+                col="10"
+                id="describeInterest"
+                name="describeInterest"
+                value={formData.describeInterest}
+                onChange={handleChange}
+                placeholder="Describe your interests in the above mentioned skills.."
+              ></textarea>
+            </div>
+            <div className="input-box">
+              <label htmlFor="projectLink" className="form-label">
+                Upload Link of Project
+              </label>
+              <input
+                type="text"
+                className="form-input"
+                id="projectLink"
+                name="projectLink"
+                value={formData.projectLink}
+                onChange={handleChange}
+                placeholder="Enter Upload Link"
+              />
+            </div>
+
+            <h2>Socail Links </h2>
+            <div className="CI-input-box">
+              <label htmlFor="linkedin" className="CI-form-label">
+                LinkedIn
+              </label>
+              <input
+                type="text"
+                className="CI-form-input"
+                id="linkedin"
+                name="linkedin"
+                value={formData.linkedin}
+                onChange={handleChange}
+                placeholder="Enter Your LinkedIn Profile Link"
+              />
+            </div>
+            <div className="CI-input-box">
+              <label htmlFor="github" className="CI-form-label">
+                GitHub
+              </label>
+              <input
+                type="text"
+                className="CI-form-input"
+                id="github"
+                name="github"
+                value={formData.github}
+                onChange={handleChange}
+                placeholder="Enter Your GitHub Profile Link"
+              />
+            </div>
+
+            <div className="CI-input-box">
+              <label htmlFor="instagram" className="CI-form-label">
+                Instagram
+              </label>
+              <input
+                type="text"
+                className="CI-form-input"
+                id="instagram"
+                name="instagram"
+                value={formData.instagram}
+                onChange={handleChange}
+                placeholder="Enter Your Instagram Profile Link"
               />
             </div>
             {/* <div className="input-box">
