@@ -43,7 +43,8 @@ import "./FeatureSection.css"; // Import your CSS file
 
 const FeatureSection = () => {
   return (
-    <div className="relative feature-section">
+    <a href="">
+    <div id="F" className="relative feature-section">
       <div className="text-center">
         <span className="feature-label">Feature</span>
         <h2 className="feature-heading">
@@ -62,6 +63,7 @@ const FeatureSection = () => {
         ))}
       </div>
     </div>
+    </a>
   );
 };
 

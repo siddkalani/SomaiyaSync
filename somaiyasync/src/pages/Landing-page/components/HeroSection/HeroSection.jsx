@@ -59,7 +59,7 @@ import "./HeroSection.css"; // Import your CSS file
 
 const HeroSection = () => {
   return (
-    <div className="hero-section">
+    <div id="HS" className="hero-section">
       <h1 className="hero-title">
         Connecting platform
         <span className="hero-subtitle">
