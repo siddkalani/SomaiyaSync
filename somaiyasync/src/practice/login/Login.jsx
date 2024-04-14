@@ -5,7 +5,6 @@ import Register from "../register/Register";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
-
 // const Login = () => {
 //   const [email, setEmail] = useState("");
 //   const [error, setError] = useState("");
@@ -102,10 +101,12 @@ const Login = () => {
         response.data.user.is_verified === 1
       ) {
         localStorage.setItem("accessToken", response.data.accessToken);
-        navigate("/home",{state:{
-          topName:"home"
-        }});
-
+        localStorage.setItem("userEmail", email);
+        navigate("/home", {
+          state: {
+            topName: "home",
+          },
+        });
       } else if (
         response.status === 200 &&
         response.data.accessToken &&

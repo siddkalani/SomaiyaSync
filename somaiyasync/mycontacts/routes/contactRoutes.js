@@ -44,7 +44,7 @@ const {
 const validateToken = require("../middleware/validateTokenHandler");
 
 router.use((req, res, next) => {
-  if (req.path === "/getAll" || req.path === "/search" || req.path === "/:id") {
+  if (req.path === "/getAll" || req.path === "/search") {
     return next(); // Skip validateToken middleware for these routes
   }
   validateToken(req, res, next); // Apply validateToken middleware to other routes
