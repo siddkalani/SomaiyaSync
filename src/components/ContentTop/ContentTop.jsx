@@ -77,11 +77,7 @@ const ContentTop = ({ topName }) => {
       <div className="content-top-btns right-btn">
         <div className="search-box">
           <input
-<<<<<<< Updated upstream
             className="main-input"
-=======
-            className="searchbar-input"
->>>>>>> Stashed changes
             type="search"
             placeholder="Search for comaptible user"
             onChange={handleChange}

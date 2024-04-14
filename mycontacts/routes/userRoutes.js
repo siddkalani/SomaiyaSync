@@ -7,7 +7,6 @@ const {
   currentUser,
   verifyMail,
 } = require("../controllers/userController");
-const { getUsers } = require("../controllers/contactController");
 const validateToken = require("../middleware/validateTokenHandler");
 const router = express.Router();
 router.use(
@@ -15,7 +14,6 @@ router.use(
     secret: process.env.SESSION_SECRET,
   })
 );
-router.get("/", getUsers);
 
 router.post("/register", registerUser);
 router.get("/register", isLogout, registerUser);
