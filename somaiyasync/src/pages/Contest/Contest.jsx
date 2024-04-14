@@ -31,7 +31,7 @@ const Contest = () => {
         <div className="navbar-btn"><div className='symbol-game'><BsSearch /></div><h2>Search for Games</h2></div>
       </div>
       <div className="games">
-        <ContestCard
+        {/* <ContestCard
         Name="CSS Battle"/>
         <ContestCard
         Name="CSS Battle"/>
@@ -42,7 +42,7 @@ const Contest = () => {
         <ContestCard
         Name="CSS Battle"/>
         <ContestCard
-        Name="CSS Battle"/>
+        Name="CSS Battle"/> */}
         {/* <div className='cards'></div>
         <div className='cards'></div>
         <div className='cards'></div>
@@ -85,6 +85,8 @@ const Contest = () => {
           <div className='plus-icon'><CiSquarePlus /></div>
           </div>
         </div> */}
+
+        
       </div>
     </div>
     </div>

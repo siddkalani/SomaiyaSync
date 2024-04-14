@@ -20,13 +20,14 @@ import EditContactInformation from "./practice/EditProfile/contactinfo/ContactIn
 import EditSkills from "./practice/EditProfile/Skills/Skills";
 import EditProject from "./practice/EditProfile/Project/Project";
 import EditEducation from "./practice/EditProfile/Education/Education";
+import Landing from "./pages/Landing-page/Landing";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/" element={<Login />}></Route>
+        <Route path="/" element={< Landing />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/email" element={<EmailVerify />}></Route>
         <Route path="/home" element={<ContentMain />}></Route>
@@ -41,6 +42,7 @@ function App() {
         <Route path="/skills" element={<EditSkills/>}></Route>
         <Route path="/project" element={<EditProject />}></Route>
         <Route path="/education" element={< EditEducation/>}></Route>
+        <Route path="/landing" element={<Landing/>}></Route>
         
       </Routes>
     </BrowserRouter>

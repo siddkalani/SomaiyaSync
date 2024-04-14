@@ -31,7 +31,7 @@
   border-radius: 10px;
   background-color: var(--clr-primar-light);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .grid-chart-bar .grid-hortz-value {
   margin-top: 12px;
@@ -54,7 +54,7 @@
   border-radius: 10px;
 }
 .grid-chart-bar:nth-child(3) .bar-wrapper .bar-item1 {
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 @media screen and (max-width: 992px) {
