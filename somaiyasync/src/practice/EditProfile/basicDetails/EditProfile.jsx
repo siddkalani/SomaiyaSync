@@ -21,8 +21,10 @@ function EditProfile() {
   });
 
   const accessToken = localStorage.getItem("accessToken");
+  console.log(accessToken);
 
   useEffect(() => {
+    // localStorage.clear();
     const storedProfile = JSON.parse(localStorage.getItem("userProfile"));
     if (storedProfile) {
       const userEmail = localStorage.getItem("userEmail");
@@ -47,33 +49,8 @@ function EditProfile() {
     });
   };
 
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-
-  //   // Update the form state
-  //   setFormState({
-  //     ...formState,
-  //     [name]: value,
-  //   });
-
-  //   // Update the local storage data
-  //   const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
-  //   const userEmail = formState.email;
-  //   const existingProfile = userProfile[userEmail];
-
-  //   if (existingProfile) {
-  //     // If the user already has a profile, update the corresponding field in local storage
-  //     userProfile[userEmail] = {
-  //       ...existingProfile,
-  //       [name]: value,
-  //     };
-  //     localStorage.setItem("userProfile", JSON.stringify(userProfile));
-  //   }
-  // };
-
   const handleSubmit = async () => {
     try {
-      // Check if the user already has a profile
       const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
       const userEmail = formState.email;
       const existingProfile = userProfile[userEmail];
@@ -85,7 +62,7 @@ function EditProfile() {
           formState,
           {
             headers: {
-              Authorization: `Bearer ${accessToken}`,
+              Authorization: `Bearer ${accessToken}`, // Include the access token in the authorization header
             },
           }
         );
@@ -98,7 +75,7 @@ function EditProfile() {
         // If the user doesn't have a profile, make a POST request to create one
         await axios.post("http://localhost:4200/api/contacts/", formState, {
           headers: {
-            Authorization: `Bearer ${accessToken}`,
+            Authorization: `Bearer ${accessToken}`, // Include the access token in the authorization header
           },
         });
         // Save the new profile in localStorage
@@ -112,6 +89,7 @@ function EditProfile() {
       console.error("Error saving profile:", error);
     }
   };
+
   return (
     <div className="editContainer">
       <div className="flexEditContainer">
