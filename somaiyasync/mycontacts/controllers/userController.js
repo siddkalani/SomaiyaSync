@@ -152,11 +152,24 @@ const verifyMail = asyncHandler(async (req, res) => {
     console.log(updateInfo);
     // res.json("Email Verified");
     // res.status(200).send({ message: "Verified" });
-    res.redirect("/email");
+    res.redirect("http://localhost:5173/email");
   } catch (error) {
     res.status(401);
     console.log(error.message);
   }
+});
+
+const logoutUser = asyncHandler(async (req, res) => {
+  // Clear the user's session
+  req.session.destroy((err) => {
+    if (err) {
+      res.status(500).json({ message: "Failed to logout" });
+    } else {
+      res.clearCookie("connect.sid"); // Clear the session cookie
+      res.clearCookie("access_token"); // Clear the access token cookie
+      res.status(200).json({ message: "Logged out successfully" });
+    }
+  });
 });
 
 module.exports = {
@@ -164,4 +177,5 @@ module.exports = {
   loginUser,
   currentUser,
   verifyMail,
+  logoutUser,
 };

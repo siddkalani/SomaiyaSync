@@ -264,6 +264,19 @@ const deleteContact = asyncHandler(async (req, res) => {
   }
 });
 
+const deleteUser = asyncHandler(async (req, res) => {
+  try {
+    const contact = await User.findById(req.params.id);
+    if (!contact) {
+      return res.status(404).json({ message: "Contact not found" });
+    }
+    await User.deleteOne({ _id: req.params.id });
+    res.status(200).json(contact);
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
 // @desc Search contacts by name
 // @route  GET /api/contacts/search?q=name
 ////@access public
@@ -301,6 +314,7 @@ module.exports = {
   getContactByName,
   searchUserByName,
   getUsers,
+  deleteUser,
 };
 
 //async Handler functions -> not giving proper output
