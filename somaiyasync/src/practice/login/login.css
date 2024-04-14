@@ -94,15 +94,10 @@ width: 21.5rem;
     background: #fff;
 }
 .input-email{
-<<<<<<< Updated upstream:src/practice/login/login.css
-<<<<<<< Updated upstream:src/practice/login/login.css
     /* background-color: #B56E06; */
-=======
+    /* background-color: #B56E06; */
     background-color: #B56E06;
->>>>>>> Stashed changes:src/practice/login.css
-=======
-    background-color: #B56E06;
->>>>>>> Stashed changes:src/practice/login.css
+    
     
 }
 .inputbox-pass{
@@ -115,16 +110,11 @@ width: 21.5rem;
     color: rgb(14, 14, 16);
     background: #dee1e2;
     display: block;
-<<<<<<< Updated upstream:src/practice/login/login.css
+
     height: 2.4rem;
     width: 21.5rem;
-=======
-    height: 1.5rem;
-    width: 20rem;
-<<<<<<< Updated upstream:src/practice/login/login.css
->>>>>>> Stashed changes:src/practice/login.css
-=======
->>>>>>> Stashed changes:src/practice/login.css
+
+    
     
 }
 .inputbox-pass:hover{
