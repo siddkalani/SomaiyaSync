@@ -276,10 +276,13 @@ const searchUserByName = asyncHandler(async (req, res) => {
         .json({ message: "Search query parameter 'q' is required" });
       return;
     }
-    const contacts = await User.find({
+    const contacts = await Contact.find({
       $or: [
+        { fname: { $regex: new RegExp(q, "i") } },
         { username: { $regex: new RegExp(q, "i") } }, // Case-insensitive search for name
-        { email: { $regex: new RegExp(q, "i") } }, // Case-insensitive search for email
+        { email: { $regex: new RegExp(q, "i") } },
+        { skillss: { $regex: new RegExp(q, "i") } }, // Case-insensitive search for skillss
+        { currcourse: { $regex: new RegExp(q, "i") } }, // Case-insensitive search for email
       ],
     });
     res.json(contacts);

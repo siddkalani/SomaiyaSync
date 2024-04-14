@@ -107,7 +107,7 @@ const ContentTop = ({ topName }) => {
                 key={index}
               >
                 {/* {data.show && data.show.name ? data.show.name : "Unknown"} */}
-                {data.username}
+                {data.fname}
               </a>
             );
           })}
