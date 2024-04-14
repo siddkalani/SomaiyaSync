@@ -12,7 +12,6 @@ import Settings from "./pages/Settings/Settings";
 import Footer from "./components/Footer/Footer";
 import NewsFeed from "./pages/NewsFeed/NewsFeed";
 import { useLocation } from "react-router-dom";
-<<<<<<< Updated upstream
 import Login from "./practice/login/Login";
 import Register from "./practice/register/Register";
 import EmailVerify from "./practice/email/Email";
@@ -21,11 +20,6 @@ import EditContactInformation from "./practice/EditProfile/contactinfo/ContactIn
 import EditSkills from "./practice/EditProfile/Skills/Skills";
 import EditProject from "./practice/EditProfile/Project/Project";
 import EditEducation from "./practice/EditProfile/Education/Education";
-=======
-import Login from "./practice/Login";
-import Register from "./practice/Register";
-import EmailVerify from './practice/Email'
->>>>>>> Stashed changes
 
 function App() {
   return (

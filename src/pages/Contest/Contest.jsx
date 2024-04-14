@@ -18,16 +18,11 @@ const Contest = () => {
     <div className='app'>
     <Sidebar />
     <div className='main-content'>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
       <ContentTop
       topName={topName}/>
-=======
       <ContentTop topName={topName}/>
->>>>>>> Stashed changes
-=======
-      <ContentTop topName={topName}/>
->>>>>>> Stashed changes
+
     
     <div className='main-contest'>
       

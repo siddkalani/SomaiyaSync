@@ -13,11 +13,7 @@ import Sidebar from "../../layout/Sidebar/Sidebar";
 
 const ContentMain = () => {
   const locate = useLocation();
-<<<<<<< Updated upstream
   const topName = locate.state.topName;
-=======
-  const topName = locate.state.topName
->>>>>>> Stashed changes
   return (
     <div className='whole-main'>
     <div className='app'>

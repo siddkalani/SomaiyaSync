@@ -13,19 +13,9 @@ const Setting = () => {
     <div className='app'>
     <Sidebar />
     <div className='main-content'>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
       <ContentTop/>
-      Settings
-      </div>
-=======
-=======
->>>>>>> Stashed changes
-      <ContentTop topName={topName
-      }/>
-      Settinfrg
->>>>>>> Stashed changes
-      </div>
+
       </div>
       </div>
       </div>
