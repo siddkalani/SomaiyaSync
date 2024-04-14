@@ -61,7 +61,7 @@ const skillsSchema = mongoose.Schema({
     type: String,
     required: [true, "Please enter "],
   },
-  interests: {
+  skillsDescp: {
     type: String,
     // required: [true, "Please enter "],
   },
@@ -141,10 +141,10 @@ const contactSchema = mongoose.Schema(
       type: String,
       required: [true, "Select one"],
     },
-    // username: {
-    //   type: String,
-    //   // required: [true, "Please add the contact name"],
-    // },
+    username: {
+      type: String,
+      required: [true, "Please add the contact name"],
+    },
     email: {
       type: String,
       required: [true, "Please add the email id "],

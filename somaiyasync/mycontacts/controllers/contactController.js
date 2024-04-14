@@ -211,6 +211,7 @@ const createContact = asyncHandler(async (req, res) => {
     // lname,
     gender,
     usertype,
+    username,
     email,
     currdegree,
     currcourse,
@@ -237,6 +238,7 @@ const createContact = asyncHandler(async (req, res) => {
     // !lname ||
     !gender ||
     !usertype ||
+    !username ||
     !email ||
     !currdegree ||
     !currcourse ||
@@ -252,6 +254,7 @@ const createContact = asyncHandler(async (req, res) => {
     // lname,
     gender,
     usertype,
+    username,
     email,
     education: {
       currdegree,
@@ -330,18 +333,92 @@ const getContactByName = asyncHandler(async (req, res) => {
 //@desc Update contacts
 //@route  PUT /api/contacts/:id
 //@access private
+// const updateContact = asyncHandler(async (req, res) => {
+//   try {
+//     const contact = await Contact.findById(req.params.id);
+//     const updatedContact = await Contact.findByIdAndUpdate(
+//       req.params.id,
+//       req.body,
+//       { new: true }
+//     );
+//     res.status(201).json(updatedContact);
+//   } catch (error) {
+//     res.status(404);
+//     throw new Error("Contact not found in the database");
+//   }
+// });
 const updateContact = asyncHandler(async (req, res) => {
   try {
-    const contact = await Contact.findById(req.params.id);
-    const updatedContact = await Contact.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
-    res.status(201).json(updatedContact);
+    // Find the contact by user ID
+    let contact = await Contact.findOne({ user_id: req.user.id });
+    if (!contact) {
+      res.status(404);
+      throw new Error("Contact not found");
+    }
+
+    // Update each field individually
+    const {
+      fname,
+      gender,
+      usertype,
+      username,
+      email,
+      currdegree,
+      currcourse,
+      passyear,
+      skillss,
+      skillsDescp,
+      projectLink,
+      linkedIn,
+      github,
+      insta,
+    } = req.body;
+
+    // Update personal information
+    if (fname) contact.fname = fname;
+    if (gender) contact.gender = gender;
+    if (usertype) contact.usertype = usertype;
+    if (username) contact.username = username;
+    if (email) contact.email = email;
+
+    // Update education details
+    if (currdegree) contact.education.currdegree = currdegree;
+    if (currcourse) contact.education.currcourse = currcourse;
+    if (passyear) contact.education.passyear = passyear;
+
+    // Update skills
+    if (skillss) contact.skills.skillss = skillss;
+    if (skillsDescp) contact.skills.skillsDescp = skillsDescp;
+
+    // Update project details
+    if (projectLink) contact.project.projectLink = projectLink;
+
+    // Update social links
+    if (linkedIn) contact.personalInfo.linkedIn = linkedIn;
+    if (github) contact.personalInfo.github = github;
+    if (insta) contact.personalInfo.insta = insta;
+
+    if (skillsDescp && !contact.skills.skillsDescp) {
+      contact.skills.skillsDescp = skillsDescp;
+    }
+    if (projectLink && !contact.project.projectLink) {
+      contact.project.projectLink = projectLink;
+    }
+    if (insta && !contact.personalInfo.insta) {
+      contact.personalInfo.insta = insta;
+    }
+    if (github && !contact.personalInfo.github) {
+      contact.personalInfo.github = github;
+    }
+    if (linkedIn && !contact.personalInfo.linkedIn) {
+      contact.personalInfo.linkedIn = linkedIn;
+    }
+    // Save the updated contact
+    await contact.save();
+
+    res.status(200).json(contact);
   } catch (error) {
-    res.status(404);
-    throw new Error("Contact not found in the database");
+    res.status(500).json({ message: error.message });
   }
 });
 
