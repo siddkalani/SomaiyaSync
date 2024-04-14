@@ -154,6 +154,7 @@ const verifyMail = asyncHandler(async (req, res) => {
     // res.status(200).send({ message: "Verified" });
     res.redirect("/email");
   } catch (error) {
+    res.status(401);
     console.log(error.message);
   }
 });
