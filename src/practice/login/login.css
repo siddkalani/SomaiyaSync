@@ -95,7 +95,11 @@ width: 21.5rem;
 }
 .input-email{
 <<<<<<< Updated upstream:src/practice/login/login.css
+<<<<<<< Updated upstream:src/practice/login/login.css
     /* background-color: #B56E06; */
+=======
+    background-color: #B56E06;
+>>>>>>> Stashed changes:src/practice/login.css
 =======
     background-color: #B56E06;
 >>>>>>> Stashed changes:src/practice/login.css
@@ -117,6 +121,9 @@ width: 21.5rem;
 =======
     height: 1.5rem;
     width: 20rem;
+<<<<<<< Updated upstream:src/practice/login/login.css
+>>>>>>> Stashed changes:src/practice/login.css
+=======
 >>>>>>> Stashed changes:src/practice/login.css
     
 }

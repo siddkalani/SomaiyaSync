@@ -78,7 +78,11 @@ const ContentTop = ({ topName }) => {
         <div className="search-box">
           <input
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             className="main-input"
+=======
+            className="searchbar-input"
+>>>>>>> Stashed changes
 =======
             className="searchbar-input"
 >>>>>>> Stashed changes
