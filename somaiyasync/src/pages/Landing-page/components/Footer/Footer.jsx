@@ -61,7 +61,7 @@ import "./Footer.css"; // Import your CSS file
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="F" className="footer">
       <div className="footer-grid">
         <div>
           <h3 className="footer-heading">Resources</h3>

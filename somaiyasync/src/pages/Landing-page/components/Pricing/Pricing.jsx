@@ -54,7 +54,7 @@ import "./Pricing.css"; // Import your CSS file
 
 const Pricing = () => {
   return (
-    <div className="pricing-container">
+    <div id="P" className="pricing-container">
       <h2 className="pricing-title">Pricing</h2>
       <div className="pricing-options">
         {pricingOptions.map((option, index) => (

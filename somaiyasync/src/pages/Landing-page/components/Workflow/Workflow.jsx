@@ -43,7 +43,7 @@ import "./Workflow.css"; // Import your CSS file
 
 const Workflow = () => {
   return (
-    <div className="workflow-container">
+    <div id="WF" className="workflow-container">
       <h2 className="workflow-title">
         Accelerate your <span className="gradient-text">coding journey.</span>
       </h2>
