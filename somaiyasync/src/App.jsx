@@ -21,29 +21,30 @@ import EditSkills from "./practice/EditProfile/Skills/Skills";
 import EditProject from "./practice/EditProfile/Project/Project";
 import EditEducation from "./practice/EditProfile/Education/Education";
 import Landing from "./pages/Landing-page/Landing";
+import UsersAccount from "./pages/Accounts/UsersAccount";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/" element={< Landing />}></Route>
+        <Route path="/" element={<Landing />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/email" element={<EmailVerify />}></Route>
         <Route path="/home" element={<ContentMain />}></Route>
         <Route path="/contest" element={<Contest />}></Route>
         <Route path="/inbox" element={<Inbox />}></Route>
         <Route path="/account" element={<Account />}></Route>
+        <Route path="/account/:username" element={<UsersAccount />}></Route>
         <Route path="/leaderboard" element={<Leaderboard />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
         <Route path="/NewsFeed" element={<NewsFeed />}></Route>
         <Route path="/Editprofile" element={<EditBasicDetails />}></Route>
         <Route path="/contactInfo" element={<EditContactInformation />}></Route>
-        <Route path="/skills" element={<EditSkills/>}></Route>
+        <Route path="/skills" element={<EditSkills />}></Route>
         <Route path="/project" element={<EditProject />}></Route>
-        <Route path="/education" element={< EditEducation/>}></Route>
-        <Route path="/landing" element={<Landing/>}></Route>
-        
+        <Route path="/education" element={<EditEducation />}></Route>
+        <Route path="/landing" element={<Landing />}></Route>
       </Routes>
     </BrowserRouter>
   );

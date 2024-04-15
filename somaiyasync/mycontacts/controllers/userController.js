@@ -52,6 +52,11 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("All fields are mandatory!");
   }
+  const userExists = await User.findOne({ username });
+  if (userExists) {
+    res.status(400);
+    throw new Error("Username already exists!");
+  }
   const userAvailable = await User.findOne({ email });
   if (userAvailable) {
     res.status(400);
@@ -125,13 +130,17 @@ const loginUser = asyncHandler(async (req, res) => {
       },
     },
     process.env.ACCESS_TOKEN_KEY,
-    { expiresIn: "30m" }
+    { expiresIn: "300m" }
   );
   req.session.user_id = user._id;
   res.status(200).json({
     message: "Logged In",
     accessToken,
-    user: { is_verified: user.is_verified },
+
+    user: {
+      is_verified: user.is_verified,
+      username: user.username,
+    },
   });
 });
 

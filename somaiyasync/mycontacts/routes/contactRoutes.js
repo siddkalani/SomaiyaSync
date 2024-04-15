@@ -9,12 +9,14 @@ const {
   deleteContact,
   searchUserByName,
   deleteUser,
+  getContactByUsername,
 } = require("../controllers/contactController");
 const validateToken = require("../middleware/validateTokenHandler");
 
 router.use((req, res, next) => {
   if (
     req.path === "/getAll" ||
+    // req.path === "/:username" ||
     req.path === "/search" ||
     req.path === "/deluser/:id"
   ) {
@@ -28,7 +30,13 @@ router.route("/getAll").get(getContacts);
 router.route("/deluser/:id").delete(deleteUser);
 router.route("/").get(getContactsofUser).post(createContact);
 router.route("/search").get(searchUserByName);
+router.route("/:username").get(getContactByUsername);
 
-router.route("/:id").get(getContact).put(updateContact).delete(deleteContact);
+router
+  .route("/:id")
+  .get(getContactsofUser)
+  .get(getContact)
+  .put(updateContact)
+  .delete(deleteContact);
 
 module.exports = router;

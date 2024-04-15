@@ -46,10 +46,15 @@ const Login = () => {
       ) {
         localStorage.setItem("accessToken", response.data.accessToken);
         localStorage.setItem("userEmail", email);
+        localStorage.setItem("username", response.data.user.username);
+
         const accesstoken = localStorage.getItem("accessToken");
         const EmailUser = localStorage.getItem("userEmail");
-        console.log(console.log(accesstoken));
+        const userName = localStorage.getItem("username");
+
+        console.log(accesstoken);
         console.log(EmailUser);
+        console.log(userName);
         navigate("/home", {
           state: {
             topName: "home",

@@ -148,6 +148,28 @@ const getContact = asyncHandler(async (req, res) => {
   }
 });
 
+const getContactByUsername = asyncHandler(async (req, res) => {
+  const { username } = req.params;
+
+  // Find the user by username to get their ID
+  const user = await User.findOne({ username });
+
+  if (!user) {
+    return res.status(404).json({ message: "User not found" });
+  }
+
+  // Once you have the user ID, find the contacts associated with that user ID
+  const contacts = await Contact.find({ user_id: user._id });
+
+  if (!contacts || contacts.length === 0) {
+    return res
+      .status(404)
+      .json({ message: "Contacts not found for this username" });
+  }
+
+  res.status(200).json(contacts);
+});
+
 // @desc Get contact by name
 // @route  GET /api/contact/:name
 //@access public
@@ -318,6 +340,7 @@ module.exports = {
   searchUserByName,
   getUsers,
   deleteUser,
+  getContactByUsername,
 };
 
 //async Handler functions -> not giving proper output

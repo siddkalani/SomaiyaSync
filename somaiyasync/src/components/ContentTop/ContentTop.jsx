@@ -97,18 +97,31 @@ const ContentTop = ({ topName }) => {
         <div className="searchResult">
           {searchData.slice(0, 5).map((data, index) => {
             return (
-              <a
-                // href={data.show.url}
+              // <a
+              //   // href={data.show.url}
+              //   className={
+              //     selectedItem === index
+              //       ? "search_suggestion_active"
+              //       : "search_suggestion"
+              //   }
+              //   key={index}
+              // >
+              //   {/* {data.show && data.show.name ? data.show.name : "Unknown"} */}
+              //   {data.username}
+              // </a>
+              <NavLink
+                to={`/account/${data.username}`}
+                key={index}
                 className={
                   selectedItem === index
                     ? "search_suggestion_active"
                     : "search_suggestion"
                 }
-                key={index}
               >
-                {/* {data.show && data.show.name ? data.show.name : "Unknown"} */}
-                {data.fname}
-              </a>
+                {/* {data.username} */}
+                <div>{data.username}</div>
+                <div>{data.skills.skillss}</div>
+              </NavLink>
             );
           })}
         </div>
