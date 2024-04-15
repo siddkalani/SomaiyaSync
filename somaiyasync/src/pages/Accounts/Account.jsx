@@ -21,10 +21,10 @@ const Account = () => {
           <div className="left-upper">
             <div className="profile-img"></div>
             <div className="profile-info">
-              <h1>Siddharth kalani</h1>
-              <p>Btech SY</p>
+              <h1>Full name:</h1>
+              <p></p>
               <div className="profile-btn">
-                <button className='follow white-hover'>Resume</button>
+                {/* <button className='follow white-hover'>Resume</button> */}
                 <button className='message'>Share</button>
               </div>
             </div>
@@ -47,9 +47,15 @@ const Account = () => {
             <div className="personal-info">
               <div className=''>Full Name:</div>
               <div className=''>Email:</div>
-              <div className=''>Phone:</div>
-              <div className=''>College:</div>
-              <div className='bio'>Bio: lorem42</div>
+              <div className=''>Gender:</div>
+              <div className=''>User Type:</div>
+              <div className=''>course: </div>
+              <div className=''>specialization: </div>
+              <div className=''>Passing year: </div>
+              <div className=''>Skills: </div>
+              <div className=''>Interests: </div>
+              <div className=''>Project links: </div>
+
             </div>
 
           </div>
