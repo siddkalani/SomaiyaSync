@@ -227,20 +227,20 @@ function EditProfile() {
                 <option className="option-field" value="">
                   Select Course Specialization
                 </option>
-                <option className="option-field" value="Cs">
+                <option className="option-field" value="Computer Science">
                   Computer Engineering
                 </option>
-                <option className="option-field" value="It">
+                <option className="option-field" value="Information Technology">
                   Information Technology
                 </option>
-                <option className="option-field" value="Mech">
+                <option
+                  className="option-field"
+                  value=" Mechanical Engineering"
+                >
                   Mechanical Engineering
                 </option>
-                <option className="option-field" value="Extc">
+                <option className="option-field" value=" EXTC Engineering">
                   EXTC Engineering
-                </option>
-                <option className="option-field" value="Mech">
-                  Mechanical Engineering
                 </option>
               </select>
             </div>

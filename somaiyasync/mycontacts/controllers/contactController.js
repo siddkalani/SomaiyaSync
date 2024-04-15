@@ -3,7 +3,7 @@ const Contact = require("../models/contactModel");
 const User = require("../models/userModel");
 
 //@desc Get contacts
-//@route  GET /api/contacts
+//@route  GET /api/contacts/getAll
 //@access public
 const getContacts = asyncHandler(async (req, res) => {
   const contacts = await Contact.find();
@@ -17,6 +17,9 @@ const getUsers = asyncHandler(async (req, res) => {
   res.status(200).json(user);
 });
 //// profile created by particular user
+//@desc Get contacts
+//@route  GET /api/contacts/getAll
+//@access private
 const getContactsofUser = asyncHandler(async (req, res) => {
   const contacts = await Contact.find({ user_id: req.user.id });
   res.status(200).json(contacts);
