@@ -16,38 +16,42 @@ const ContentMain = () => {
   const topName = locate.state.topName;
   return (
     <div className='whole-main'>
-    <div className='app'>
-    <Sidebar />
-    <div className='main-content'>
-    <div className="main-content-holder">
-      <ContentTop
-      topName={topName} />
-        <div className="content-grid-one">
-            <Cards 
-            name="Welcome to SomaiyaSync"/>
-            <Transactions />
-            <Report />
-        </div>
-        <div className="content-grid-two">
-            <Budget />
-            <div className="grid-two-item">
-              <div className="subgrid-two">
-                <Subscriptions />
-                <Savings />
-              </div>
+      <div className='app'>
+        <Sidebar />
+        <div className='main-content'>
+          <div className="main-content-holder">
+            <div className="c-top">
+              <ContentTop
+                topName={topName} />
             </div>
+            {/* <div className="content-container"> */}
+            <div className="content-grid-one">
+              <Cards
+                name="Welcome to SomaiyaSync" />
+              <Transactions />
+              <Report />
+            </div>
+            <div className="content-grid-two">
+              <Budget />
+              <div className="grid-two-item">
+                <div className="subgrid-two">
+                  <Subscriptions />
+                  <Savings />
+                </div>
+              </div>
 
-            <div className="grid-two-item">
-              <div className="subgrid-two">
-                <Loans />
-                <Financial />
+              <div className="grid-two-item">
+                <div className="subgrid-two">
+                  <Loans />
+                  <Financial />
+                </div>
               </div>
             </div>
+            {/* </div> */}
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
+      </div>
+    </div>
   )
 }
 

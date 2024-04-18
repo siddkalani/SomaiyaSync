@@ -4,6 +4,7 @@ import "./Account.css";
 import { Link, useLocation, useParams } from "react-router-dom";
 import ContentTop from "../../components/ContentTop/ContentTop";
 import Sidebar from "../../layout/Sidebar/Sidebar";
+// import ContentTop from "../../components/ContentTop/ContentTop";
 
 const UsersAccount = () => {
   const { username } = useParams();
@@ -58,7 +59,7 @@ const UsersAccount = () => {
         <div className="app">
           <Sidebar />
           <div className="main-content">
-            {/* <ContentTop topName={topName} /> */}
+            {/* <ContentTop/> */}
             <div className="account-main">
               <div className="account-container">
                 <div className="left-side">

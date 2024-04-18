@@ -1,8 +1,10 @@
+
 .main-contest{
     height: 90vh;
-    width: 100%;
+    max-width:100%;
     margin-top: -0.9rem;
     /* background-color: #b5acac; */
+    margin-left: 260px;
     padding: 1rem;
 }
 .nav-bar{

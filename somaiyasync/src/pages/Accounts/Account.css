@@ -6,6 +6,7 @@
     margin-top: -0.9rem;
     /* background-color: rgb(172, 200, 200); */
     color: rgb(76, 74, 74);
+    margin-left: 260px;
 }
 
 .account-container {
@@ -29,23 +30,25 @@
 
 .right-side {
     flex: 2;
-    /* background-color: aquamarine; */
+    background: rgb(17, 16, 16);
     display: flex;
     overflow-y: scroll;
     flex-direction: column;
     gap: 1.6rem;
+    border: 1px solid rgba(253, 253, 253, 0.3);
+    border-radius: 20px;
 
 }
 
 .left-upper {
     flex: 2;
     /* background-color: #9fd8ef; */
-    background: rgba(255, 255, 255, 0);
-    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    background: rgb(17, 16, 16);
+    /* box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px; */
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
-    border: 1px solid rgba(253, 253, 253, 0.18);
+    border: 1px solid rgba(253, 253, 253, 0.3);
     height: 25rem;
     display: flex;
     flex-direction: column;
@@ -101,12 +104,12 @@
     flex: 1;
     height: 21rem;
    
-    background: rgba(255, 255, 255, 0);
-    box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px;
+    background: rgb(17, 16, 16);
+    /* box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px; */
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
-    border: 1px solid rgba(253, 253, 253, 0.18);
+    border: 1px solid rgba(253, 253, 253, 0.3);
     
     
     border-radius: 20px;
@@ -279,4 +282,8 @@
 .message:hover {
     background-color: rgb(255, 72, 0);
     color: white;
+}
+.website{
+    display: flex;
+    gap: 0.7rem;
 }

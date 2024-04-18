@@ -65,13 +65,13 @@ const ContentTop = ({ topName }) => {
   return (
     <div className="main-content-top">
       <div className="content-top-left">
-        <button
+        {/* <button
           type="button"
           className="sidebar-toggler"
           onClick={() => toggleSidebar()}
         >
           <PiListFill color="white" />
-        </button>
+        </button> */}
         <h3 className="content-top-title">{topName}</h3>
       </div>
       <div className="content-top-btns right-btn">

@@ -13,7 +13,7 @@ const Contest = () => {
   const locate = useLocation();
   const topName = locate.state.topName
   return (
-    <div className="">
+    <div className="contest-main">
     <div className='whole-main'>
     <div className='app'>
     <Sidebar />

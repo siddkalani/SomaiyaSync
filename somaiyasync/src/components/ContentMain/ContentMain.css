@@ -2,11 +2,21 @@
 .main-content-holder {
   display: grid;
   row-gap: 20px;
+  margin-left: 260px;
+}
+.main-content-holder{
+  /* margin-right: 260px; */
+  /* background-color: aliceblue; */
 }
 .content-grid-one {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 16px;
+}
+.c-top{
+  /* margin-right: 260px;
+  background-color: aqua; */
+  margin-left: -260px;
 }
 .content-grid-two {
   display: grid;
