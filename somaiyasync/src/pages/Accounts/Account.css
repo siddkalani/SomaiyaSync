@@ -30,25 +30,57 @@
 
 .right-side {
     flex: 2;
-    background: rgb(17, 16, 16);
     display: flex;
     overflow-y: scroll;
     flex-direction: column;
     gap: 1.6rem;
-    border: 1px solid rgba(253, 253, 253, 0.3);
+    /* border: 1px solid rgba(253, 253, 253, 0.3); */
     border-radius: 20px;
 
+    border: 1px solid rgb(239, 124, 83);
+
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    background: rgba(27, 27, 27, 0.9);
+    backdrop-filter: blur(10px);
+    
+    
+
+    &::-webkit-scrollbar {
+        width: 4px;
+      }
+    
+      /* &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(58, 58, 58, 0.3);
+        border-radius: 18px;
+      } */
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--clr-pumpkin);
+        border-radius: 18px;
+      }
 }
 
 .left-upper {
     flex: 2;
     /* background-color: #9fd8ef; */
-    background: rgb(17, 16, 16);
+    /* background: rgb(17, 16, 16); */
     /* box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px; */
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
-    border-radius: 10px;
-    border: 1px solid rgba(253, 253, 253, 0.3);
+    /* border-radius: 10px; */
+
+    /* border: 1px solid orangered; */
+
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    background: rgba(27, 27, 27, 0.9);
+    backdrop-filter: blur(10px);
+    
+    
+    border-radius: 20px;
+
+    border: 1px solid rgb(239, 124, 83);
     height: 25rem;
     display: flex;
     flex-direction: column;
@@ -104,12 +136,18 @@
     flex: 1;
     height: 21rem;
    
-    background: rgb(17, 16, 16);
+    /* background: rgb(17, 16, 16); */
     /* box-shadow: rgba(255, 248, 248, 0.2) 0px 2px 8px 0.8px; */
+    /* backdrop-filter: blur(0px); */
+    /* -webkit-backdrop-filter: blur(0px); */
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(253, 253, 253, 0.3); */
+    border: 1px solid rgb(239, 124, 83);
+
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
-    border-radius: 10px;
-    border: 1px solid rgba(253, 253, 253, 0.3);
+    background: rgba(27, 27, 27, 0.9);
+    backdrop-filter: blur(10px);
     
     
     border-radius: 20px;
@@ -128,9 +166,24 @@
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
-    border: 1px solid rgba(253, 253, 253, 0.18);
+    /* border: 1px solid rgba(253, 253, 253, 0.18); */
 
     overflow-y: scroll;
+
+
+    &::-webkit-scrollbar {
+        width: 4px;
+      }
+    
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 18px;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--clr-pumpkin);
+        border-radius: 18px;
+      }
     /* font-size: large; */
 }
 
@@ -286,4 +339,10 @@
 .website{
     display: flex;
     gap: 0.7rem;
+}
+.input-fields{
+    color: aliceblue;
+}
+.gray-name{
+    color: gray;
 }

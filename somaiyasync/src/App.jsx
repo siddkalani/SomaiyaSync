@@ -49,8 +49,8 @@ function App() {
         <Route path="/project" element={<EditProject />}></Route>
         <Route path="/education" element={<EditEducation />}></Route>
         <Route path="/landing" element={<Landing />}></Route>
-        <Route path="/join" element={<Join />}></Route>
-        <Route path="/chat" element={<Chat />}></Route>
+        {/* <Route path="/join" element={<Join />}></Route> */}
+        {/* <Route path="/chat" element={<Chat />}></Route> */}
       </Routes>
     </BrowserRouter>
   );

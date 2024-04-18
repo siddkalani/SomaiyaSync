@@ -22,7 +22,8 @@ const ContentMain = () => {
           <div className="main-content-holder">
             <div className="c-top">
               <ContentTop
-                topName={topName} />
+                topName={topName}
+              />
             </div>
             {/* <div className="content-container"> */}
             <div className="content-grid-one">
@@ -47,10 +48,10 @@ const ContentMain = () => {
                 </div>
               </div>
             </div>
-            {/* </div> */}
+            </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   )
 }

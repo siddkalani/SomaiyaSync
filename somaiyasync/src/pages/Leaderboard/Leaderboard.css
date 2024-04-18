@@ -1,9 +1,10 @@
 .Leaderboard-container{
     /* background-color: gray; */
+    
 }
 .Leaderboard-main{
     /* background-color: bisque; */
-    width: 100%;
+    max-width: 100%;
     height: 85vh;
     margin-left: 260px;
     
