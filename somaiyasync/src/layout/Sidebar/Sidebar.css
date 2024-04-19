@@ -119,8 +119,11 @@
 .sidebar-end {
   position: relative;
   top: 14rem;
-  width: 13rem;
+  width: ;
   cursor: pointer;
+}
+.logout{
+  color: red;
 }
 
 @media screen and (max-width: 1400px) {

@@ -95,8 +95,8 @@ const Sidebar = () => {
           className="sidebar-end nav-item nav-link nav-link-text"
           onClick={handleLogout}
         >
-          <TbLogout size={30} />
-          logout
+          <TbLogout className="logout" size={30} />
+          <span className="logout">logout</span>
         </div>
       </nav>
     </div>

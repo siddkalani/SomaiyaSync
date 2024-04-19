@@ -75,7 +75,7 @@ const ContentTop = ({ topName }) => {
         <h3 className="content-top-title">{topName}</h3>
       </div>
       <div className="content-top-btns right-btn">
-        <div className="search-box">
+        <div className="main-search-box">
           <input
             className="main-input"
             type="search"

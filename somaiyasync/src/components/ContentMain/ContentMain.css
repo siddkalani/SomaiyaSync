@@ -10,17 +10,24 @@
   display: grid;
   row-gap: 20px;
   margin-left: 260px;
+  /* margin-top: 2rem; */
  
 }
 .main-content-holder{
   /* margin-right: 260px; */
   /* background-color: aliceblue; */
+  /* margin-top: -2rem; */
 
 }
 .content-grid-one {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 16px;
+  margin-top: -2rem;
+
+  /* background-color: ; */
+  height: 100%;
+  width: 100%;
 }
 .c-top{
   /* margin-right: 260px; */
