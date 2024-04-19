@@ -3,6 +3,8 @@
   /* background-color: aliceblue; */
   overflow-y: scroll;
   /* max-width: 100%; */
+  height: 100vh;
+  width: 100vw;
 }
 .main-content-holder {
   display: grid;
