@@ -71,7 +71,8 @@ button {
 
 .app {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* commons */
@@ -109,5 +110,6 @@ button {
   }
 }
 /* .whole-main{
-  color: #00fe93;
+height: 100vh;
+background-color: #00fe93;
 } */

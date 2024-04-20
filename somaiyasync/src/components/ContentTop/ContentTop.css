@@ -1,17 +1,27 @@
 .main-content-top {
+
+  padding: 1rem;
+  margin-left: 260px;
+  margin-bottom: 2rem;
+
+  /* background-color: aqua; */
+  position: absolute;
+
   display: flex;
   align-items: center;
   flex-grow: 1;
   flex-shrink: 1;
   justify-content: space-between;
-  padding: 1rem;
-  margin-left: 260px;
-  margin-bottom: 2rem;
+  /* gap:30%; */
+
+  width: 78%;
 }
+
 .content-top-title {
   color: white;
   /* background-color: aqua; */
 }
+
 .sidebar-toggler {
   font-size: 1.6rem;
 }
@@ -20,7 +30,7 @@
   display: flex;
   /* background-color: aqua; */
   gap: 1rem;
-  
+
 }
 
 .right-btn {
@@ -35,20 +45,29 @@
 .main-input i {
   position: absolute;
 }
+
 .main-input input {
   color: rgb(26, 26, 26);
 }
+
 .main-input::placeholder {
   color: gray;
 }
-.main-search-box{
-  width: 40rem;
-  /* background-color: aqua; */
+
+.main-search-box {
+  width: 50%;
+  position: absolute;
+  top: 13%;
+  left: 25%;
+  flex-grow: 1;
+  /* background-color: rgba(2, 36, 36, 0.193); */
+
 }
+
 .main-input {
   display: flex;
   background-color: rgb(233, 229, 229);
-  width:100%;
+  width: 100%;
   font-size: 1.5rem;
 
   padding-left: 2rem;
@@ -60,6 +79,7 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
 .searchResult {
   background-color: rgb(233, 229, 229);
   width: 45rem;
@@ -70,13 +90,16 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
 .active-searchbar {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+
 .searchResult::-webkit-scrollbar {
   display: none;
 }
+
 .search_suggestion_line,
 .search_loading {
   padding: 10px 20px;
@@ -87,6 +110,7 @@
   background-color: rgb(74, 49, 19);
   overflow: hidden;
 }
+
 /* controls
   the
   search
@@ -108,6 +132,7 @@ button [type="search"]::-webkit-search-cancel-button {
   /* padding: 1rem; */
   /* z-index: 1; */
 }
+
 .search_suggestion:hover {
   /* border: 1px solid var(--clr-primar-light); */
   transition: var(--transition-default);
@@ -118,9 +143,11 @@ button [type="search"]::-webkit-search-cancel-button {
   color: white;
   font-size: 1.7rem;
 }
+
 .notification-btn :hover {
   color: rgb(79, 75, 65);
 }
+
 /* .search-box{
   display: flex;
   flex-grow: 1;
