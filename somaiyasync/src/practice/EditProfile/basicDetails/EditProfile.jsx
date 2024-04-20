@@ -20,27 +20,9 @@ function EditProfile() {
     insta: "",
   });
 
+
   const accessToken = localStorage.getItem("accessToken");
   console.log(accessToken);
-
-  // useEffect(() => {
-  //   // localStorage.clear();
-  //   const storedProfile = JSON.parse(localStorage.getItem("userProfile"));
-  //   if (storedProfile) {
-  //     const userEmail = localStorage.getItem("userEmail");
-  //     if (userEmail && storedProfile[userEmail]) {
-  //       setFormState(storedProfile[userEmail]);
-  //     }
-  //   } else {
-  //     const userEmail = localStorage.getItem("userEmail");
-  //     if (userEmail) {
-  //       setFormState((prevState) => ({
-  //         ...prevState,
-  //         email: userEmail,
-  //       }));
-  //     }
-  //   }
-  // }, []);
 
   useEffect(() => {
     const storedProfile = JSON.parse(localStorage.getItem("userProfile"));
@@ -66,34 +48,6 @@ function EditProfile() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   const storedProfile = JSON.parse(localStorage.getItem("userProfile"));
-  //   const userEmail = localStorage.getItem("userEmail");
-  //   const username = localStorage.getItem("username");
-
-  //   if (storedProfile && userEmail && storedProfile[userEmail]) {
-  //     setFormState((prevState) => ({
-  //       ...prevState,
-  //       email: userEmail,
-  //       username: storedProfile[userEmail].username,
-  //     }));
-  //   } else {
-  //     if (userEmail) {
-  //       setFormState((prevState) => ({
-  //         ...prevState,
-  //         email: userEmail,
-  //       }));
-  //     }
-  //   }
-
-  //   if (username) {
-  //     setFormState((prevState) => ({
-  //       ...prevState,
-  //       username: username,
-  //     }));
-  //   }
-  // }, []);
-
   const handleInputChange = (e) => {
     setFormState({
       ...formState,
@@ -103,6 +57,7 @@ function EditProfile() {
 
   const handleSubmit = async () => {
     try {
+      localStorage.removeItem("siddharth.kalani@somaiya.edu");
       const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
       const userEmail = formState.email;
       const existingProfile = userProfile[userEmail];
