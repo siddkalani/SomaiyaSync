@@ -4,7 +4,7 @@
 }
 
 .register-main {
-  background: rgba(0, 4, 41, 0.9);
+  background: rgba(0, 0, 0, 0.99);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 
@@ -56,7 +56,7 @@ background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
 
 .register-form {
   background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;

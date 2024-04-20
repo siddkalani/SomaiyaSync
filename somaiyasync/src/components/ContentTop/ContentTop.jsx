@@ -18,7 +18,7 @@ const ContentTop = ({ topName }) => {
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
   const [selectedItem, setSelectedItem] = useState(-1);
-
+  const [activeSearch , setActiveSearch] = useState(false)
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
@@ -27,6 +27,12 @@ const ContentTop = ({ topName }) => {
     setSearchData([]);
     setSelectedItem(-1);
   };
+  const handleFocus = () =>{
+    
+  }
+  const handleClickSearch = () => {
+    setActiveSearch(true);
+  }
   const handleKeyDown = (e) => {
     if (selectedItem < searchData.length) {
       if (e.key === "ArrowUp" && selectedItem > 0) {
@@ -77,12 +83,14 @@ const ContentTop = ({ topName }) => {
       <div className="content-top-btns right-btn">
         <div className="main-search-box">
           <input
-            className="main-input"
+            className={`main-input ${activeSearch ? "main-input-search": null}`}
             type="search"
             placeholder="Search for comaptible user"
             onChange={handleChange}
             value={search}
             onKeyDown={handleKeyDown}
+            onFocus={handleFocus}
+            onClick={handleClickSearch}
           />
           {/* <div className="search_icon">
             {search === " " ? (

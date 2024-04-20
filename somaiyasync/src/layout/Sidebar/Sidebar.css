@@ -1,7 +1,7 @@
 /* sidebar */
 
 .sidebar {
-  background: rgb(17, 16, 16);
+  /* background: rgb(17, 16, 16); */
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   background: rgba(27, 27, 27, 0.9);

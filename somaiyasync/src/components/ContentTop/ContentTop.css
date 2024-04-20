@@ -2,9 +2,7 @@
 
   padding: 1rem;
   margin-left: 260px;
-  margin-bottom: 2rem;
 
-  /* background-color: aqua; */
   position: absolute;
 
   display: flex;
@@ -12,14 +10,24 @@
   flex-grow: 1;
   flex-shrink: 1;
   justify-content: space-between;
-  /* gap:30%; */
 
+  top: 5%;
+  z-index: 50;
+  padding: 0.75rem;
+  backdrop-filter: blur(20px);
+
+  border-radius: 30px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 5px -1px, rgba(0, 0, 0, 0.2) 0px 1px 3px -1px , rgba(255, 255, 255, 0.2) 0px 2px 5px -4px;
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
   width: 78%;
+  height: 10%;
 }
 
 .content-top-title {
   color: white;
   /* background-color: aqua; */
+  font-size: 150%;
+  margin-left: 2rem;
 }
 
 .sidebar-toggler {
@@ -29,7 +37,7 @@
 .content-top-left {
   display: flex;
   /* background-color: aqua; */
-  gap: 1rem;
+  gap: 2rem;
 
 }
 
@@ -47,7 +55,7 @@
 }
 
 .main-input input {
-  color: rgb(26, 26, 26);
+  color: whitesmoke;
 }
 
 .main-input::placeholder {
@@ -57,7 +65,7 @@
 .main-search-box {
   width: 50%;
   position: absolute;
-  top: 13%;
+  top: 17%;
   left: 25%;
   flex-grow: 1;
   /* background-color: rgba(2, 36, 36, 0.193); */
@@ -66,9 +74,10 @@
 
 .main-input {
   display: flex;
-  background-color: rgb(233, 229, 229);
+  background: rgba(27, 27, 27, 0.9);
   width: 100%;
   font-size: 1.5rem;
+  color: whitesmoke;
 
   padding-left: 2rem;
   padding-right: 1rem;
@@ -78,14 +87,30 @@
   border: none;
   border-radius: 20px;
   overflow: hidden;
+  caret-color: whitesmoke;
+
+}
+
+.main-input:hover {
+  border: 1px solid gray;
+}
+
+.main-input-search {
+  border: 2px solid rgb(215, 215, 215);
+}
+
+.main-input-search:hover {
+  /* border: 2px solid rgb(215, 215, 215); */
+  border: 2px solid rgb(215, 215, 215);
 }
 
 .searchResult {
   background-color: rgb(233, 229, 229);
-  width: 45rem;
+  width: 50%;
   margin-top: 2rem;
   position: absolute;
-  top: 70px;
+  top: 50%;
+  left: 25%;
   background-color: rgb(233, 229, 229);
   border-radius: 20px;
   overflow: hidden;
@@ -142,6 +167,7 @@ button [type="search"]::-webkit-search-cancel-button {
 .notification-btn {
   color: white;
   font-size: 1.7rem;
+  margin-right: 2rem;
 }
 
 .notification-btn :hover {
