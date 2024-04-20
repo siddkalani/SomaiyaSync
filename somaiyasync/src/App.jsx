@@ -22,6 +22,7 @@ import EditProject from "./practice/EditProfile/Project/Project";
 import EditEducation from "./practice/EditProfile/Education/Education";
 import Landing from "./pages/Landing-page/Landing";
 import UsersAccount from "./pages/Accounts/UsersAccount";
+import QuizApp from "./pages/Quiz/quiz-landing/QuizApp";
 // import Join from "./practice/chat_chord/Join";
 // import Chat from "./practice/chat_chord/Chat";
 // import Join from "./practice/chat_chord/Join";
@@ -49,6 +50,8 @@ function App() {
         <Route path="/project" element={<EditProject />}></Route>
         <Route path="/education" element={<EditEducation />}></Route>
         <Route path="/landing" element={<Landing />}></Route>
+        <Route path="/quiz-section" element={<QuizApp/>}></Route>
+
         {/* <Route path="/join" element={<Join />}></Route> */}
         {/* <Route path="/chat" element={<Chat />}></Route> */}
       </Routes>

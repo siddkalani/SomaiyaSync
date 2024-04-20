@@ -56,6 +56,7 @@ const Sidebar = () => {
   };
 
   return (
+    <div className="sidebar-main">
     <div className={`sidebar ${sidebarClass}`}>
       <div className="user-info">
         <div className="info-img img-fit-cover">
@@ -63,7 +64,6 @@ const Sidebar = () => {
         </div>
         <span className="info-name">SomaiyaSync</span>
       </div>
-
       <nav className="navigation">
         <ul className="nav-list">
           {navigationLinks.map((navigationLink) => (
@@ -99,6 +99,7 @@ const Sidebar = () => {
           <span className="logout">logout</span>
         </div>
       </nav>
+    </div>
     </div>
   );
 };

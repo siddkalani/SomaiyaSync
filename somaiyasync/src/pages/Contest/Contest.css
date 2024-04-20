@@ -6,10 +6,12 @@
     background-color: antiquewhite;
 } */
 .main-contest{
-    height: 100vh;
+    height: 100%;
     max-width:100%;
     margin-top: 7rem;
     /* background-color: #b5acac; */
+    /* position:absolute; */
+    overflow: hidden;
     margin-left: 260px;
     padding: 1rem;
 }

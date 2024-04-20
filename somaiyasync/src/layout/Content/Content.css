@@ -2,10 +2,10 @@
     /* background:linear-gradient(10deg,#000000,#130F40); */
     background-color: black;
     flex: 1;
-    padding: 32px;
-    
+    padding: 2.5%;
+    /* overflow-y: scroll; */
     /* height: 100%; */
-    /* overflow: hidden; */
+    overflow: hidden;
 
   }
 

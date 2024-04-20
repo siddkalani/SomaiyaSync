@@ -194,7 +194,7 @@ const Account = () => {
       <div className="whole-main">
         <div className="app">
           <Sidebar />
-          <div className="main-content">
+          <div className="account-main-content">
             <ContentTop topName={topName} />
             <div className="account-main">
               <div className="account-container">
@@ -203,7 +203,7 @@ const Account = () => {
                     <div className="profile-img"><img src={user} alt="" /></div>
                     <div className="profile-info">
                       {/* <h1>Full name: {userData?.fname}</h1> */}
-                      <span className="gray-name"> <h1>
+                      <span className="profile-name"> <h1>
                         {userData?.fname ? ` ${userData.fname}` : "Full Name"}
                       </h1>
                       </span>
@@ -218,19 +218,19 @@ const Account = () => {
                     {" "}
                     <div className="website">
                      <div><FaGithub color="white" size={20}/></div>
-                     <div>Github: </div>{" "}
+                     <div className="gray-name">Github : </div>{" "}
                     </div>{" "}
                     <div className="twitter website">
                     <div><FaTwitter  color="white" size={20}/></div>
-                     <div>Twitter: </div>{" "}
+                     <div className="gray-name">Twitter : </div>{" "}
                     </div>{" "}
                     <div className="facebook website">
                     <div><FaFacebook  color="white" size={20}/></div>
-                     <div>Facebook: </div>{" "}
+                     <div className="gray-name">Facebook : </div>{" "}
                     </div>{" "}
                     <div className="instagram website">
                     <div><IoLogoInstagram  color="white" size={20}/></div>
-                     <div>Instagram: </div>{" "}
+                     <div className="gray-name">Instagram : </div>{" "}
                     </div>{" "}
                   </div>
                   <div className="left-btn">
@@ -246,32 +246,32 @@ const Account = () => {
                         <p>Loading User Data...</p>
                       ) : userData ? (
                         <>
-                          <div className="input-fields"><span className="gray-name">Full Name: </span>{userData.fname}</div>
-                          <div className="input-fields"><span className="gray-name">Username:</span> {userData.username}</div>
-                          <div className="input-fields"><span className="gray-name">Email: </span>{userData.email}</div>
-                          <div className="input-fields"><span className="gray-name">Gender: </span> {userData.gender}</div>
-                          <div className="input-fields"><span className="gray-name"> User Type:</span> {userData.usertype}</div>
+                          <div className="input-fields"><span className="gray-name">Full Name : </span>{userData.fname}</div>
+                          <div className="input-fields"><span className="gray-name">Username :</span> {userData.username}</div>
+                          <div className="input-fields"><span className="gray-name">Email : </span>{userData.email}</div>
+                          <div className="input-fields"><span className="gray-name">Gender : </span> {userData.gender}</div>
+                          <div className="input-fields"><span className="gray-name"> User Type :</span> {userData.usertype}</div>
                           <div className="input-fields">
-                           <span className="gray-name">Course:</span> {userData.education?.currdegree}
+                           <span className="gray-name">Course :</span> {userData.education?.currdegree}
                           </div>
                           <div className="input-fields">
-                            <span className="gray-name">Specialization: </span>{userData.education?.currcourse}
+                            <span className="gray-name">Specialization : </span>{userData.education?.currcourse}
                           </div>
                           <div className="input-fields">
-                           <span className="gray-name">Passing year: </span> {userData.education?.passyear}
+                           <span className="gray-name">Passing year : </span> {userData.education?.passyear}
                           </div>
                           <div className="input-fields">
-                            <span className="gray-name">Project Link: </span>{userData.project?.projectLink}
+                            <span className="gray-name">Project Link : </span>{userData.project?.projectLink}
                           </div>
                           <div className="input-fields">
-                            <span className="gray-name">Skills: </span>{userData.skills?.skillss}
+                            <span className="gray-name">Skills : </span>{userData.skills?.skillss}
                           </div>
                           <div className="input-fields">
-                            <span className="gray-name">Skills Description:</span> {userData.skills?.skillsDescp}
+                            <span className="gray-name">Skills Description :</span> {userData.skills?.skillsDescp}
                           </div>
                           <div className="website">
                             <p>
-                             <span className="gray-name"> Github:</span>{" "}
+                             <span className="gray-name"> Github :</span>{" "}
                               <Link to={`${userData.personalInfo?.github}`}>
                                 {userData.personalInfo?.github}{" "}
                               </Link>{" "}
@@ -279,7 +279,7 @@ const Account = () => {
                           </div>{" "}
                           <div className="facebook">
                             <p>
-                            <span className="gray-name">Linkedin:</span>{" "}
+                            <span className="gray-name">Linkedin :</span>{" "}
                               <Link to={`${userData.personalInfo?.linkedIn}`}>
                                 {userData.personalInfo?.linkedIn}{" "}
                               </Link>{" "}
@@ -287,7 +287,7 @@ const Account = () => {
                           </div>{" "}
                           <div className="instagram">
                             <p>
-                            <span className="gray-name">Instagram:</span>{" "}
+                            <span className="gray-name">Instagram :</span>{" "}
                               <Link to={`${userData.personalInfo?.insta}`}>
                                 {userData.personalInfo?.insta}{" "}
                               </Link>{" "}

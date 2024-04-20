@@ -20,7 +20,7 @@ const Report = () => {
                     <span>25</span>
                     <span>0</span>
                 </div>
-                {/* {
+                {
                     reportData.map((report) => (
                         <div className="grid-chart-bar" key={report.id}>
                             <div className="bar-wrapper">
@@ -30,7 +30,7 @@ const Report = () => {
                             <span className="grid-hortz-value">Jan</span>
                         </div>
                     ))
-                } */}
+                }
                 
             </div>
         </div>

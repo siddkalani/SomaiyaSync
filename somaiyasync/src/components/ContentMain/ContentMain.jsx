@@ -18,7 +18,7 @@ const ContentMain = () => {
     <div className='whole-main'>
       <div className='app'>
         <Sidebar />
-        <div className='main-content'>
+        <div className='home-main-content'>
           <div className="main-content-holder">
             <div className="c-top">
               <ContentTop

@@ -57,10 +57,10 @@ const UsersAccount = () => {
     <div className="">
       <div className="whole-main">
         <div className="app">
-          <Sidebar />
-          <div className="main-content">
+          {/* <Sidebar /> */}
+          <div className="user-main-content">
             {/* <ContentTop/> */}
-            <div className="account-main">
+            <div className="user-account-main">
               <div className="account-container">
                 <div className="left-side">
                   <div className="left-upper">
@@ -92,11 +92,11 @@ const UsersAccount = () => {
                       <p>Instagram:</p>{" "}
                     </div>{" "}
                   </div>
-                  <div className="left-btn">
+                  {/* <div className="left-btn">
                     <Link to="/editProfile">
                       <button className="edit-prof-btn">Edit Profile</button>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="right-side">
                   <div className="right-upper">

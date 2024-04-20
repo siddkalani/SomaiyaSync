@@ -8,6 +8,7 @@ import ContestCard from './Contest-cards/ContestCard';
 import ContentTop from '../../components/ContentTop/ContentTop';
 import { useLocation } from 'react-router-dom';
 import Sidebar from '../../layout/Sidebar/Sidebar';
+import QuizApp from '../Quiz/quiz-landing/QuizApp';
 
 const Contest = () => {
   const locate = useLocation();
@@ -24,13 +25,16 @@ const Contest = () => {
 
     
     <div className='main-contest'>
-      
-      <div className="nav-bar">
+
+      <QuizApp/>
+
+
+      {/* <div className="nav-bar">
         <div className="navbar-btn"><div className='symbol-game'><FaQuestionCircle /></div><h2>How to play</h2></div>
         <div className="navbar-btn"><div className='symbol-game'><MdLeaderboard /></div><h2>Leaderboard</h2></div>
         <div className="navbar-btn"><div className='symbol-game'><BsSearch /></div><h2>Search for Games</h2></div>
       </div>
-      <div className="games">
+      <div className="games"> */}
         {/* <ContestCard
         Name="CSS Battle"/>
         <ContestCard
@@ -92,7 +96,7 @@ const Contest = () => {
     </div>
     </div>
     </div>
-    </div>
+    // </div>
   )
 }
 
