@@ -53,7 +53,7 @@ const Result = ({totalQuestions,result,onTryAgain}) =>{
                     value ={name} 
                     onChange={(evt) => setName(evt.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
+                <button className="quiz-button-next" onClick={handleSave}>Save</button>
             </>
             ) : (
                 <>

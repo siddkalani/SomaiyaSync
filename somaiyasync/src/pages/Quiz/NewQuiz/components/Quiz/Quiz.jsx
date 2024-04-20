@@ -95,6 +95,7 @@ const Quiz = ({questions})=>{
         );
     };
     return(
+        <div className="quiz-main">
         <div className="quiz-container">
             {!showResult ? (
             <>
@@ -104,13 +105,14 @@ const Quiz = ({questions})=>{
                 <h2>{question}</h2>
                 {getAnswerUI()}
                 <div className="footer">
-                    <button onClick={() => onClickNext(answer)} disabled={answerIdx === null && !inputAnswer}>
+                    <button className="quiz-button-next" onClick={() => onClickNext(answer)} disabled={answerIdx === null && !inputAnswer}>
                         {currentQuestion === questions.length - 1 ? "Finish":" Next"}
                     </button>
                 </div>
             </>) :(
                 <Result result={result} onTryAgain={onTryAgain} totalQuestions = {questions.length}/>
             )}
+        </div>
         </div>
     );
 }

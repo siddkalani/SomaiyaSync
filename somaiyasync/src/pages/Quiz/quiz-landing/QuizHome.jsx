@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const QuizHome = () => {
   return (
-    <div className="home-container">
+    <div className="newquiz-home-container">
       {/* <Navbar /> */}
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
