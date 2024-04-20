@@ -12,7 +12,7 @@ import QuizApp from '../Quiz/quiz-landing/QuizApp';
 
 const Contest = () => {
   const locate = useLocation();
-  const topName = locate.state.topName
+  const topName = locate.state.topName;
   return (
     <div className="contest-main">
     <div className='whole-main'>

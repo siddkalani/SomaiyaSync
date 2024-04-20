@@ -1,0 +1,32 @@
+/* // @import "../../styles/vars.scss";
+
+// .answer-timer-container{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     border-bottom:  1px solid $disabled;
+
+//     .progress{
+//         height: 10px;
+//         transition-duration: 1s;
+//         width: 0;
+//         transition-timing-function: linear;
+//     }
+// } */
+
+.answer-timer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #9c9c9c; /* Replaced $disabled with its corresponding value */
+}
+
+.answer-timer-container .progress {
+    height: 10px;
+    transition-duration: 1s;
+    width: 0;
+    transition-timing-function: linear;
+}
+

@@ -1,0 +1,82 @@
+.quiz-container {
+    width: 500px;
+    background: #ffffff;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 60px;
+    box-sizing: border-box;
+    margin-top: 150px;
+    /* position: relative; */
+}
+
+.quiz-container .active-question-no {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.quiz-container .total-question {
+    font-size: 16px;
+    font-weight: 500;
+    color: #9c9c9c;
+}
+
+.quiz-container h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.quiz-container ul {
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.quiz-container ul li {
+    text-decoration: none;
+    list-style: none;
+    color: #2d264b;
+    font-size: 16px;
+    background: #ffffff;
+    border: 2px solid #9c9c9c;
+    border-radius: 16px;
+    padding: 11px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.quiz-container ul li.selected-answer {
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.quiz-container .footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quiz-container button {
+    /* background: linear-gradient((180deg, #000000 0.03%, rgb(229, 109, 39))); */
+    background: #f7a53e;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 10px 42px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.quiz-container button:disabled {
+    background-color: black
+}
+
+.quiz-container input {
+    border: 2px solid #9c9c9c;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,0 +1,32 @@
+/* @import "../../styles/vars.scss"; */
+
+.result {
+    text-align: center;
+}
+
+.result h3 {
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    text-align: center;
+}
+
+.result p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.result p span {
+    color: #000000; /* Assuming $primary is equivalent to #000000 */
+    font-size: 20px;
+}
+
+.result table {
+    width: 80%;
+    text-align: center;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+.result table tr {
+    border: 2px solid #000000; /* Assuming $primary is equivalent to #000000 */
+}
