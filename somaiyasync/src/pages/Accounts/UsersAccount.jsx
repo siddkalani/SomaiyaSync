@@ -5,6 +5,8 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import ContentTop from "../../components/ContentTop/ContentTop";
 import Sidebar from "../../layout/Sidebar/Sidebar";
 // import ContentTop from "../../components/ContentTop/ContentTop";
+import { FaTwitter ,FaGithub,FaLinkedin, FaGit, FaFacebook } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
 
 const UsersAccount = () => {
   const { username } = useParams();
@@ -80,16 +82,20 @@ const UsersAccount = () => {
                   <div className="left-lower">
                     {" "}
                     <div className="website">
-                      <p>Github: </p>{" "}
+                     <div><FaGithub color="white" size={20}/></div>
+                     <div className="gray-name">Github :   <Link to={`${userData?.personalInfo?.github}`}>  {userData?.personalInfo?.github}{" "} </Link> </div>{" "}
                     </div>{" "}
-                    <div className="twitter">
-                      <p>Twitter:</p>{" "}
+                    <div className="twitter website">
+                    <div><FaLinkedin  color="white" size={20}/></div>
+                     <div className="gray-name">LinkedIn : <Link to={`${userData?.personalInfo?.linkedIn}`}>  {userData?.personalInfo?.linkedIn}{" "} </Link> </div>{" "}
                     </div>{" "}
-                    <div className="facebook">
-                      <p>Linkedin:</p>{" "}
-                    </div>{" "}
-                    <div className="instagram">
-                      <p>Instagram:</p>{" "}
+                    {/* <div className="facebook website">
+                    <div><FaFacebook  color="white" size={20}/></div>
+                     <div className="gray-name">Facebook : </div>{" "}
+                    </div>{" "} */}
+                    <div className="instagram website">
+                    <div><IoLogoInstagram  color="white" size={20}/></div>
+                     <div className="gray-name">Instagram :<Link to={`${userData?.personalInfo?.insta}`}>  {userData?.personalInfo?.insta}{" "} </Link>  </div>{" "}
                     </div>{" "}
                   </div>
                   {/* <div className="left-btn">
@@ -128,7 +134,7 @@ const UsersAccount = () => {
                           <div className="">
                             Skills Description: {userData.skills?.skillsDescp}
                           </div>
-                          <div className="website">
+                          {/* <div className="website">
                             <p>
                               Github:{" "}
                               <Link to={`${userData.personalInfo?.github}`}>
@@ -151,7 +157,7 @@ const UsersAccount = () => {
                                 {userData.personalInfo?.insta}{" "}
                               </Link>{" "}
                             </p>{" "}
-                          </div>{" "}
+                          </div>{" "} */}
                         </>
                       ) : (
                         <p>No user data found.</p>

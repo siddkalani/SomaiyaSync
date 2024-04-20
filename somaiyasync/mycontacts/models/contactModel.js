@@ -120,6 +120,9 @@ const contactSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add the email id "],
     },
+    score: {
+      type: Number,
+    },
     education: educationSchema,
     skills: skillsSchema,
     project: projectSchema,

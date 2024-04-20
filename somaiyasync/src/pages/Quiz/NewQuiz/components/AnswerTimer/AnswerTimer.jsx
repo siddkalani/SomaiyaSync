@@ -13,7 +13,7 @@ function AnswerTimer ({duration,onTimeUp}) {
     useEffect(() => {
         intervalRef.current = setInterval(() => {
             setCounter((cur) => cur + 1);
-        },1000);
+        },5000);
 
         return () => clearInterval(intervalRef.current);
     },[]);

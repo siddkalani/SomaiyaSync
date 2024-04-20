@@ -28,30 +28,32 @@ const Sidebar = () => {
   };
 
   const handleLogout = async () => {
-    try {
-      // Retrieve the access token from localStorage
-      const accessToken = localStorage.getItem("accessToken");
+    if (window.confirm("Are you sure you want to log out?")) {
+      try {
+        // Retrieve the access token from localStorage
+        const accessToken = localStorage.getItem("accessToken");
 
-      // Send a request to the backend to logout the user
-      const response = await fetch("http://localhost:4200/api/users/logout", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`, // Include the access token in the Authorization header
-        },
-        credentials: "include", // Send cookies along with the request
-      });
+        // Send a request to the backend to logout the user
+        const response = await fetch("http://localhost:4200/api/users/logout", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`, // Include the access token in the Authorization header
+          },
+          credentials: "include", // Send cookies along with the request
+        });
 
-      if (response.ok) {
-        // Upon successful logout, navigate the user to the "/" page
-        console.log(accessToken);
-        navigate("/");
-      } else {
-        // Handle unsuccessful logout
-        console.error("Failed to logout");
+        if (response.ok) {
+          // Upon successful logout, navigate the user to the "/" page
+          console.log(accessToken);
+          navigate("/");
+        } else {
+          // Handle unsuccessful logout
+          console.error("Failed to logout");
+        }
+      } catch (error) {
+        console.error("Failed to logout", error);
       }
-    } catch (error) {
-      console.error("Failed to logout", error);
     }
   };
 
