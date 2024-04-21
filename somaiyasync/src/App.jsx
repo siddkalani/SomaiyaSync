@@ -24,6 +24,9 @@ import Landing from "./pages/Landing-page/Landing";
 import UsersAccount from "./pages/Accounts/UsersAccount";
 import QuizApp from "./pages/Quiz/quiz-landing/QuizApp";
 import NewQuizApp from "./pages/Quiz/NewQuiz/NewQuizApp";
+import Month from "./pages/Leaderboard/components/Month";
+import Year from "./pages/Leaderboard/components/Year";
+// import Today from "./pages/Leaderboard/components/Today";
 // import Join from "./practice/chat_chord/Join";
 // import Chat from "./practice/chat_chord/Chat";
 // import Join from "./practice/chat_chord/Join";
@@ -53,7 +56,9 @@ function App() {
         <Route path="/landing" element={<Landing />}></Route>
         <Route path="/quiz-section" element={<QuizApp/>}></Route>
         <Route path="/game" element={<NewQuizApp/>}></Route>
-
+        {/* <Route path="/Leaderboard/today" element={<Today/>}></Route> */}
+        <Route path="/Leaderboard/month" element={<Month/>}></Route>
+        <Route path="/Leaderboard/year" element={<Year/>}></Route>
         {/* <Route path="/join" element={<Join />}></Route> */}
         {/* <Route path="/chat" element={<Chat />}></Route> */}
       </Routes>

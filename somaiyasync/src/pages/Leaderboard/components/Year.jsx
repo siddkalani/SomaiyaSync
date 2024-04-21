@@ -1,66 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
-import "./Leaderboard.css";
-import ContentTop from '../../components/ContentTop/ContentTop';
+import "../Leaderboard.css";
+import ContentTop from '../../../components/ContentTop/ContentTop';
 import { useLocation } from 'react-router-dom';
-import Sidebar from '../../layout/Sidebar/Sidebar';
+import Sidebar from '../../../layout/Sidebar/Sidebar';
 import { Link } from "react-router-dom";
 import { UserRound } from 'lucide-react';
-import { MdLeaderboard } from "react-icons/md";
 
-const Leaderboard = () => {
-  const locate = useLocation();
-  const topName = locate.state.topName;
-
-  const [scores, setScores] = useState([]);
-  const [selectedGame, setSelectedGame] = useState('');
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(`http://localhost:4200/api/contacts/getAll`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("accessToken")}`
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const data = await response.json();
-      const sortedScores = data
-        .filter(contact => contact.score !== undefined)
-        .map(contact => ({
-          name: contact.username,
-          score: contact.score
-        }))
-        .sort((a, b) => b.score - a.score);
-
-      let rank = 1;
-      sortedScores.forEach((score, index) => {
-        if (index > 0 && score.score !== sortedScores[index - 1].score) {
-          rank = index + 1;
-        }
-        score.rank = rank;
-      });
-
-      setScores(sortedScores);
-
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
-  const handleGameSelection = (game) => {
-    setSelectedGame(game);
-  };
-
-  return (
-    <div className='whole-main'>
+const Year = () => {
+    return (
+        <div className='whole-main'>
       <div className='app'>
         <Sidebar />
         <div className='main-content'>
@@ -68,7 +17,7 @@ const Leaderboard = () => {
           <div className='Leaderboard-container'>
             <div className="Leaderboard-main">
               <div className="Leaderboard-header">
-                <div><h1 className='Leaderboard-text'>See where you are! </h1></div>
+                <div><h1>See where you are!</h1></div>
               </div>
               {/* <div className="Leaderboard-body">
                 <div className='Leaderboard-container-header'>
@@ -99,8 +48,9 @@ const Leaderboard = () => {
                   <div className="lboard_tabs">
                     <div className="tabs">
                       <ul>
-                         <li data-li="today"><MdLeaderboard  size={25}/> Leaderboard </li>
-                        
+                        <Link to="/Leaderboard/today"> <li data-li="today">Today</li></Link>
+                        <Link to="/Leaderboard/month"> <li data-li="month">Month</li></Link>
+                        <Link to="/Leaderboard/year"> <li data-li="year">Year</li> </Link>
                       </ul>
                     </div>
                   </div>
@@ -110,7 +60,7 @@ const Leaderboard = () => {
                   <div className="lboard_item today">
                         <div className="lboard_mem">
                             <div className="img">
-                            <UserRound color='black'/>
+                            <UserRound />
                             </div>
                             <div className="name_bar">
                                 <p><span>1.</span> Charles John</p>
@@ -124,7 +74,7 @@ const Leaderboard = () => {
                         </div>
                         <div className="lboard_mem">
                             <div className="img">
-                            <UserRound color='black'/>
+                            <UserRound />
                             </div>
                             <div className="name_bar">
                                 <p><span>2.</span>Alex Mike</p>
@@ -138,7 +88,7 @@ const Leaderboard = () => {
                         </div>
                         <div className="lboard_mem">
                             <div className="img">
-                                <UserRound color='black'/>
+                                <UserRound />
                             </div>
                             <div className="name_bar">
                                 <p><span>3.</span>Johnson</p>
@@ -152,7 +102,7 @@ const Leaderboard = () => {
                         </div>
                         <div className="lboard_mem">
                             <div className="img">
-                            <UserRound color='black'/>
+                            <UserRound />
                             </div>
                             <div className="name_bar">
                                 <p><span>4.</span>Rosey</p>
@@ -166,7 +116,7 @@ const Leaderboard = () => {
                         </div>
                         <div className="lboard_mem">
                             <div className="img">
-                            <UserRound color='black'/>
+                            <UserRound />
                             </div>
                             <div className="name_bar">
                                 <p><span>5.</span>Scarlett Angela</p>
@@ -190,10 +140,7 @@ const Leaderboard = () => {
           </div>
         </div>
       </div>
-
-  );
+    );
 };
 
-export default Leaderboard;
-
-
+export default Year;
