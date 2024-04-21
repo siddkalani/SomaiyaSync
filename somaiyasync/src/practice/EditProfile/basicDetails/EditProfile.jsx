@@ -20,7 +20,7 @@ function EditProfile() {
     insta: "",
   });
 
-
+  localStorage.removeItem("sidd27");
   const accessToken = localStorage.getItem("accessToken");
   console.log(accessToken);
 
@@ -57,7 +57,6 @@ function EditProfile() {
 
   const handleSubmit = async () => {
     try {
-      localStorage.removeItem("siddharth.kalani@somaiya.edu");
       const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
       const userEmail = formState.email;
       const existingProfile = userProfile[userEmail];

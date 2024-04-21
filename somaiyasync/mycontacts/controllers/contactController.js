@@ -44,6 +44,7 @@ const createContact = asyncHandler(async (req, res) => {
     usertype,
     username,
     email,
+    score,
     currdegree,
     currcourse,
     // curryear,
@@ -87,6 +88,7 @@ const createContact = asyncHandler(async (req, res) => {
     usertype,
     username,
     email,
+    score,
     education: {
       currdegree,
       currcourse,
@@ -216,6 +218,7 @@ const updateContact = asyncHandler(async (req, res) => {
       usertype,
       username,
       email,
+      score,
       currdegree,
       currcourse,
       passyear,
@@ -233,6 +236,7 @@ const updateContact = asyncHandler(async (req, res) => {
     if (usertype) contact.usertype = usertype;
     if (username) contact.username = username;
     if (email) contact.email = email;
+    if (score) contact.score = score;
 
     // Update education details
     if (currdegree) contact.education.currdegree = currdegree;

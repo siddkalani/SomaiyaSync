@@ -218,19 +218,19 @@ const Account = () => {
                     {" "}
                     <div className="website">
                      <div><FaGithub color="white" size={20}/></div>
-                     <div className="gray-name">Github : </div>{" "}
+                     <div className="gray-name">Github :   <Link to={`${userData?.personalInfo?.github}`}>  {userData?.personalInfo?.github}{" "} </Link> </div>{" "}
                     </div>{" "}
                     <div className="twitter website">
-                    <div><FaTwitter  color="white" size={20}/></div>
-                     <div className="gray-name">Twitter : </div>{" "}
+                    <div><FaLinkedin  color="white" size={20}/></div>
+                     <div className="gray-name">LinkedIn : <Link to={`${userData?.personalInfo?.linkedIn}`}>  {userData?.personalInfo?.linkedIn}{" "} </Link> </div>{" "}
                     </div>{" "}
-                    <div className="facebook website">
+                    {/* <div className="facebook website">
                     <div><FaFacebook  color="white" size={20}/></div>
                      <div className="gray-name">Facebook : </div>{" "}
-                    </div>{" "}
+                    </div>{" "} */}
                     <div className="instagram website">
                     <div><IoLogoInstagram  color="white" size={20}/></div>
-                     <div className="gray-name">Instagram : </div>{" "}
+                     <div className="gray-name">Instagram :<Link to={`${userData?.personalInfo?.insta}`}>  {userData?.personalInfo?.insta}{" "} </Link>  </div>{" "}
                     </div>{" "}
                   </div>
                   <div className="left-btn">
@@ -269,7 +269,7 @@ const Account = () => {
                           <div className="input-fields">
                             <span className="gray-name">Skills Description :</span> {userData.skills?.skillsDescp}
                           </div>
-                          <div className="website">
+                          {/* <div className="website">
                             <p>
                              <span className="gray-name"> Github :</span>{" "}
                               <Link to={`${userData.personalInfo?.github}`}>
@@ -292,7 +292,7 @@ const Account = () => {
                                 {userData.personalInfo?.insta}{" "}
                               </Link>{" "}
                             </p>{" "}
-                          </div>{" "}
+                          </div>{" "} */}
                         </>
                       ) : (
                         <p>No user data found.</p>
