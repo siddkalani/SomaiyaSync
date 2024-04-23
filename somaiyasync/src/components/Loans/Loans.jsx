@@ -5,7 +5,7 @@ const Loans = () => {
   return (
     <div className="subgrid-two-item grid-common grid-c7">
         <div className="grid-c-title">
-            <h3 className="grid-c-title-text">Loans</h3>
+            <h3 className="grid-c-title-text">Quiz</h3>
             <button className="grid-c-title-icon">
                 <img src={iconsImgs.plus} />
             </button>
@@ -24,12 +24,12 @@ const Loans = () => {
             </div>
             <ul className="data-list">
                 <li className="data-item text-silver-v1">
-                    <span className="data-item-text">Savings Target</span>
-                    <span className="data-item-value">$ 500,000</span>
+                    <span className="data-item-text">Highest Score</span>
+                    <span className="data-item-value">40</span>
                 </li>
                 <li className="data-item text-silver-v1">
-                    <span className="data-item-text">Target Reached</span>
-                    <span className="data-item-value">$ 250,000</span>
+                    <span className="data-item-text">Lowest Score</span>
+                    <span className="data-item-value">10</span>
                 </li>
             </ul>
         </div>

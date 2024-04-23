@@ -12,7 +12,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: -1.5rem;
+    margin-top: 1.6rem;
 
 }
 
@@ -31,10 +31,18 @@
 
 .Leaderboard-body {
 
-    height: 35rem;
+    height:max-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* background-color: aqua; */
+    background: rgba(27, 27, 27, 0.99);
     border-radius: 1rem;
-
-
+    /* border-radius: 20px; */
+    
 }
 
 .goal-img img {
@@ -57,6 +65,7 @@
     border-radius: 10px;
     margin: 0.5rem;
 
+
 }
 
 .Leaderboard-btn {
@@ -72,18 +81,24 @@
 
 .button_card {
 
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(242, 242, 242, 0.35) 0px 5px 15px;
 }
 
 .Leaderboard-content {
 
-    width: 100%;
+    width: 90%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: aqua; */
+
 
 }
 
 .Leaderboard-content-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1rem;
     padding: 1rem;
 
@@ -92,10 +107,11 @@
 }
 
 .Leaderboard-content-inputs {
-    background-color: rgb(226, 223, 219);
+    /* background-color: rgb(226, 223, 219); */
     display: flex;
+     border: 1px solid;
     justify-content: space-around;
-    gap: 28rem;
+    /* gap: 2rem; */
     border-radius: 1rem;
     padding: 0.1rem;
     height: 2.4rem;
@@ -109,7 +125,9 @@
     gap: 1.9rem;
 }
 
-
+.new-input{
+    /* background-color: antiquewhite; */
+}
 
 .Lwrapper {
     width: 100%;

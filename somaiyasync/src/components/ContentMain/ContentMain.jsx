@@ -28,7 +28,8 @@ const ContentMain = () => {
             {/* <div className="content-container"> */}
             <div className="content-grid-one">
               <Cards
-                name="Welcome to SomaiyaSync" />
+                name="Welcome to SomaiyaSync" 
+                />
               <Transactions />
               <Report />
             </div>

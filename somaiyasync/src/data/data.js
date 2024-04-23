@@ -4,7 +4,7 @@ import { personsImgs } from "../utils/images";
 export const navigationLinks = [
     { id: 1, title: 'Home', image: iconsImgs.home },
     { id: 2, title: 'Contest', image: iconsImgs.budget },
-    { id: 3, title: 'Inbox', image: iconsImgs.plane },
+    // { id: 3, title: 'Inbox', image: iconsImgs.plane },
     { id: 4, title: 'Leaderboard', image: iconsImgs.report },
     { id: 5, title: 'Account', image: iconsImgs.user },
     { id: 6, title: 'Settings', image: iconsImgs.gears },
@@ -70,54 +70,54 @@ export const reportData = [
 export const budget = [
     {
         id: 19, 
-        title: "Subscriptions",
-        type: "Automated",
-        amount: 22000
+        title: "Student",
+        // type: "Automated",
+        // amount: 22000
     },
     {
         id: 20, 
-        title: "Loan Payment",
-        type: "Automated",
-        amount: 16000
+        title: "Faculty",
+        // type: "Automated",
+        // amount: 16000
     },
     {
         id: 21, 
-        title: "Foodstuff",
-        type: "Automated",
-        amount: 20000
+        title: "Recruiter",
+        // type: "Automated",
+        // amount: 20000
     },
-    {
-        id: 22, 
-        title: "Subscriptions",
-        type: null,
-        amount: 10000
-    },
-    {
-        id: 23, 
-        title: "Subscriptions",
-        type: null,
-        amount: 40000
-    }
+    // {
+    //     id: 22, 
+    //     title: "Subscriptions",
+    //     type: null,
+    //     amount: 10000
+    // },
+    // {
+    //     id: 23, 
+    //     title: "Subscriptions",
+    //     type: null,
+    //     amount: 40000
+    // }
 ];
 
 export const subscriptions = [
     {
         id: 24,
         title: "LinkedIn",
-        due_date: "23/12/04",
-        amount: 20000
+        due_date: "",
+        amount:""
     },
     {
         id: 25,
-        title: "Netflix",
-        due_date: "23/12/10",
-        amount: 5000
+        title: "Instagram",
+        due_date: "",
+        amount: ""
     },
     {
         id: 26,
-        title: "DSTV",
-        due_date: "23/12/22",
-        amount: 2000
+        title: "Github",
+        due_date: "",
+        amount: ""
     }
 ];
 

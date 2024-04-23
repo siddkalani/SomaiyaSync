@@ -59,6 +59,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 .grid-c1 .logo-shape2 {
   background-color: var(--clr-yellow);
 }
+.card-p{
+  
+}
 
 @media screen and (max-width: 768px) {
   .grid-c1 {

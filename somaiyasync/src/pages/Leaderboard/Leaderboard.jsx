@@ -70,7 +70,7 @@ const Leaderboard = () => {
               <div className="Leaderboard-header">
                 <div><h1 className='Leaderboard-text'>See where you are! </h1></div>
               </div>
-              {/* <div className="Leaderboard-body">
+              <div className="Leaderboard-body">
                 <div className='Leaderboard-container-header'>
                   <button onClick={() => handleGameSelection('CSS Battle')} className={`Leaderboard-btn ${selectedGame === 'CSS Battle' && 'button_card'}`}>CSS Battle</button>
                   <button onClick={() => handleGameSelection('DSA Challenge')} className={`Leaderboard-btn ${selectedGame === 'DSA Challenge' && 'button_card'}`}>DSA Challenge</button>
@@ -86,16 +86,16 @@ const Leaderboard = () => {
                   <div className="content-inputs">
                     {scores && scores.map((scoree, index) => (
                       <div key={index} className="Leaderboard-content-inputs">
-                        <div>{scoree.name}</div>
-                        <div>{scoree.rank}</div>
-                        <div>{scoree.score}</div>
+                        <div className='new-input'>{scoree.name}</div>
+                        <div className='new-input'>{scoree.rank}</div>
+                        <div className='new-input'>{scoree.score}</div>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div> */}
+              </div>
 
-                <div className="lboard_section">
+                {/* <div className="lboard_section">
                   <div className="lboard_tabs">
                     <div className="tabs">
                       <ul>
@@ -128,7 +128,7 @@ const Leaderboard = () => {
                             <div className="points">
                                 {scoree.score}
                             </div>
-                        </div>
+                        </div> */}
                         {/* <div className="lboard_mem">
                             <div className="img">
                             <UserRound color='black'/>
@@ -185,13 +185,13 @@ const Leaderboard = () => {
                                 110 points
                             </div>
                         </div> */}
-                    </div>
+                    {/* </div>
                        
 
                   ))}
                   </div>
               
-                </div>
+                </div> */}
          
               </div>
             </div>

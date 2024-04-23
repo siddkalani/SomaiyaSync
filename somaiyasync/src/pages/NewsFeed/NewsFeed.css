@@ -1,9 +1,12 @@
 /* NewsFeed.css */
 .newsfeed-container {
-    background: linear-gradient(to bottom, #1e0342, #0e46a3);
+    /* background: linear-gradient(to bottom, #1e0342, #0e46a3); */
+    background: url(cool-background.png);
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
+    height: 100%;
+    width: 100%;
   }
   
   .newsfeed-container .container {

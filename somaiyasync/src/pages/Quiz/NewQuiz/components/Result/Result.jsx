@@ -89,6 +89,7 @@
 
 import { useState, useEffect } from "react";
 import "../Result/Result.css";
+import { IoMdArrowBack } from "react-icons/io";
 
 const Result = ({ totalQuestions, result, onTryAgain }) => {
   const [name, setName] = useState(localStorage.getItem("username") || "");
@@ -197,6 +198,8 @@ const Result = ({ totalQuestions, result, onTryAgain }) => {
           </table>
         </> */}
       {/* )} */}
+      {/* <IoMdArrowBack size={200} color="white"/> */}
+      
     </div>
   );
 };
