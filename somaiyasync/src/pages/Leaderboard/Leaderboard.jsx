@@ -106,28 +106,35 @@ const Leaderboard = () => {
                   </div>
 
                   <div className="lboard_wrap">
-
+                  <div className='Leaderboard-container-header'>
+                  <button onClick={() => handleGameSelection('CSS Battle')} className={`Leaderboard-btn ${selectedGame === 'CSS Battle' && 'button_card'}`}>CSS Battle</button>
+                  <button onClick={() => handleGameSelection('DSA Challenge')} className={`Leaderboard-btn ${selectedGame === 'DSA Challenge' && 'button_card'}`}>DSA</button>
+                  <button onClick={() => handleGameSelection('Quiz')} className={`Leaderboard-btn ${selectedGame === 'Quiz' && 'button_card'}`}>Quiz</button>
+                  <button onClick={() => handleGameSelection('Typing Test')} className={`Leaderboard-btn ${selectedGame === 'Typing Test' && 'button_card'}`}>Typing Test</button>
+                </div>
+                  {scores && scores.map((scoree, index) => (
+            
                   <div className="lboard_item today">
                         <div className="lboard_mem">
                             <div className="img">
                             <UserRound color='black'/>
                             </div>
                             <div className="name_bar">
-                                <p><span>1.</span> Charles John</p>
+                                <p><span>{scoree.rank + "."}</span>{scoree.name}</p>
                                 <div className="bar_wrap">
-                                    <div className="inner_bar" style={{ width: '95%' }}></div>
+                                    <div className="inner_bar" style={{ width: '85%' }}></div>
                                 </div>
                             </div>
                             <div className="points">
-                                195 points
+                                {scoree.score}
                             </div>
                         </div>
-                        <div className="lboard_mem">
+                        {/* <div className="lboard_mem">
                             <div className="img">
                             <UserRound color='black'/>
                             </div>
                             <div className="name_bar">
-                                <p><span>2.</span>Alex Mike</p>
+                                <p><span>2.</span></p>
                                 <div className="bar_wrap">
                                     <div className="inner_bar" style={{ width: '85%' }}></div>
                                 </div>
@@ -141,7 +148,7 @@ const Leaderboard = () => {
                                 <UserRound color='black'/>
                             </div>
                             <div className="name_bar">
-                                <p><span>3.</span>Johnson</p>
+                                <p><span>3.</span>{scoree.name}</p>
                                 <div className="bar_wrap">
                                     <div className="inner_bar" style={{ width: '60%' }}></div>
                                 </div>
@@ -155,7 +162,7 @@ const Leaderboard = () => {
                             <UserRound color='black'/>
                             </div>
                             <div className="name_bar">
-                                <p><span>4.</span>Rosey</p>
+                                <p><span>4.</span>{scoree.name}</p>
                                 <div className="bar_wrap">
                                     <div className="inner_bar" style={{ width: '30%' }}></div>
                                 </div>
@@ -169,7 +176,7 @@ const Leaderboard = () => {
                             <UserRound color='black'/>
                             </div>
                             <div className="name_bar">
-                                <p><span>5.</span>Scarlett Angela</p>
+                                <p><span>5.</span>{scoree.name}</p>
                                 <div className="bar_wrap">
                                     <div className="inner_bar" style={{ width: '10%' }}></div>
                                 </div>
@@ -177,14 +184,15 @@ const Leaderboard = () => {
                             <div className="points">
                                 110 points
                             </div>
-                        </div>
+                        </div> */}
                     </div>
+                       
 
-                    {/* <Month/> */}
-
-                    {/* <Year/> */}
+                  ))}
                   </div>
+              
                 </div>
+         
               </div>
             </div>
           </div>
