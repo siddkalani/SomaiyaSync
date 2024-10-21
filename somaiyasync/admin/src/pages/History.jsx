@@ -83,45 +83,6 @@ const History = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="w-1/3 bg-gray-100 p-6 overflow-hidden flex flex-col">
-          <div className="bg-white rounded-lg shadow p-6 flex flex-col h-full overflow-hidden">
-            <h2 className="text-xl font-semibold mb-4">Detail history</h2>
-            <div className="flex justify-between items-center mb-4">
-              <span>Order Number {orderDetails.orderNumber}</span>
-              <span>{orderDetails.time}</span>
-            </div>
-            <div className="space-y-4 mb-6">
-              <div className="bg-gray-100 p-3 rounded">
-                <p>{orderDetails.customer}</p>
-              </div>
-              <div className="bg-gray-100 p-3 rounded">
-                <p>{orderDetails.table}</p>
-              </div>
-              <div className="bg-gray-100 p-3 rounded">
-                <p>{orderDetails.dineOption}</p>
-              </div>
-            </div>
-            <h3 className="font-semibold mb-4">Order List</h3>
-            <div className="space-y-4 overflow-auto flex-grow">
-              {orderItems.map((item, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
-                  <div className="flex-grow">
-                    <h4 className="font-semibold">{item.name}</h4>
-                    <p className="text-sm text-gray-500">{item.quantity} Dish</p>
-                    <p className="text-sm text-gray-500">{item.specs}</p>
-                    <p className="font-semibold">${item.price.toFixed(2)}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <h3 className="font-semibold mt-6 mb-4">Order summary</h3>
-            <button className="w-full bg-blue-500 text-white py-2 rounded-lg mt-auto">
-              Print invoice
-            </button>
-          </div>
-        </div> */}
       </main>
     </div>
   );
