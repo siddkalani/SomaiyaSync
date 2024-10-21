@@ -14,6 +14,9 @@ const router = express.Router();
 router.use(
   session({
     secret: process.env.SESSION_SECRET,
+    resave: false,            // Prevent session from being saved back to the store unless modified
+  saveUninitialized: false, // Do not create session until something is stored
+  cookie: { secure: false } 
   })
 );
 

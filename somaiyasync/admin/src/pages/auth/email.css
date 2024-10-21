@@ -1,0 +1,57 @@
+.email-content{
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.verfied-sign-in {
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+    width: 14rem;
+  }
+  
+  .verfied-sign-in:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .verfied-sign-in:active {
+    transform: scale(0.95);
+  }
+  
+  .verified-form {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  
+    width: 20rem;
+    height: 15rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.1rem;
+    text-align: center;
+  }

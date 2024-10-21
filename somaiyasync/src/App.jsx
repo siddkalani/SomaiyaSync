@@ -26,7 +26,7 @@ import QuizApp from "./pages/Quiz/quiz-landing/QuizApp";
 import NewQuizApp from "./pages/Quiz/NewQuiz/NewQuizApp";
 import Month from "./pages/Leaderboard/components/Month";
 import Year from "./pages/Leaderboard/components/Year";
-import Dashboard from "./pages/Admin/Dashboard";
+// import Dashboard from "./pages/Admin/Dashboard";
 // import Today from "./pages/Leaderboard/components/Today";
 // import Join from "./practice/chat_chord/Join";
 // import Chat from "./practice/chat_chord/Chat";
@@ -61,7 +61,7 @@ function App() {
         <Route path="/Leaderboard/month" element={<Month/>}></Route>
         <Route path="/Leaderboard/year" element={<Year/>}></Route>
 
-        <Route path="/Admin/Dashboard" element={<Dashboard/>}></Route>
+        {/* <Route path="/Admin/Dashboard" element={<Dashboard/>}></Route> */}
         <Route path="/Leaderboard/year" element={<Year/>}></Route>
       </Routes>
     </BrowserRouter>

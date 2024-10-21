@@ -9,9 +9,23 @@ import Dashboard from './pages/Dashboard';
 import OrderList from './pages/OrderList';
 import History from './pages/History';
 import Bills from './pages/Bills';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import EmailVerify from './pages/auth/Email';
 
 const router = createBrowserRouter([
-
+{
+  path:'/login',
+  element: <Login/>
+},
+{
+  path:'/register',
+  element: <Register/>
+},
+{
+  path:'/email',
+  element: <EmailVerify/>
+},
   {
     path: '/',
     element: <Index />,
