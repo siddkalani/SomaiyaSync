@@ -26,6 +26,7 @@ import QuizApp from "./pages/Quiz/quiz-landing/QuizApp";
 import NewQuizApp from "./pages/Quiz/NewQuiz/NewQuizApp";
 import Month from "./pages/Leaderboard/components/Month";
 import Year from "./pages/Leaderboard/components/Year";
+import Dashboard from "./pages/Admin/Dashboard";
 // import Today from "./pages/Leaderboard/components/Today";
 // import Join from "./practice/chat_chord/Join";
 // import Chat from "./practice/chat_chord/Chat";
@@ -36,6 +37,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/register" element={<Register />}></Route>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/login" element={<Login />}></Route>
@@ -56,11 +58,11 @@ function App() {
         <Route path="/landing" element={<Landing />}></Route>
         <Route path="/quiz-section" element={<QuizApp/>}></Route>
         <Route path="/game" element={<NewQuizApp/>}></Route>
-        {/* <Route path="/Leaderboard/today" element={<Today/>}></Route> */}
         <Route path="/Leaderboard/month" element={<Month/>}></Route>
         <Route path="/Leaderboard/year" element={<Year/>}></Route>
-        {/* <Route path="/join" element={<Join />}></Route> */}
-        {/* <Route path="/chat" element={<Chat />}></Route> */}
+
+        <Route path="/Admin/Dashboard" element={<Dashboard/>}></Route>
+        <Route path="/Leaderboard/year" element={<Year/>}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -55,9 +55,9 @@ const Login = () => {
         console.log(accesstoken);
         console.log(EmailUser);
         console.log(userName);
-        navigate("/home", {
+        navigate("/Home", {
           state: {
-            topName: "home",
+            topName: "Home",
           },
         });
       } else if (
