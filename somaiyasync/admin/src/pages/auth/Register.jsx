@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./register.css";
-import axios from "axios"; // Import axios for making HTTP requests
+import axios from "axios"; 
 
 const Register = () => {
   const [username, setUsername] = useState("");
