@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { Bell, Search, Settings, ArrowUpRight, DollarSign, ShoppingCart, TrendingUp, XOctagon, Upload } from 'lucide-react';
+import axios from 'axios';
+
 
 const salesData = [
   { name: 'Jan', value: 300 },
@@ -52,6 +54,30 @@ const StatCard = ({ Icon, title, value, change, changeType }) => (
 
 
 const Dashboard = () => {
+
+
+  const [title, setTitle] = useState();
+  const [content, setContent] = useState('');
+  const [category, setCategory] = useState('Contest'); // default category
+  const [newsFeed, setNewsFeed] = useState([]); // assuming you have a news feed
+
+  const handleAddNews = async (e) => {
+    e.preventDefault(); // prevent the form from reloading the page
+    try {
+      const response = await axios.post('http://localhost:4200/api/news', {
+        title,
+        content,
+        category,
+      });
+      setNewsFeed([response.data, ...newsFeed]); // update news feed
+      setTitle(''); // reset title input
+      setContent(''); // reset content input
+      setCategory('Contest'); // reset category
+    } catch (error) {
+      console.error('Error adding news:', error);
+    }
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen p-8 mt-12">
       <div className="w-full mx-auto">
@@ -105,63 +131,75 @@ const Dashboard = () => {
 
             {/* Right Column */}
             <div className="w-1/3 flex flex-col h-full">
-            <div className="bg-white rounded-lg shadow flex-grow flex flex-col h-full">
-              <div className="p-4 border-b">
-                <h2 className="text-xl font-semibold">Add News</h2>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <form className="space-y-4 flex-grow flex flex-col">
-                
-                  <div className="flex space-x-4">
-                    <div className="flex-1">
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
-                      <div className="relative">
-                        <select className="block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
-                          <option>Contest</option>
-                          <option>Hackathon</option>
-                          <option>Internship</option>
-                          <option>Placement</option>
-                        </select>
-                        {/* <ChevronDown className="absolute right-3 top-2.5 text-gray-400" size={18} /> */}
-                      </div>
-                    </div>
-                   
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">News Title</label>
-                    <input
-                      type="text"
-                      className="block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="News title"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                    <input
-                      type="text"
-                      className="block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="Here is my first news for somaiya"
-                    />
-                  </div>
-                
-                  <div className="flex space-x-4 mt-auto">
-                    <button
-                      type="reset"
-                      className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-md hover:bg-gray-200"
-                    >
-                      Reset
-                    </button>
-                    <button
-                      type="submit"
-                      className="flex-1 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
-                    >
-                      Save
-                    </button>
-                  </div>
-                </form>
+      <div className="bg-white rounded-lg shadow flex-grow flex flex-col h-full">
+        <div className="p-4 border-b">
+          <h2 className="text-xl font-semibold">Add News</h2>
+        </div>
+        <div className="p-4 flex-grow flex flex-col">
+          <form className="space-y-4 flex-grow flex flex-col" onSubmit={handleAddNews}>
+            <div className="flex space-x-4">
+              <div className="flex-1">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                <div className="relative">
+                  <select
+                    className="block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                  >
+                    <option value="Contest">Contest</option>
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Placement">Placement</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">News Title</label>
+              <input
+                type="text"
+                className="block w-full sm:text-sm border-gray-300 rounded-md"
+                placeholder="News title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+              <input
+                type="text"
+                className="block w-full sm:text-sm border-gray-300 rounded-md"
+                placeholder="Here is my first news for Somaiya"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+              />
+            </div>
+
+            <div className="flex space-x-4 mt-auto">
+              <button
+                type="reset"
+                className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-md hover:bg-gray-200"
+                onClick={() => {
+                  setTitle(''); 
+                  setContent(''); 
+                  setCategory('Contest');
+                }}
+              >
+                Reset
+              </button>
+              <button
+                type="submit"
+                className="flex-1 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
           </div>
       </div>
     </div>
