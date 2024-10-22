@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
-// Import components and store
 import Index from './routes/Index';
 import ProductManagementDashboard from './App';
 import Dashboard from './pages/Dashboard';
