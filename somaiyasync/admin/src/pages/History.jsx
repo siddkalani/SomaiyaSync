@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bell, User, ChevronDown, MoreVertical, ChevronRight } from 'lucide-react';
 
 const History = () => {
@@ -27,6 +27,48 @@ const History = () => {
     { name: 'Butterscotch', quantity: 3, specs: 'Medium - Not spicy', price: 132.00, image: '/api/placeholder/80/80' },
   ];
 
+  const [scores, setScores] = useState([]);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`http://localhost:4200/api/contacts/getAll`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      const sortedScores = data
+        .filter(contact => contact.score !== undefined)
+        .map(contact => ({
+          name: contact.username,
+          score: contact.score
+        }))
+        .sort((a, b) => b.score - a.score);
+
+      let rank = 1;
+      sortedScores.forEach((score, index) => {
+        if (index > 0 && score.score !== sortedScores[index - 1].score) {
+          rank = index + 1;
+        }
+        score.rank = rank;
+      });
+
+      setScores(sortedScores);
+
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+
   return (
     <div className="bg-gray-100 min-h-screen mt-12">
 
@@ -46,19 +88,19 @@ const History = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b">
-                    <th className="text-left p-4 sticky top-0 bg-white">Name <ChevronDown className="inline" /></th>
-                    <th className="text-left p-4 sticky top-0 bg-white">Date/Time <ChevronDown className="inline" /></th>
-                    <th className="text-left p-4 sticky top-0 bg-white">Payment status</th>
-                    <th className="text-left p-4 sticky top-0 bg-white">Amount</th>
+                    <th className="text-left p-4 sticky top-0 bg-white">Username<ChevronDown className="inline" /></th>
+                    <th className="text-left p-4 sticky top-0 bg-white">Rank <ChevronDown className="inline" /></th>
+                    <th className="text-left p-4 sticky top-0 bg-white">Score</th>
+                    {/* <th className="text-left p-4 sticky top-0 bg-white">Amount</th> */}
                   </tr>
                 </thead>
                 <tbody>
-                  {orderHistory.map((order, index) => (
+                  {scores.map((score, index) => (
                     <tr key={index} className={index === 1 ? 'bg-blue-50' : ''}>
-                      <td className="p-4">{order.number}</td>
-                      <td className="p-4">{order.dateTime}</td>
-                      <td className="p-4 text-blue-500">{order.status}</td>
-                      <td className="p-4">${order.amount.toFixed(2)}</td>
+                      <td className="p-4">{score.name}</td>
+                      <td className="p-4">{score.rank}</td>
+                      <td className="p-4 text-blue-500">{score.score}</td>
+                      {/* <td className="p-4">${order.amount.toFixed(2)}</td> */}
                     </tr>
                   ))}
                 </tbody>

@@ -55,8 +55,8 @@ function NewsFeed() {
   return (
     <div className="newsfeed-container">
       <div className="container">
-        <h1 className="heading">somaiyaSync News-Feed</h1>
-        {isAdmin && ( // Render the input fields only if the user is an admin
+        {/* <h1 className="heading">somaiyaSync News-Feed</h1> */}
+        {/* {isAdmin && ( // Render the input fields only if the user is an admin
           <div className="input-container">
             <input
               className="input-field"
@@ -76,7 +76,7 @@ function NewsFeed() {
               Add News
             </button>
           </div>
-        )}
+        )} */}
         <div className="news-container">
           {newsFeed.map((news) => (
             <div key={news._id} className="news-card">
