@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Bell, ChevronDown, MoreVertical, ChevronRight, Upload } from 'lucide-react';
+import axios from 'axios';
 
 const ProductManagementDashboard = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -9,19 +10,19 @@ const [selectedSem, setSelectedSem] = useState('');
 const [documentTopic, setDocumentTopic] = useState('');
 const [documentList, setDocumentList] = useState([]); // For holding document data if needed
 
-const handleAddDocument = async () => {
+const handleAddDocument = async (e) => {
+  e.preventDefault();
   try {
     const response = await axios.post('http://localhost:4200/api/documents', {
-      url: documentUrl,  // Assuming you have a state for document URL
-      branch: selectedBranch,  // Assuming you have a state for the selected branch
-      sem: selectedSem,  // Assuming you have a state for the selected semester
-      topic: documentTopic,  // Assuming you have a state for the document topic
+      url: documentUrl,  
+      branch: selectedBranch,  
+      sem: selectedSem,  
+      topic: documentTopic,  
     });
+    console.log('Posted data:', response.data);
 
-    // Update the document list if needed
     setDocumentList([response.data, ...documentList]);
 
-    // Reset the form states
     setDocumentUrl('');
     setSelectedBranch('');
     setSelectedSem('');
@@ -46,6 +47,7 @@ const handleAddDocument = async () => {
       <main className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-12">
         <div className="flex space-x-8">
           {/* Left Column */}
+
           <div className="flex-grow flex flex-col">
             <div className="flex justify-between mb-6">
               <h1 className="text-2xl font-bold">Documents</h1>
@@ -108,7 +110,10 @@ const handleAddDocument = async () => {
           </div>
 
           {/* Right Column */}
-          <div className="w-1/3 flex flex-col h-full">
+          <div className="w-1/3">
+          <form className="w-full flex flex-col" onSubmit={handleAddDocument}>
+
+          <div className="w-full flex flex-col h-full">
             <div className="bg-white rounded-lg shadow flex-grow flex flex-col h-full">
               <div className="p-4 border-b">
                 <h2 className="text-xl font-semibold">Add Documents</h2>
@@ -168,6 +173,7 @@ const handleAddDocument = async () => {
                       Reset
                     </button>
                     <button
+                    // onClick={handleAddDocument}
                       type="submit"
                       className="flex-1 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
                     >
@@ -178,7 +184,8 @@ const handleAddDocument = async () => {
               </div>
             </div>
           </div>
-
+          </form>
+          </div>
         </div>
       </main>
   );

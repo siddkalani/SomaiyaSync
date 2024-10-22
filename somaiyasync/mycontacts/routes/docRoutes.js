@@ -1,9 +1,4 @@
 const express = require("express");
-const {
-  getNews,
-  createNews,
-  deleteNews,
-} = require("../controllers/newsController");
 const { getDocs, createDocs } = require("../controllers/docsControllers");
 const router = express.Router();
 
