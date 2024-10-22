@@ -26,10 +26,7 @@ const ProductManagementDashboard = () => {
                 <button className="bg-blue-100 text-blue-600 px-4 py-2 rounded-md">+ Add new doc</button>
               </div>
             </div>
-
-          
-
-
+            
             <div className="bg-white rounded-lg shadow flex-grow flex flex-col">
               <div className="flex justify-between items-center p-4 border-b">
                 <h2 className="text-xl font-semibold flex items-center">
@@ -91,10 +88,7 @@ const ProductManagementDashboard = () => {
                 <form className="space-y-4 flex-grow flex flex-col">
                   <div className=''>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Image/Pdf/Word/Excel</label>
-                    <div className="border-2 border-dashed border-gray-300 rounded-md p-4 text-center">
-                      <Upload className="mx-auto text-gray-400" size={24} />
-                      <p className="mt-1 text-sm text-gray-500">Upload or drag image</p>
-                    </div>
+                   
                   </div>
                   <div className="flex flex-col space-y-2">
                     <div className="flex-1">
