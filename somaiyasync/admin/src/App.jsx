@@ -3,6 +3,35 @@ import { Search, Bell, ChevronDown, MoreVertical, ChevronRight, Upload } from 'l
 
 const ProductManagementDashboard = () => {
   const [activeTab, setActiveTab] = useState('All');
+  const [documentUrl, setDocumentUrl] = useState('');
+const [selectedBranch, setSelectedBranch] = useState('');
+const [selectedSem, setSelectedSem] = useState('');
+const [documentTopic, setDocumentTopic] = useState('');
+const [documentList, setDocumentList] = useState([]); // For holding document data if needed
+
+const handleAddDocument = async () => {
+  try {
+    const response = await axios.post('http://localhost:4200/api/documents', {
+      url: documentUrl,  // Assuming you have a state for document URL
+      branch: selectedBranch,  // Assuming you have a state for the selected branch
+      sem: selectedSem,  // Assuming you have a state for the selected semester
+      topic: documentTopic,  // Assuming you have a state for the document topic
+    });
+
+    // Update the document list if needed
+    setDocumentList([response.data, ...documentList]);
+
+    // Reset the form states
+    setDocumentUrl('');
+    setSelectedBranch('');
+    setSelectedSem('');
+    setDocumentTopic('');
+  } catch (error) {
+    console.error('Error adding document:', error);
+  }
+};
+
+
   const [products, setProducts] = useState([
     { name: 'TAC', code: 'Comps', category: 'Engg', stock: 4, price: 'Ise' },
     // { name: 'Kopag Benedict', code: '#12345', category: 'Food', stock: 120, price: '$123.00' },
@@ -88,45 +117,46 @@ const ProductManagementDashboard = () => {
                 <form className="space-y-4 flex-grow flex flex-col">
                   <div className=''>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Image/Pdf/Word/Excel</label>
-                   
-                  </div>
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex-1">
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Branch</label>
-                      <div className="relative">
-                        <select className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
-                          <option>comps</option>
-                          <option>it</option>
-                          <option>extc</option>
-                          <option>excp</option>
-                          <option>mech</option>
-                        </select>
-                        {/* <ChevronDown className="absolute right-3 top-2.5 text-gray-400" size={18} /> */}
-                      </div>
-                    </div>
-
-                    <div className="flex-1">
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Sem</label>
-                      <div className="relative">
-                        <select className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                        {/* <ChevronDown className="absolute right-3 top-2.5 text-gray-400" size={18} /> */}
-                      </div>
-                    </div>
-                   
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Topic</label>
                     <input
-                      type="text"
-                      className="block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="Input product name"
-                    />
+  type="text"
+  className="block w-full sm:text-sm border-gray-300 rounded-md"
+  placeholder="Input document URL"
+  value={documentUrl}
+  onChange={(e) => setDocumentUrl(e.target.value)}
+/>
+<label className="block text-sm font-medium text-gray-700 mb-1">Branch</label>
+<select
+  className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+  value={selectedBranch}
+  onChange={(e) => setSelectedBranch(e.target.value)}
+>
+  <option value="comps">comps</option>
+  <option value="it">it</option>
+  <option value="extc">extc</option>
+  <option value="excp">excp</option>
+  <option value="mech">mech</option>
+</select>
+<label className="block text-sm font-medium text-gray-700 mb-1">Sem</label>
+<select
+  className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+  value={selectedSem}
+  onChange={(e) => setSelectedSem(e.target.value)}
+>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+<label className="block text-sm font-medium text-gray-700 mb-1">Topic</label>
+<input
+  type="text"
+  className="block w-full sm:text-sm border-gray-300 rounded-md"
+  placeholder="Input document topic"
+  value={documentTopic}
+  onChange={(e) => setDocumentTopic(e.target.value)}
+/>
+
                   </div>
              
                
