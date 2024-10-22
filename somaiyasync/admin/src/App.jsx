@@ -27,26 +27,7 @@ const ProductManagementDashboard = () => {
               </div>
             </div>
 
-            <div className="relative flex justify-between bg-slate-300 mb-6 rounded-lg w-full">
-              <div className="absolute top-0 left-0 w-full h-full">
-                <div
-                  className={`absolute bg-white rounded-lg drop-shadow-lg h-full w-1/5 transform transition-all ease-in-out duration-300`}
-                  style={{
-                    transform: `translateX(${['All', 'Main course', 'Appetizer', 'Dessert', 'Beverage'].indexOf(activeTab) * 100}%)`,
-                  }}
-                />
-              </div>
-              {['All', 'Main course', 'Appetizer', 'Dessert', 'Beverage'].map((tab) => (
-                <button
-                  key={tab}
-                  className={`relative px-4 py-2 whitespace-nowrap w-full z-10 ${activeTab === tab ? 'text-blue-600 font-semibold' : 'text-gray-600'
-                    }`}
-                  onClick={() => setActiveTab(tab)}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
+          
 
 
             <div className="bg-white rounded-lg shadow flex-grow flex flex-col">
