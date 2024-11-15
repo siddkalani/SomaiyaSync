@@ -59,4 +59,4 @@ License
 This project is licensed under the MIT License.
 
 Contact
-For any inquiries, please contact siddharthkalani@somaiya.edu
+For any inquiries, please contact siddharth.kalani@somaiya.edu
